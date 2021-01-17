@@ -1,7 +1,7 @@
 # Equation Sheets
 This repository hosts equations I learned and used in science and engineering courses at the University of Washington. Current topics include chemistry and physics. Future topics include calculus, applied mathematics, and chemical engineering.
 
-**CAUTION: These equations are hand-typed, so there is a high probability of having mistakes. Therefore, use with caution!** If you find any mistakes, I welcome you to raise an issue.
+**CAUTION: These equations are hand-typed, so there is a high probability of having mistakes. Therefore, use with caution!** If you find any mistakes, I welcome you to [raise an issue](https://github.com/tengjuilin/equation-sheets/issues/new).
 
 You could download pdf of the equation sheets in this repository or view them [online](http://polarize.pw/equation-sheets/index.html). The online version is most up-to-date.
 
