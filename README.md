@@ -14,5 +14,5 @@ You could download pdf of the equation sheets in this repository or view them [o
 |MATH 124 Calculus I|[math124.pdf]|[math124.html]||planning
 |MATH 125 Calculus II|[math125.pdf]|[math125.html]||planning
 |MATH 126 Calculus III|[math126.pdf]|[math126.html]||planning
-|MATH 324 Calculus IV|[math324.pdf]|[math324.html]||currently constructing; course in progress|
-|AMATH 351 Differential Equations|[amath351.pdf]|[amath351.html]||currently constructing; course in progress|
+|MATH 324 Calculus IV|[math324.pdf]|[math324.html](http://polarize.pw/equation-sheets/math324.html)||currently constructing; course in progress|
+|AMATH 351 Differential Equations|[amath351.pdf]|[amath351.html](http://polarize.pw/equation-sheets/amath351.html)||currently constructing; course in progress|
