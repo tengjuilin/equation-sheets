@@ -1,4 +1,6 @@
 # Equation Sheets
+[![HitCount](http://hits.dwyl.com/tengjuilin/equation-sheets.svg)](http://hits.dwyl.com/tengjuilin/equation-sheets)
+
 This repository hosts equations I learned and used in science and engineering courses at the University of Washington. Current topics include chemistry and physics. Future topics include calculus, applied mathematics, and chemical engineering.
 
 **WARNING: These equations are hand-typed and for personal reference use, so it is guaranteed to have some mistakes, both innocent and unforgivable. Therefore, use with caution!** By using this equation sheet, you accept the risk associated with potential mistakes. If you find any mistakes, I welcome you to [raise an issue](https://github.com/tengjuilin/equation-sheets/issues/new).
