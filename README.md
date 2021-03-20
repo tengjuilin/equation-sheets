@@ -15,9 +15,9 @@ You could download pdf of the equation sheets in this repository or view them [o
 |PHYS 121 <br/> Mechanics|[phys121.pdf](phys121.pdf)|[phys121.html](http://polarize.pw/equation-sheets/phys121.html)|**Mechanics** - kinematics, dynamics, energy, momentum, rotational kinematics and dynamics, universal gravitation|completed|
 |PHYS 122 <br/> Electromagnetism|[phys122.pdf](phys122.pdf)|[phys122.html](http://polarize.pw/equation-sheets/phys122.html)|**Electromagnetism** - electrostatics, Gauss's law, electric potential, capacitance, magnetic field, induction, Maxwell's equations DC and AC circuits, special relativity|completed|
 |PHYS 123 <br/> Waves|[phys123.pdf]|[phys123.html]|**Waves**|currently constructing; course in progress|
-|MATH 124 <br/> Calculus I|[math124.pdf]|[math124.html]||planning
-|MATH 125 <br/> Calculus II|[math125.pdf]|[math125.html]||planning
-|MATH 126 <br/> Calculus III|[math126.pdf]|[math126.html]||planning
+|MATH 124 <br/> Calculus I|[math124.pdf](math124.pdf)|[math124.html](http://polarize.pw/equation-sheets/math124.html)|**Differential calculus** - limits, continuity, derivatives, applications of differentiation|completed
+|MATH 125 <br/> Calculus II|[math125.pdf](math125.pdf)|[math125.html](http://polarize.pw/equation-sheets/math125.html)|**Integral calculus** - indefinite and definite integrals, fundamental theorem of calculus, u-substitution, integration by parts, techniques and applications of integration|completed
+|MATH 126 <br/> Calculus III|[math126.pdf](math126.pdf)|[math126.html](http://polarize.pw/equation-sheets/math126.html)|**Multivariable calculus and 3D geometry** - vectors, equation of lines, planes, cylinders, and quadratic surfaces, vector functions, partial derivatives, double integrals, Taylor series|completed
 |MATH 324 <br/> Calculus IV|[math324.pdf](math324.pdf)|[math324.html](http://polarize.pw/equation-sheets/math324.html)|**Multivariable and vector calculus** - double integrals, triple integrals, chain rule, gradient vector, line integrals, surface integrals, Green's theorem, Stoke's theorem, divergence theorem|completed|
 |AMATH 351 <br/> Intro to Differential Equations and Applications|[amath351.pdf](amath351.pdf)|[amath351.html](http://polarize.pw/equation-sheets/amath351.html)|**Ordinary differential equations** - 1st, 2nd order ODE with applications, systems of ODEs, Laplace transform|completed|
 |CHEM E 310 <br/> Mass and Energy Balances|[cheme310.pdf]|[cheme310.html]|**Mass and energy balances**|currently constructing, course in progress|
