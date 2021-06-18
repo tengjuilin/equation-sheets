@@ -40,12 +40,14 @@ You could download pdf of the equation sheets in this repository or view them [o
 ## Applied Mathematics
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
+|AMATH 301 <br/> Beginning Scientific Computing|[Jupyter Notebooks](../../../intro-sci-computing)|[amath301.html](http://polarize.pw/equation-sheets/amath301/index.html)|**Scientific Computing** - root finding, solving linear systems with direct and iterative methods, optimization, curve fitting, SVD, numerical differentiation and integration, solving systems of ODEs|:white_check_mark:|
 |AMATH 351 <br/> Intro to Differential Equations and Applications|[amath351.pdf](amath351.pdf)|[amath351.html](http://polarize.pw/equation-sheets/amath351.html)|**Ordinary differential equations** - 1st, 2nd order ODE with applications, systems of ODEs, Laplace transform|:white_check_mark:|
 
 ## Chemical Engineering
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
 |NME 220 Intro to Molecular and Nanoscale Principles|[nme220.pdf](nme220.pdf)|[nme220.html](http://polarize.pw/equation-sheets/nme220.html)|**Molecular and nanoscale principles** - scaling and transport properties, atomic theory and models, wave function in quantum mechanics, nanoscience and technology, electronic structures of molecules, molecular modes|:white_check_mark:|
+|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](../../../cheme-sci-computing)|[cheme375.html](http://polarize.pw/equation-sheets/cheme375/index.html)|**ChemE Scientific Computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
 |CHEM E 310 <br/> Mass and Energy Balances|[cheme310.pdf](cheme310.pdf)|[cheme310.html](http://polarize.pw/equation-sheets/cheme310.html)|**Material and energy balances** - units and process variables, material and energy balances of nonreactive and reactive processes, single- and multi-phase systems|:white_check_mark:|
 |CHEM E 325 Energy and Entropy|[cheme325.pdf]|[cheme325.html]|**ChemE thermodynamics I** - | Au21 in progress <br/> :pick:|
 |CHEM E 330 Transport Process I|[cheme330.pdf]|[cheme330.html]|**Fluid mechanics** - | Au21 in progress <br/> :pick:|
