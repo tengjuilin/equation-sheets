@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/tengjuilin/equation-sheets)](https://creativecommons.org/licenses/by/4.0/)
 [![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Ftengjuilin.netlify.app%2F)](https://tengjuilin.netlify.app/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/tengjuilin/equation-sheets)
-[Total Visits](https://pv-badge.herokuapp.com/total.svg?repo_id=tengjuilin-equation-sheets)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftengjuilin%2Fequation-sheets&count_bg=%233D6AC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 This repository contains equations that I learned and used in science and engineering courses at the University of Washington. Current topics include calculus, applied mathematics, chemistry, physics, and chemical engineering.
 
