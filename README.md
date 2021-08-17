@@ -55,7 +55,7 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
-|AMATH 301 <br/> Beginning Scientific Computing|-|[Jupyter Notebooks](https://github.com/tengjuilin/intro-sci-computing)|**Scientific Computing** - root finding, solving linear systems with direct and iterative methods, optimization, curve fitting, SVD, numerical differentiation and integration, solving systems of ODEs|:white_check_mark:|
+|AMATH 301 <br/> Beginning Scientific Computing|[Jupyter Notebooks](https://github.com/tengjuilin/intro-sci-computing)|[html](http://tengjuilin.netlify.app/resources/intro-sci-computing/)|**Scientific Computing** - root finding, solving linear systems with direct and iterative methods, optimization, curve fitting, SVD, numerical differentiation and integration, solving systems of ODEs|:white_check_mark:|
 |AMATH 351 <br/> Intro to Differential Equations and Applications|[pdf](amath/amath351.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/amath/amath351/)|**Ordinary differential equations** - 1st, 2nd order ODE with applications, systems of ODEs, Laplace transform|:white_check_mark:|
 
 ## Chemical Engineering
@@ -63,7 +63,7 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
 |NME 220 Intro to Molecular and Nanoscale Principles|[pdf](cheme/nme220.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/cheme/nme220/)|**Molecular and nanoscale principles** - scaling and transport properties, atomic theory and models, wave function in quantum mechanics, nanoscience and technology, electronic structures of molecules, molecular modes|:white_check_mark:|
-|CHEM E 375 <br/> Chemical Engineering Computer Skills|-|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|**ChemE Scientific Computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
+|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://tengjuilin.netlify.app/resources/cheme-sci-computing/)|**ChemE Scientific Computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
 |CHEM E 310 <br/> Mass and Energy Balances|[pdf](cheme/cheme310.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/cheme/cheme310/)|**Material and energy balances** - units and process variables, material and energy balances of nonreactive and reactive processes, single- and multi-phase systems|:white_check_mark:|
 |CHEM E 325 Energy and Entropy|[pdf]|[html]|**ChemE thermodynamics I** - | Au21 in progress <br/> :pick:|
 |CHEM E 330 Transport Process I|[pdf]|[html]|**Fluid mechanics** - | Au21 in progress <br/> :pick:|
