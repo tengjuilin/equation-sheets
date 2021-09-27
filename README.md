@@ -1,7 +1,7 @@
 # Equation Sheets
 
 [![License](https://img.shields.io/github/license/tengjuilin/equation-sheets)](https://creativecommons.org/licenses/by/4.0/)
-[![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Ftengjuilin.netlify.app%2F)](https://tengjuilin.netlify.app/)
+[![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Ftengjuilin.netlify.app%2F)](https://tengjuilin.netlify.app/resources/equation-sheets/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/tengjuilin/equation-sheets)
 [![Visits since Aug 2021](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftengjuilin%2Fequation-sheets&count_bg=%233D6AC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visits+since+Aug+2021+%28daily%2Ftotal%29&edge_flat=false)](https://hits.seeyoufarm.com)
 
@@ -32,7 +32,7 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 |CHEM 145 <br/> Honors General Chemistry I|[pdf](chem/chem145.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/chem/chem145/)|**Physical chemistry** - gas, thermodynamics, equilibrium|:white_check_mark:|
 |CHEM 155 <br/> Honors General Chemistry II|[pdf](chem/chem155.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/chem/chem155/)|**Physical chemistry** - acid-base equilibria, solution equilibria, electrochemistry, kinetics, nuclear chemistry, quantum mechanics and atomic structure|:white_check_mark:|
 |CHEM 238 <br/> Organic Chemistry II|-|[html](http://tengjuilin.netlify.app/resources/equation-sheets/chem/chem238/)|**Organic chemistry** - alcohol, thiol, ether, sulfide, epoxide, glycol, alkyne, diene, benzene, transition metal catalysis, characterization techniques|:white_check_mark:|
-|CHEM 455 Physical Chemistry|[pdf]|[html]|**Quantum mechanics** - | Au21 in progress <br/> :pick:|
+|CHEM 455 Physical Chemistry|[pdf]|[html](http://tengjuilin.netlify.app/resources/equation-sheets/chem/chem455/)|**Quantum mechanics** - | Au21 in progress <br/> :pick:|
 
 ## Physics
 
@@ -65,5 +65,5 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 |NME 220 Intro to Molecular and Nanoscale Principles|[pdf](cheme/nme220.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/cheme/nme220/)|**Molecular and nanoscale principles** - scaling and transport properties, atomic theory and models, wave function in quantum mechanics, nanoscience and technology, electronic structures of molecules, molecular modes|:white_check_mark:|
 |CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://tengjuilin.netlify.app/resources/cheme-sci-computing/)|**ChemE Scientific Computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
 |CHEM E 310 <br/> Mass and Energy Balances|[pdf](cheme/cheme310.pdf)|[html](http://tengjuilin.netlify.app/resources/equation-sheets/cheme/cheme310/)|**Material and energy balances** - units and process variables, material and energy balances of nonreactive and reactive processes, single- and multi-phase systems|:white_check_mark:|
-|CHEM E 325 Energy and Entropy|[pdf]|[html]|**ChemE thermodynamics I** - | Au21 in progress <br/> :pick:|
-|CHEM E 330 Transport Process I|[pdf]|[html]|**Fluid mechanics** - | Au21 in progress <br/> :pick:|
+|CHEM E 325 Energy and Entropy|[pdf]|[html](http://tengjuilin.netlify.app/resources/equation-sheets/cheme/cheme325/)|**ChemE thermodynamics I** - | Au21 in progress <br/> :pick:|
+|CHEM E 330 Transport Process I|[pdf]|[html](http://tengjuilin.netlify.app/resources/equation-sheets/cheme/cheme330/)|**Fluid mechanics** - | Au21 in progress <br/> :pick:|
