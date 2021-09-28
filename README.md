@@ -1,7 +1,8 @@
 # Equation Sheets
 
 [![License](https://img.shields.io/github/license/tengjuilin/equation-sheets)](https://creativecommons.org/licenses/by/4.0/)
-[![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Ftengjuilin.netlify.app%2F)](https://tengjuilin.netlify.app/resources/equation-sheets/)
+![Netlify](https://img.shields.io/netlify/ad44d69f-5e00-4f31-9bda-a3732a8f8060)
+[![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fequation-sheets.netlify.app%2F)](https://equation-sheets.netlify.app/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/tengjuilin/equation-sheets)
 
 ## Introduction
