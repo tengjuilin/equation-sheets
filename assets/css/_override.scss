@@ -1,0 +1,182 @@
+// ==============================
+// Override Variables
+// 覆盖变量
+// ==============================
+
+$theme-color: #0D47A1;
+
+// ========== Global ========== //
+// Font and Line Height
+$global-font-family: Roboto, Open Sans, system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei UI, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+$global-font-size: 15px;
+
+// Color of the hover link
+$global-link-hover-color: #0D47A1;
+
+// Color of the single link
+$single-link-color: #0D47A1;
+$single-link-color-dark: #91cbf9;
+
+// Color of the hover single link
+$single-link-hover-color: #0d92a1;
+$single-link-hover-color-dark: #bbdefb;
+
+// Color of header background
+$header-background-color: #ECEFF1 !important;
+$header-background-color-dark: #252627 !important;
+// ========== Global ========== //
+
+// ========== Pagination ========== //
+// Color of the link in pagination
+$pagination-link-color: #0D47A1;
+// ========== Pagination ========== //
+
+// ========== Code ========== //
+// Color of the code
+$code-color: #0D47A1;
+
+// Color of the code background
+$code-background-color: #e3f2fd;
+
+// Font size of the code
+$code-font-size: .9rem;
+
+// Font family of the code
+$code-font-family: Consolas, Source Code Pro, Menlo, Monaco, monospace, $global-font-family;
+// ========== Code ========== //
+
+
+//// ========== SPECIFIC customizations ========== ////
+// ========== Blog post h1 title ========== //
+.posts-title {
+    text-align: left;
+    font-size: 2rem  !important;
+    line-height: 2rem  !important;
+    margin: 1rem 0 !important;
+}
+// ========== Blog post h1 title ========== //
+
+// ========== Custom-added index page h1 title ========== //
+.archive .single-title, .special .single-title, .special .single-subtitle {
+    text-align: left !important;
+    font-size: 2rem !important;
+}
+// ========== Custom-added index page h1 title ========== //
+
+// ========== Blog post paragraph ========== //
+main article div.content p {
+    margin: 1rem 0 !important;
+}
+// ========== Blog post paragraph ========== //
+
+// ========== Home page article cards ========== //
+.article-info {
+    padding: 2rem;
+}
+
+.home[posts] .summary, .article-card {
+    border-radius: 1rem;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.30), 0 2px 10px rgba(0,0,0,0.22);
+    padding: 0 !important;
+    margin: 2rem auto;
+}
+
+.featured-image-preview {
+    margin: 0 !important;
+}
+
+.home[posts] .summary .featured-image-preview img, .publication-images {
+    border-radius: 0.8rem;
+    box-shadow: 0 1px 15px rgba(0,0,0,0.10);
+}
+
+.home[posts] .summary .featured-image-preview:hover{
+    transform: none !important;
+}
+
+.home[posts] .summary .single-title {
+    font-size: 1.4rem !important;
+}
+// ========== Home page article cards ========== //
+
+// ========== Home page headers ========== //
+.home[posts] .home-section-title {
+    border-left: 5px solid $theme-color;
+    padding-left: 1rem;
+}
+// ========== Home page headers ========== //
+
+// ========== Disable animations ========== //
+.pulse {
+    animation-name: none !important;
+}
+// ========== Disable animations ========== //
+
+// ========== Publication page ========== //
+header {
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.1);
+}
+
+.post-meta-line {
+    text-align: right;
+}
+
+.publication-images {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.publication-optional-info {
+    color: silver !important;
+}
+
+.article-title {
+    margin: 0 0 1rem 0;
+}
+// ========== Publication page ========== //
+
+// ========== Site tables ========== //
+table {
+    margin: 0 auto 2em auto;
+}
+
+td {
+    width: 400px;
+}
+
+thead {
+    background-color: transparent !important;
+}
+
+th {
+    border-bottom: 1px solid black !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+td {
+    border-bottom: 1px solid lightgray !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+// ========== Site tables ========== //
+
+// ========== Site printing ========== //
+@media print {
+    article, .page {
+        width: 100% !important;
+        padding-top: 0 !important;
+    }
+
+    header, .post-nav, .post-footer, footer, #back-to-top, .post-meta-line, .toc {
+        display: none !important;
+    }
+}
+// ========== Site printing ========== //
+
+
+.home-profile {
+    display: none;
+}

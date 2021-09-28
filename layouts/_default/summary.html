@@ -1,0 +1,39 @@
+<!-- Home page article summary card -->
+{{- $params := .Params | merge .Site.Params.page -}}
+
+<article class="single summary" itemscope itemtype="http://schema.org/Article">
+    <!-- Article featured image -->
+    {{- /* Featured image */ -}}
+    {{- $image := $params.featuredimagepreview | default $params.featuredimage -}}
+    {{- with .Resources.GetMatch "featured-image" -}}
+        {{- $image = .RelPermalink -}}
+    {{- end -}}
+    {{- with .Resources.GetMatch "featured-image-preview" -}}
+        {{- $image = .RelPermalink -}}
+    {{- end -}}
+    {{- with $image -}}
+        <div class="featured-image-preview">
+            <a href="{{ $.RelPermalink }}">
+                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/image.html" -}}
+            </a>
+        </div>
+    {{- end -}}
+
+    <!-- Article content summary -->
+    <div class="article-info">
+        <!-- Article title -->
+        {{- /* Title */ -}}
+        <h1 class="single-title" itemprop="name headline">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h1>
+
+        {{- /* Meta */ -}}
+        <div class="post-meta">
+            <!-- Article post date -->
+            <i class="far fa-calendar-alt fa-fw"></i>
+            {{- with .Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format -}}
+                {{- . -}}
+            {{- end -}}
+        </div>
+    </div>
+</article>

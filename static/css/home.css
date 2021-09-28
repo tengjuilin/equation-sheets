@@ -1,0 +1,24 @@
+.home-row {
+    display: flex;
+}
+
+.left-column {
+    flex: 60%;
+    margin: 0 2rem;
+}
+
+.right-column {
+    flex: 40%;
+    margin: 0 2rem;
+}
+
+div.home {
+    max-width: 1200px !important;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .home-row {
+        display: block;
+    }
+}
