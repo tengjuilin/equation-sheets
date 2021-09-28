@@ -1,0 +1,5 @@
+# hugo local builds
+/public/
+
+# hugo build resources
+/resources/
