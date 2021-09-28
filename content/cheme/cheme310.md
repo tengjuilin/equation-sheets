@@ -332,7 +332,7 @@ Use (hypothetical) process paths to guide the use of equations.
 
 ### Enthalpy change of reactions
 
-{{< image src="/resources/equation-sheets/cheme/cheme-310-reaction-process-path.png" caption="Reaction process paths. (Elementary Principles of Chemical Processes 4e by Felder et al. p507.)" >}}
+{{< image src="/cheme/cheme-310-reaction-process-path.png" caption="Reaction process paths. (Elementary Principles of Chemical Processes 4e by Felder et al. p507.)" >}}
 
 |Description|Equations|
 |-:|:-|
