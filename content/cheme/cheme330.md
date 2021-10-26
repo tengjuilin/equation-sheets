@@ -3,7 +3,7 @@ title: "CHEM E 330 Transport Processes I"
 date: 2021-10-25T00:00:00-07:00
 ---
 
-## Phenomenological rate laws of transport
+## Phenomenological Rate Laws for Diffusive Transport
 
 |Description|Equations|
 |-:|:-|
@@ -54,7 +54,7 @@ date: 2021-10-25T00:00:00-07:00
 |**Newton's law of viscosity** <br/> ★ Power law fluid|$\tau_{yx} = -m\dot{\gamma}^n$|
 |**Carreau equation** <br/> ★ Slurry|$\dfrac{\eta - \eta_\infty}{\eta_o - \eta_\infty} = [1 + (\lambda\dot{\gamma})^2]^{(n-1)/2}$|
 
-## Transport coefficients of fluids
+## Transport Coefficients of Fluids
 
 ### Ideal gas: Simple kinetic theory
 
@@ -112,6 +112,173 @@ date: 2021-10-25T00:00:00-07:00
 |**Wilke-Chang correlation** <br/> Diffusivity of dilute liquid A <br/> $\tilde{V} [=] \mathrm{cm^3/mol} \newline \mu_B [=] \mathrm{cP} \newline T [=] \mathrm{K}$|$D_{AB}\left(\mathrm{\frac{cm^2}{s}}\right) = 7.4 \times 10^{-8} \dfrac{(\psi_B \mathcal{M}_B)^{1/2} T}{\mu \tilde{V}_A^{0.6}}$|
 |**Vigne's equation** <br/> Diffusivity of liquid mixture|$D_{AB} = (D_{AB}^0)^{x_B} (D_{BA}^0)^{x_A}$|
 |**$T$ dependence of transport coefficients of liquids <br/> (no $P$ dependence)**|$\begin{aligned} \mu &= Ae^{B/T} \\\ D_{AB}\mu_B &\propto T \\\ D_{AB} &\not= D_{BA} \end{aligned}$|
-|||
+
+## Shell Balances for Flux Distributions and Profiles
+
+### Boundary conditions and shell volume
+
+|Description|Equations|
+|-:|:-|
+|Rectilinear shell volume|$\Delta V = LW\Delta y$|
+|Cylindrical shell volume|$\Delta V = 2\pi r L \Delta r$|
+|Spherical shell volume|$\Delta V = 4 \pi r^2 \Delta r$|
+|Newton's law of cooling|$q = h(T_{\text{solid}} - T_{\text{fluid}})$|
+|Relationship between $N_A$ and $c_A$ at boundary|$N_A = k_m (c_{A, \text{solid}} - c_{A, \text{fluid}})$|
+|Reynolds number|$\mathrm{Re} = \dfrac{L_{\text{char}}v_{\text{char}}\rho}{\mu}$|
+
+<!-- ### Shell balance method
+
+1. Sketch the system with coordinate system
+2. Sketch the shell that is thin in the direction of transport (change)
+3. Write shell volume $\Delta V$
+4. Write shell balance OIGA of transported quantity
+   - $\mathrm{out - in = generation - accumulation}$
+5. Take limit as shell thickness approach 0
+   - **Differential equation of flux distribution**
+6. Separate variable and integrate
+   - **Flux distribution, $c_1$**
+7. Substitute rate law
+8. Separate variable and integrate
+   - **Profile, $c_1, c_2$**
+9. Evaluate $c_1, c_2$ using boundary conditions -->
+
+### Axial transport in rectilinear systems
+
+- Rectilinear system
+- No generation
+- No driving force
+- Steady state
+
+|Description|Equations|
+|-:|:-|
+|Differential equation of flux distribution|$\dfrac{dq}{dy} = 0$|
+|Temperature profile (linear)|$T(y) = T_1 - \dfrac{q}{k} y$|
+|Flux distribution (inverse)|$q(y) = \dfrac{k(T_1 - T)}{y}$|
+|Flux across the whole layer|$q = \dfrac{k(T_1 - T_2)}{H}$|
+
+### Radial transport in cylindrical systems
+
+- Cylindrical system
+- No generation
+- No driving force
+- Steady state
+
+|Description|Equations|
+|-:|:-|
+|Differential equation of flux distribution|$\dfrac{d(rq)}{dr} = 0$|
+|Flux distribution (inverse)|$q(r) = \dfrac{k(T_i - T_0)}{r \ln(\frac{R_0}{R_i})}$|
+|Temperature profile (logarithmic)|$T(r) = T_i - \dfrac{T_i - T_0}{\ln(\frac{R_0}{R_i})} \ln\left(\dfrac{r}{R_i}\right)$|
+
+### Radial transport in spherical systems
+
+- Spherical system
+- No generation
+- No driving force
+- Steady state
+
+|Description|Equations|
+|-:|:-|
+|Differential equation of flux distribution|$\dfrac{d(r^2 q)}{dr} = 0$|
+|Flux distribution (inverse squared)|$q(r) = \dfrac{k(T_i - T_0)}{r^2 (\frac{1}{R_i} - \frac{1}{R_0})}$|
+|Temperature profile (inverse)|$T(r) = T_i - \dfrac{T_i - T_0}{(\frac{1}{R_i} - \frac{1}{R_0})} \left(\dfrac{1}{r} - \dfrac{1}{R_i}\right)$|
+
+### Axial transport in rectilinear systems (with generation)
+
+- Rectilinear system
+- With generation
+- No driving force
+- Steady state
+
+|Description|Equations|
+|-:|:-|
+|Differential equation of flux distribution|$\dfrac{dq}{dy} = S$|
+|Flux distribution (linear)|$q(y) = Sy + \dfrac{k}{H}(T_2 - T_1) - \dfrac{SH}{2}$|
+|Temperature profile (quadratic)|$T(y) = T_1 - \dfrac{S}{2k} y^2 + \left[ \dfrac{SH}{2k} - \dfrac{T_2 - T_1}{H} \right] y$|
+
+### Flow down inclined plane (falling film)
+
+- Rectilinear system
+- Gravity driving force, but no pressure gradient
+- Steady state
+
+|Description|Equations|
+|-:|:-|
+|Differential equation of flux distribution|$\dfrac{d\tau_{yx}}{dy} = \rho g \cos\beta$|
+|Flux distribution (linear)|$\tau_{yx}(y) = -\rho g \cos\beta (\delta - y)$|
+|Velocity profile (quadratic)|$v_x(y) = \dfrac{g \cos\beta}{2\nu}(2\delta y - y^2)$|
+|★ No entry length effect|$L \gg \delta$|
+|★ No edge effect|$W \gg \delta$|
+|★ Incompressible Newtonian fluid|$\Delta\mu = 0, \Delta\rho = 0$|
+|★ No end effect, no ripple|$\mathrm{Re}_{\text{rippling}} \lesssim 20$|
+|Reynolds number for falling film|$\mathrm{Re} = \dfrac{4\delta \langle v_x \rangle\rho}{\mu}$|
+
+#### Flow descriptors
+
+|Description|Equations|
+|-:|:-|
+|Skin friction|$\tau^0 = \rho g \cos(\beta)\delta$|
+|Free surface velocity|$v_x^{\text{surf}} = \dfrac{g \cos\beta}{2\nu}\delta^2$|
+|Volumetric flow rate|$Q = \int v_\perp \ dA$|
+|Volumetric flow rate per unit area|$\dfrac{Q}{W} = \dfrac{g \cos(\beta) \delta^3}{3\nu}$|
+|Average velocity|$\langle v_x \rangle = \dfrac{g\cos(\beta)\delta^2}{3\nu}$|
+|Mass flow rate|$\dot{m} = \rho Q$|
+|Mass flow rate per unit width|$\Gamma = \dfrac{\rho Q}{W} = \dfrac{\rho g \cos(\beta) \delta^3}{3\nu}$|
+|Film thickness given $\Gamma$|$\delta = \sqrt[3]{\dfrac{3\nu \Gamma}{\rho g \cos\beta}}$|
+
+### Flow in round tube (Hagen-Poiseuille flow)
+
+- Cylindrical system
+- Pressure-gravity driving force
+- Steady state
+- No tube bents, constant corss section
+- Negligible P dependence with r
+
+|Description|Equations|
+|-:|:-|
+|Pressure-gravity driving force|$-\dfrac{dP}{dz} + \rho g \cos\beta = \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L}$|
+|Differential equation of flux distribution|$\dfrac{d (r\tau_{yx})}{dy} = \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
+|Flux distribution (linear)|$\tau_{yx}(r) = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
+|Velocity profile (quadratic)|$v_z(r) = \dfrac{R^2}{4\mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) \left[ 1 - \left( \dfrac{r}{R} \right)^2 \right]$|
+|★ Incompressible Newtonian fluid|$\Delta\mu = 0, \Delta\rho = 0$|
+|★ Laminar flow|$\mathrm{Re}_{\text{laminar}} \le 2100$|
+|★ Fully developed flow (no entry length effect)|$L_e \approxeq 0.035 D \mathrm{Re}$|
+|Reynolds number for pipe flow|$\mathrm{Re}_{\text{pipe}} = \dfrac{D \langle v_z \rangle\rho}{\mu}$|
+
+#### Flow descriptors
+
+|Description|Equations|
+|-:|:-|
+|Skin friction|$\tau_{yx}^0 = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) R$|
+|Volumetric flow|$Q = \dfrac{R^4 \pi}{8 \mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right)$|
+|Average velocity|$\langle v_z \rangle = \dfrac{R^2}{8\mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right)$|
+|Mass flow rate|$\dot{m} = \dfrac{R^4 \pi\rho}{8\mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right)$|
+
+### Laminar flow through porous media
+
+|Description|Equations|
+|-:|:-|
+|**Darcy's law** - average velocity <br/> $\kappa$ - bed permeability|$\langle v \rangle = \dfrac{\kappa}{\mu L}(\mathcal{P}_1 - \mathcal{P}_2)$|
+|**Darcy's law** - volumetric flow rate <br/> $A$ - empty bed cross section <br/> $\varepsilon$ - porosity, void fraction|$Q = \dfrac{\kappa A \varepsilon}{\mu L}(\mathcal{P}_1 - \mathcal{P}_2)$|
+|**Blake-Kozeny model** <br/> Bed permeability|$\kappa = \dfrac{D_p^2}{150} \left( \dfrac{\varepsilon}{1 - \varepsilon} \right)$|
+|Effective packing particle diameter|$D_p = \dfrac{6}{a_v} = \dfrac{6 V}{A} \newline D_{p, \text{spheres}} = D$|
+|Bed Reynolds number|$\mathrm{Re}_{\text{bed}} = \dfrac{D_p Q \rho}{\mu A (1-\varepsilon)}$|
+|★ Laminar flow|$\mathrm{Re}_{\text{laminar}} < 10$|
+
+### Fluid pressure, hydrostatic, manometer
+
+|Description|Equations|
+|-:|:-|
+|Equation of hydrostatic|$P_1 - P_2 = \rho g(h_2 - h_1)$|
+|Manometer equation|$P_1 - P_2 = (\rho_m - \rho) gH + \rho g(h_2 - h_1)$|
+|Manometer equation|$\mathcal{P}_1 - \mathcal{P}_2 = (\rho_m - \rho) gH$|
+
+### Unsteady state transport
+
+|Description|Equations|
+|-:|:-|
+|Unsteady state conduction in rectilinear system|$\left(\dfrac{\partial T}{\partial t}\right)_y = \alpha \dfrac{\partial^2 T}{\partial y^2} + \dfrac{S}{\rho \hat{c_p}}$|
+|Unsteady state diffusion in rectilinear system|$\left(\dfrac{\partial c_A}{\partial t}\right)_y = D\_{AB} \dfrac{\partial^2 c_A}{\partial y^2} + R_A$|
+|Unsteady state Couette flow (1D rectilinear shear flow)|$\left(\dfrac{\partial v_x}{\partial t}\right)_y = \nu \left(\dfrac{\partial^2 v_x}{\partial y^2}\right)_t$|
+|Unsteady state flow in cylindrical system|$\left(\dfrac{\partial v_z}{\partial t}\right)_r = \nu \left[ \dfrac{\partial^2 v_z}{\partial r^2} + \dfrac{1}{r} \dfrac{\partial v_z}{\partial r} \right] + \dfrac{1}{\rho} \left[\dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L}\right]$|
 
 <!-- ★ -->
