@@ -237,8 +237,8 @@ date: 2021-10-25T00:00:00-07:00
 |-:|:-|
 |Modified pressure|$\mathcal{P} = P + \rho gh$|
 |Pressure-gravity driving force|$-\dfrac{dP}{dz} + \rho g \cos\beta = \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L}$|
-|Differential equation of flux distribution|$\dfrac{d (r\tau_{yx})}{dy} = \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
-|Flux distribution (linear)|$\tau_{yx}(r) = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
+|Differential equation of flux distribution|$\dfrac{d (r\tau_{rz})}{dr} = \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
+|Flux distribution (linear)|$\tau_{rz}(r) = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
 |Velocity profile (quadratic)|$v_z(r) = \dfrac{R^2}{4\mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) \left[ 1 - \left( \dfrac{r}{R} \right)^2 \right]$|
 |★ Incompressible Newtonian fluid|$\Delta\mu = 0, \Delta\rho = 0$|
 |★ Laminar flow|$\mathrm{Re}_{\text{laminar}} \le 2100$|
@@ -249,7 +249,7 @@ date: 2021-10-25T00:00:00-07:00
 
 |Description|Equations|
 |-:|:-|
-|Skin friction|$\tau_{yx}^0 = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) R$|
+|Skin friction|$\tau_{rz}^0 = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) R$|
 |Volumetric flow|$Q = \dfrac{R^4 \pi}{8 \mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right)$|
 |Average velocity|$\langle v_z \rangle = \dfrac{R^2}{8\mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right)$|
 |Mass flow rate|$\dot{m} = \dfrac{R^4 \pi\rho}{8\mu} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right)$|
