@@ -95,9 +95,9 @@ date: 2021-10-25T00:00:00-07:00
 
 |Description|Equations|
 |-:|:-|
-|**Wilkie equation** <br/> Viscosity of gas mixture|$\mu_{\text{mix}} = \displaystyle\sum_{i=1}^{N}\dfrac{x_i \mu_i}{\sum_{j=1}^N x_j \Phi_{ij}}$|
-|**Wilkie equation** <br/> Thermal conductivity of gas mixture|$k_{\text{mix}} = \displaystyle\sum_{i=1}^{N}\dfrac{x_i k_i}{\sum_{j=1}^N x_j \Phi_{ij}}$|
-|Wilkie equation parameter|$\Phi_{ij} = \frac{1}{\sqrt{8}} \left[ 1 + \frac{\mathcal{M}_i}{\mathcal{M}_j} \right]^{-1/2} \left[ 1 + \left[\frac{\mu_i}{\mu_j}\right]^{1/2} + \left[\frac{\mathcal{M}_i}{\mathcal{M}_j}\right]^{-1/4} \right]^2$|
+|**Wilke equation** <br/> Viscosity of gas mixture|$\mu_{\text{mix}} = \displaystyle\sum_{i=1}^{N}\dfrac{x_i \mu_i}{\sum_{j=1}^N x_j \Phi_{ij}}$|
+|**Wilke equation** <br/> Thermal conductivity of gas mixture|$k_{\text{mix}} = \displaystyle\sum_{i=1}^{N}\dfrac{x_i k_i}{\sum_{j=1}^N x_j \Phi_{ij}}$|
+|Wilke equation parameter|$\Phi_{ij} = \frac{1}{\sqrt{8}} \left[ 1 + \frac{\mathcal{M}_i}{\mathcal{M}_j} \right]^{-1/2} \left[ 1 + \left[\frac{\mu_i}{\mu_j}\right]^{1/2} + \left[\frac{\mathcal{M}_i}{\mathcal{M}_j}\right]^{-1/4} \right]^2$|
 |**Blanc's equation** <br/> Diffusivity of gas mixture|$D_{i, \text{mix}} = \left[ \displaystyle\sum_{j \not= 1}^{N} \dfrac{x_j}{D_{ij}} \right]^{-1}$|
 
 ### Liquids
@@ -230,11 +230,12 @@ date: 2021-10-25T00:00:00-07:00
 - Cylindrical system
 - Pressure-gravity driving force
 - Steady state
-- No tube bents, constant corss section
+- No tube bents, constant cross section
 - Negligible P dependence with r
 
 |Description|Equations|
 |-:|:-|
+|Modified pressure|$\mathcal{P} = P + \rho gh$|
 |Pressure-gravity driving force|$-\dfrac{dP}{dz} + \rho g \cos\beta = \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L}$|
 |Differential equation of flux distribution|$\dfrac{d (r\tau_{yx})}{dy} = \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
 |Flux distribution (linear)|$\tau_{yx}(r) = \dfrac{1}{2} \left( \dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L} \right) r$|
