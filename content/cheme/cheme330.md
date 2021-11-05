@@ -329,6 +329,13 @@ date: 2021-11-04T00:00:00-07:00
 |Laplacian operator|$\nabla^2 = \nabla\cdot\nabla$|
 |Substantial derivative operator|$\dfrac{D}{Dt} = \dfrac{\partial}{\partial t} + \utilde{v}\cdot\nabla$|
 
+### Generalization to convection
+
+|Description|Equations|
+|-:|:-|
+|Thermal energy equation|$\dfrac{DT}{Dt} = \alpha \nabla^2 T + \dfrac{S}{\rho \hat{c_p}}$|
+|Convective diffusion equation|$\dfrac{D c_A}{Dt} = D_{AB} \nabla^2 c_A + R_A$|
+
 ### Flow in conduit
 
 |Description|Equations|
