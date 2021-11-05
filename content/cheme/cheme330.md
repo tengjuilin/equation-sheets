@@ -1,9 +1,11 @@
 ---
 title: "CHEM E 330 Transport Processes I"
-date: 2021-10-25T00:00:00-07:00
+date: 2021-11-04T00:00:00-07:00
 ---
 
-## Phenomenological Rate Laws for Diffusive Transport
+## -★- TRANSPORT PHENOMENA
+
+## Rate Laws for Diffusive Transport
 
 |Description|Equations|
 |-:|:-|
@@ -75,6 +77,8 @@ date: 2021-10-25T00:00:00-07:00
 
 ### Real gas: Chapman-Enskog equations
 
+★ Moderate pressure
+
 |Description|Equations|
 |-:|:-|
 |Lenard-Jones potential|$\varphi(r) = 4\varepsilon \left[\left(\dfrac{\sigma}{r}\right)^{12} - \left(\dfrac{\sigma}{r}\right)^6\right]$|
@@ -113,7 +117,7 @@ date: 2021-10-25T00:00:00-07:00
 |**Vigne's equation** <br/> Diffusivity of liquid mixture|$D_{AB} = (D_{AB}^0)^{x_B} (D_{BA}^0)^{x_A}$|
 |**$T$ dependence of transport coefficients of liquids <br/> (no $P$ dependence)**|$\begin{aligned} \mu &= Ae^{B/T} \\\ D_{AB}\mu_B &\propto T \\\ D_{AB} &\not= D_{BA} \end{aligned}$|
 
-## Shell Balances for Flux Distributions and Profiles
+## Shell Balance (Bottom-Up)
 
 ### Boundary conditions and shell volume
 
@@ -125,6 +129,9 @@ date: 2021-10-25T00:00:00-07:00
 |Newton's law of cooling|$q = h(T_{\text{solid}} - T_{\text{fluid}})$|
 |Relationship between $N_A$ and $c_A$ at boundary|$N_A = k_m (c_{A, \text{solid}} - c_{A, \text{fluid}})$|
 |Reynolds number|$\mathrm{Re} = \dfrac{L_{\text{char}}v_{\text{char}}\rho}{\mu}$|
+|No slip condition|$v_1 = v_2$|
+|Free slip condition|$-\mu_1\left(\dfrac{dv_x}{dy}\right)_1 = 0$|
+|Continuity of stress|$\begin{aligned}\tau_{y, 1} &= \tau_{y, 2} \\\ -\mu_1\left(\dfrac{dv_x}{dy}\right)_1 &= -\mu_2\left(\dfrac{dv_x}{dy}\right)_2 \end{aligned}$|
 
 <!-- ### Shell balance method
 
@@ -281,5 +288,98 @@ date: 2021-10-25T00:00:00-07:00
 |Unsteady state diffusion in rectilinear system|$\left(\dfrac{\partial c_A}{\partial t}\right)_y = D\_{AB} \dfrac{\partial^2 c_A}{\partial y^2} + R_A$|
 |Unsteady state Couette flow (1D rectilinear shear flow)|$\left(\dfrac{\partial v_x}{\partial t}\right)_y = \nu \left(\dfrac{\partial^2 v_x}{\partial y^2}\right)_t$|
 |Unsteady state flow in cylindrical system|$\left(\dfrac{\partial v_z}{\partial t}\right)_r = \nu \left[ \dfrac{\partial^2 v_z}{\partial r^2} + \dfrac{1}{r} \dfrac{\partial v_z}{\partial r} \right] + \dfrac{1}{\rho} \left[\dfrac{\mathcal{P}_1 - \mathcal{P}_2}{L}\right]$|
+
+## Rate Laws in 3D
+
+|Description|Equations|
+|-:|:-|
+|Fourier's law in 3D|$\utilde{q} = -k \nabla T$|
+|Fick's law in 3D|$\utilde{J}_A^* = -D_{AB} \nabla c_A$|
+|Newton's law of viscosity in 3D|$\underset{\approx}{\tau} = -\mu (\underset{\approx}{\Delta} + \underset{\approx}{\Delta}^{\dagger})$|
+|Viscous stress tensor|$\underset{\approx}{\tau} = \begin{bmatrix} \tau_{xx} & \tau_{xy} & \tau_{xz} \\\ \tau_{yx} & \tau_{yy} & \tau_{yz} \\\ \tau_{zx} & \tau_{zy} & \tau_{zz} \end{bmatrix}$|
+|Rate of strain tensor|$\underset{\approx}{\Delta} = \begin{bmatrix} \dfrac{\partial v_x}{\partial x} & \dfrac{\partial v_x}{\partial y} & \dfrac{\partial v_x}{\partial z} \\\ \\\ \dfrac{\partial v_y}{\partial x} & \dfrac{\partial v_y}{\partial y} & \dfrac{\partial v_y}{\partial z} \\\ \\\ \dfrac{\partial v_z}{\partial x} & \dfrac{\partial v_z}{\partial y} & \dfrac{\partial v_z}{\partial z} \end{bmatrix}$|
+
+## Conservation Laws in 3D
+
+|Description|Equations|
+|-:|:-|
+|Conservation of thermal energy|$\nabla\cdot\utilde{q} = S - \rho \hat{c_p} \dfrac{\partial T}{\partial t}$|
+|**Conduction equation** <br/> ★ No convection|$\dfrac{\partial T}{\partial t} = \alpha \nabla^2 T + \dfrac{S}{\rho \hat{c_p}}$|
+|**Molecular diffusion equation** <br/> ★ No convection|$\dfrac{\partial c_A}{\partial t} = D_{AB} \nabla^2 c_A + R_A$|
+
+## -★- FLUID MECHANICS
+
+## Navier-Stokes Equation
+
+|Description|Equations|
+|-:|:-|
+|**Continuity equation**|$\dfrac{\partial \rho}{\partial t} + \nabla\cdot(\rho\utilde{v}) = 0$|
+|**Continuity equation of incompressible liquid** <br/> ★ Constant $\rho$|$\nabla\cdot\utilde{v} = 0$|
+|**Equation of motion** ($v$-form)|$\rho\dfrac{D\utilde{v}}{Dt} = -\nabla p + \mu\nabla^2\utilde{v} + \rho g$|
+|**Equation of motion** ($\tau$-form)|$\rho\dfrac{D\utilde{v}}{Dt} = -\nabla p - \nabla\cdot\underset{\approx}{\tau} + \rho g$|
+|Equation of motion ($x$-component)|$\begin{aligned} &\rho \left[ \dfrac{\partial v_x}{\partial t} + \utilde{v}\cdot\nabla v_x \right] \\\ =& -\dfrac{\partial p}{\partial x} - \left[ \dfrac{\partial \tau_{xx}}{\partial x} + \dfrac{\partial \tau_{yx}}{\partial y} + \dfrac{\partial \tau_{zx}}{\partial z} \right] + \rho g_x \end{aligned}$|
+
+### Operators
+
+|Description|Equations|
+|-:|:-|
+|Gradient operator $\nabla$|Operates on scalar to give a vector, whose magnitude is the maximum rate of change of the scalar with position, and whose direction points in the direction of that change|
+|Divergence operator $(\nabla\cdot)$|Operates on a vector to give a scalar|
+|Divergence of a flux vector $(\nabla\cdot\utilde{f})$|Rate of efflux (outflow) of the transported quantity per unit volume|
+|Laplacian operator|$\nabla^2 = \nabla\cdot\nabla$|
+|Substantial derivative operator|$\dfrac{D}{Dt} = \dfrac{\partial}{\partial t} + \utilde{v}\cdot\nabla$|
+
+### Flow in conduit
+
+|Description|Equations|
+|-:|:-|
+|Mach number|$\mathrm{Ma} = \dfrac{v_{\text{char}}}{v_{\text{sound}}}$|
+|Conduit flow|$\begin{aligned} \dot{m}_1 &= \dot{m}_2 \\\ \rho_1 Q_1 &= \rho_2 Q_2 \end{aligned}$|
+|Incompressible conduit flow <br/> ★ Constant $\rho$|$\begin{aligned} Q_1 &= Q_2 \\\ A_1 \langle v \rangle_1 &= A_2 \langle v \rangle_2 \end{aligned}$|
+
+## Apply N-S Equations (Top-Down)
+
+### Flow between parallel plates
+
+|Assumptions|Equations|
+|-:|:-|
+|Constant $\rho, \mu$|$\frac{\partial \rho}{\partial t} = 0, \frac{\partial \mu}{\partial t} = 0$|
+|Laminar flow|$\mathrm{Re} < \mathrm{Re}_{\text{cr}}$|
+|Steady state|$\frac{\partial}{\partial t} = 0$|
+|$v_x$ component only|$v_y = v_z = 0$|
+|No edge effect|$\frac{\partial}{\partial z} = 0$|
+|No end effect|$\frac{\partial v_x}{\partial x} = 0$|
+|No hydrostatic pressure diff between plates|$b \ll W, L \implies -\frac{\partial p}{\partial y} + \rho g_y = 0$|
+
+|Description|Equations|
+|-:|:-|
+|$x$-momentum equation|$\dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} + \mu\dfrac{\partial^2 v_x}{\partial y^2} = 0$|
+|Velocity profile (quadratic)|$v_x(y) = \dfrac{1}{2\mu}\left( \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right)(-y^2 + by)$|
+|Average velocity|$\langle v_x \rangle = \dfrac{b^2}{12\mu}\left( \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right)$|
+|Skin friction at bottom plate|$\tau^0 = \dfrac{b}{2} \left( \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right)$|
+
+### Couette flow between concentric rotating cylinders
+
+|Assumptions|Equations|
+|-:|:-|
+|Constant $\rho, \mu$|$\frac{\partial \rho}{\partial t} = 0, \frac{\partial \mu}{\partial t} = 0$|
+|Laminar flow|$\mathrm{Re} < \mathrm{Re}_{\text{cr}}$|
+|Steady state|$\frac{\partial}{\partial t} = 0$|
+|$v_\theta$ component only|$v_r = v_z = 0$|
+|Axial symmetry|$\frac{\partial}{\partial \theta} = 0$|
+|No end effect|$\frac{\partial v_\theta}{\partial z} = 0$|
+|Vertical orientation|$g_z = -g, g_\theta = g_r = 0$|
+
+|Description|Equations|
+|-:|:-|
+|$r$-momentum equation|$-\rho\dfrac{v_\theta^2}{r} = -\dfrac{\partial p}{\partial r}$|
+|$\theta$-momentum equation|$\mu\dfrac{\partial}{\partial r} \left( \dfrac{1}{r}\dfrac{\partial}{\partial r} (rv_\theta) \right) = 0$|
+|$z$-momentum equation|$-\dfrac{\partial p}{\partial z} - \rho g = 0$|
+|Velocity profile (general form)|$v_\theta(r) = c_1\dfrac{r}{2} + \dfrac{c_2}{r}$|
+|Velocity profile|$v_\theta(r) = \dfrac{\Omega_0}{1 - \kappa^2}\left[r - \dfrac{(\kappa R)^2}{r}\right]$|
+|Pressure profile|$P - P_{\kappa R} = \dfrac{1}{2}\rho \left(\dfrac{\Omega_0\kappa R}{1-\kappa^2}\right)^2 \left[\left(\dfrac{r}{\kappa R}\right)^2 - \left(\dfrac{\kappa R}{r}\right)^2 - 4\ln\left(\dfrac{r}{\kappa R}\right) \right]$|
+|Shear stress distribution|$\tau_{r\theta} = -2\mu\kappa^2\left(\dfrac{\Omega_0}{1-\kappa^2}\right)\left(\dfrac{R}{r}\right)^2$|
+|Torque|$\mathcal{T} = 4\pi\mu L \Omega_0 R^2\dfrac{\kappa^2}{1 - \kappa^2}$|
+|Viscosity|$\mu = \dfrac{\mathcal{T}}{4\pi L \Omega_0 R^2}\dfrac{1 - \kappa^2}{\kappa^2}$|
 
 <!-- ★ -->
