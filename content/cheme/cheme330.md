@@ -1,6 +1,6 @@
 ---
 title: "CHEM E 330 Transport Processes I"
-date: 2021-11-04T00:00:00-07:00
+date: 2021-11-21T00:00:00-07:00
 ---
 
 ## -★- TRANSPORT PHENOMENA
@@ -133,7 +133,7 @@ date: 2021-11-04T00:00:00-07:00
 |Free slip condition|$-\mu_1\left(\dfrac{dv_x}{dy}\right)_1 = 0$|
 |Continuity of stress|$\begin{aligned}\tau_{y, 1} &= \tau_{y, 2} \\\ -\mu_1\left(\dfrac{dv_x}{dy}\right)_1 &= -\mu_2\left(\dfrac{dv_x}{dy}\right)_2 \end{aligned}$|
 
-<!-- ### Shell balance method
+### Shell balance method
 
 1. Sketch the system with coordinate system
 2. Sketch the shell that is thin in the direction of transport (change)
@@ -147,11 +147,11 @@ date: 2021-11-04T00:00:00-07:00
 7. Substitute rate law
 8. Separate variable and integrate
    - **Profile, $c_1, c_2$**
-9. Evaluate $c_1, c_2$ using boundary conditions -->
+9. Evaluate $c_1, c_2$ using boundary conditions
 
 ### Axial transport in rectilinear systems
 
-- Rectilinear system
+- Rectilinear coordinates
 - No generation
 - No driving force
 - Steady state
@@ -165,7 +165,7 @@ date: 2021-11-04T00:00:00-07:00
 
 ### Radial transport in cylindrical systems
 
-- Cylindrical system
+- Cylindrical coordinates
 - No generation
 - No driving force
 - Steady state
@@ -178,7 +178,7 @@ date: 2021-11-04T00:00:00-07:00
 
 ### Radial transport in spherical systems
 
-- Spherical system
+- Spherical coordinates
 - No generation
 - No driving force
 - Steady state
@@ -191,7 +191,7 @@ date: 2021-11-04T00:00:00-07:00
 
 ### Axial transport in rectilinear systems (with generation)
 
-- Rectilinear system
+- Rectilinear coordinates
 - With generation
 - No driving force
 - Steady state
@@ -204,7 +204,7 @@ date: 2021-11-04T00:00:00-07:00
 
 ### Flow down inclined plane (falling film)
 
-- Rectilinear system
+- Rectilinear coordinates
 - Gravity driving force, but no pressure gradient
 - Steady state
 
@@ -234,7 +234,7 @@ date: 2021-11-04T00:00:00-07:00
 
 ### Flow in round tube (Hagen-Poiseuille flow)
 
-- Cylindrical system
+- Cylindrical coordinates
 - Pressure-gravity driving force
 - Steady state
 - No tube bents, constant cross section
@@ -350,6 +350,7 @@ date: 2021-11-04T00:00:00-07:00
 
 |Assumptions|Equations|
 |-:|:-|
+|Rectilinear coordinates|$f(x, y, z)$|
 |Constant $\rho, \mu$|$\frac{\partial \rho}{\partial t} = 0, \frac{\partial \mu}{\partial t} = 0$|
 |Laminar flow|$\mathrm{Re} < \mathrm{Re}_{\text{cr}}$|
 |Steady state|$\frac{\partial}{\partial t} = 0$|
@@ -369,6 +370,7 @@ date: 2021-11-04T00:00:00-07:00
 
 |Assumptions|Equations|
 |-:|:-|
+|Cylindrical coordinates|$f(r, \theta, z)$|
 |Constant $\rho, \mu$|$\frac{\partial \rho}{\partial t} = 0, \frac{\partial \mu}{\partial t} = 0$|
 |Laminar flow|$\mathrm{Re} < \mathrm{Re}_{\text{cr}}$|
 |Steady state|$\frac{\partial}{\partial t} = 0$|
@@ -386,7 +388,37 @@ date: 2021-11-04T00:00:00-07:00
 |Velocity profile|$v_\theta(r) = \dfrac{\Omega_0}{1 - \kappa^2}\left[r - \dfrac{(\kappa R)^2}{r}\right]$|
 |Pressure profile|$P - P_{\kappa R} = \dfrac{1}{2}\rho \left(\dfrac{\Omega_0\kappa R}{1-\kappa^2}\right)^2 \left[\left(\dfrac{r}{\kappa R}\right)^2 - \left(\dfrac{\kappa R}{r}\right)^2 - 4\ln\left(\dfrac{r}{\kappa R}\right) \right]$|
 |Shear stress distribution|$\tau_{r\theta} = -2\mu\kappa^2\left(\dfrac{\Omega_0}{1-\kappa^2}\right)\left(\dfrac{R}{r}\right)^2$|
-|Torque|$\mathcal{T} = 4\pi\mu L \Omega_0 R^2\dfrac{\kappa^2}{1 - \kappa^2}$|
-|Viscosity|$\mu = \dfrac{\mathcal{T}}{4\pi L \Omega_0 R^2}\dfrac{1 - \kappa^2}{\kappa^2}$|
+|**Torque**|$\mathcal{T} = 4\pi\mu L \Omega_0 R^2\dfrac{\kappa^2}{1 - \kappa^2}$|
+|**Couette viscometer**|$\mu = \dfrac{\mathcal{T}}{4\pi L \Omega_0 R^2}\dfrac{1 - \kappa^2}{\kappa^2}$|
+
+### Stoke's law: Flow around a sphere
+
+|Assumptions|Equations|
+|-:|:-|
+|Spherical coordinates|$f(r, \theta, \phi)$|
+|Constant $\rho, \mu$|$\frac{\partial \rho}{\partial t} = 0, \frac{\partial \mu}{\partial t} = 0$|
+|Laminar flow|$\mathrm{Re} < \mathrm{Re}_{\text{cr}}$|
+|Steady state|$\frac{\partial}{\partial t} = 0$|
+|Axial symmetry|$\frac{\partial}{\partial \phi} = 0$|
+|No spinning|$v_\phi = 0$|
+|Vertical orientation|$g_r = -g \cos\theta, g_\theta = g \sin\theta, g_\phi = 0$|
+|$v_\theta$ component only|$v_r = v_z = 0$|
+
+|Description|Equations|
+|-:|:-|
+|$r$ velocity profile|$v_r = v_\infty \left[ 1 - \dfrac{3}{2}\left(\dfrac{R}{r}\right) + \dfrac{1}{2}\left(\dfrac{R}{r}\right)^2 \right] \cos\theta$|
+|$\theta$ velocity profile|$v_\theta = -v_\infty \left[ 1 - \dfrac{3}{4}\left(\dfrac{R}{r}\right) - \dfrac{1}{4}\left(\dfrac{R}{r}\right)^3 \right] \sin\theta$|
+|Pressure profile|$p = p_0 - \rho gz - \dfrac{3}{2}\dfrac{\mu v_\infty}{R}\left(\dfrac{R}{r}\right)^2 \cos\theta$|
+|Viscous drag|$4\pi\mu v_\infty R$|
+|Pressure force (buoyancy + form frag)|$\frac{4}{3}\pi R^3 \rho g + 2\pi R \mu v_\infty$|
+|**Stoke's law**|$v_\infty = \dfrac{2R^2 (\rho_s - \rho)g}{9\mu}$|
+|**Falling ball viscometer**|$\mu = \dfrac{2R^2 (\rho_s - \rho)g}{9 v_\infty}$|
+
+### Centrifuge viscometer
+
+|Description|Equations|
+|-:|:-|
+|Terminal velocity|$v_\infty = \dfrac{2R^2 (\rho_s - \rho) \omega ^2r}{9\mu}$|
+|**Centrifuge viscometer**|$\mu = \dfrac{2R^2 (\rho_s - \rho)\omega^2}{9 \ln\left(\frac{R_2}{R_1}\right)} \Delta t$|
 
 <!-- ★ -->
