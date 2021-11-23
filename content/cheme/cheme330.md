@@ -421,4 +421,163 @@ date: 2021-11-21T00:00:00-07:00
 |Terminal velocity|$v_\infty = \dfrac{2R^2 (\rho_s - \rho) \omega ^2r}{9\mu}$|
 |**Centrifuge viscometer**|$\mu = \dfrac{2R^2 (\rho_s - \rho)\omega^2}{9 \ln\left(\frac{R_2}{R_1}\right)} \Delta t$|
 
+## Turbulence
+
+### Transition to turbulence
+
+|Geometry|Reynolds Number|Critical Reynolds Number|
+|-:|:-|:-|
+|Circular tube flow|$\mathrm{Re} = \dfrac{D \langle v \rangle \rho}{\mu}$|$\mathrm{Re_c} \approx 2100$|
+|Falling film|$\mathrm{Re} = \dfrac{4 \delta \langle v \rangle \rho}{\mu}$|$\mathrm{Re_c} \approx 1500$|
+|Flow between parallel plates|$\mathrm{Re} = \dfrac{2b \langle v \rangle \rho}{\mu}$|$\mathrm{Re_c} \approx 1780$|
+|Tangential flow in an annulus (Couette flow between rotating cylinders)|$\mathrm{Re} = \dfrac{\Omega_0 R^2 \langle v \rangle \rho}{\mu}$|$\mathrm{Re_c} \approx 50000$|
+
+### Laminar vs. turbulent
+
+|Property|Laminar Flow $(\mathrm{Re} < 2100)$|Turbulent Flow $(\mathrm{Re} \in [10^4, 10^5])$|
+|-:|:-|:-|
+|Velocity profile|$\dfrac{v_z}{v_{z, \max}} = 1 - \left(\dfrac{r}{R}\right)^2$|$\dfrac{v_z}{v_{z, \max}} \approx \left(1 - \dfrac{r}{R}\right)^{1/7}$|
+|Average velocity|$\langle v_z \rangle = \frac{1}{2}v_{z, \max}$|$\langle v_z \rangle \approx \frac{4}{5}\bar{v}_{z, \max}$|
+|Volumetric flow rate|$Q = \dfrac{\pi R^4}{8\mu} \left(\dfrac{\mathcal{P}_0 - \mathcal{P}_1}{L}\right)$|$Q \propto \left(\dfrac{\mathcal{P}_0 - \mathcal{P}_1}{L}\right)^{4/7}$|
+|Entry length|$L_e = 0.035 D \mathrm{Re}$|$L_e \approx 40D$|
+|Derivation|From theory|From experiment|
+
+|Description|Equations|
+|-:|:-|
+|Velocity decomposition|$v_z = \bar{v}_z + v_z'$|
+|Velocity profile in turbulent flow|$\bar{v}\_z = \bar{v}_{z, \max}\left(1 - \dfrac{r}{R}\right)^{1/n}$ <br/> $n = \begin{cases} 6 & \mathrm{Re} \in [2\times 10^3, 10^4] \\\ 7 & \mathrm{Re} \in [10^4, 10^5] \\\ 8 & \mathrm{Re} \in [10^5, 10^6] \end{cases}$|
+
+### Time-smoothed N-S equation
+
+|Description|Equations|
+|-:|:-|
+|Time-smoothed continuity equation|$\nabla\cdot\utilde{\bar{v}} = 0 \newline \nabla\cdot\utilde{v}' = 0$|
+|Time-smoothed equation of motion ($\tau$-form)|$\rho\dfrac{D\utilde{\bar{v}}}{Dt} = -\nabla \bar{p} - \nabla\cdot\underset{\approx}{\bar{\tau}}^{\text{total}} + \rho g$|
+|Time-smoothed equation of motion ($x$-component)|$\begin{aligned} &\rho \left[ \dfrac{\partial \bar{v}\_x}{\partial t} + \utilde{\bar{v}}\cdot\nabla \bar{v}\_x \right] \\\ =& -\dfrac{\partial \bar{p}}{\partial x} - \left[ \dfrac{\partial \bar{\tau}^{\text{total}}\_{xx}}{\partial x} + \dfrac{\partial \bar{\tau}^{\text{total}}\_{yx}}{\partial y} + \dfrac{\partial \bar{\tau}^{\text{total}}\_{zx}}{\partial z} \right] + \rho g_x \end{aligned}$|
+|Total shear stress (viscous + turbulent)|$\begin{aligned} \bar{\tau}^{\text{total}}\_{yx} &= \bar{\tau}\_{yx}^{(v)} + \bar{\tau}\_{yx}^{(t)} \\\ &= \bar{\tau}\_{yx} + \rho \overline{v_y' v_x'} \end{aligned}$|
+
+### Shear stress distribution
+
+|Description|Equations|
+|-:|:-|
+|Shear stress distribution in round tube|$\tau_{r\theta} = \dfrac{1}{2}\left[\dfrac{\mathcal{P}_0 - \mathcal{P}_1}{L}\right]r$|
+|Shear stress distribution in general conduit|$\tau_{r\theta} = \left[\dfrac{\mathcal{P}_0 - \mathcal{P}_1}{L}\right] R_H$|
+|Hydraulic radius|$R_H = \mathrm{\dfrac{cross \ sectional \ area}{wetted \ perimeter}}$|
+|Characteristic length|$l_{\text{char}} = 4R_H$|
+|Characteristic velocity|$v_{\text{char}} = \langle v_z \rangle$|
+
+### Universal velocity profile
+
+|Layer|Normalized velocity|Normalized length range|
+|-:|:-|:-|
+|Laminar sublayer|$v^+ = y^+$|$y^+ \in (0, 5)$|
+|Buffer layer|$v^+ = 5 \ln(y^+ + 0.205) - 3.27$|$y^+ \in (5, 30)$|
+|Turbulent core|$v^+ = 2.5 \ln(y^+) + 5.5$|$y^+ \in (30, \infty)$|
+
+|Description|Equations|
+|-:|:-|
+|Characteristic length|$y_* = \dfrac{\mu}{v_* \rho}$|
+|Characteristic velocity|$v_* = \sqrt{\dfrac{\tau^0}{\rho}}$|
+|Normalized length|$y^+ = \dfrac{y}{y_*}$|
+|Normalized velocity|$v^+ = \dfrac{v}{v_*}$|
+|Eddie viscosity|$\mu^{(t)} = - \dfrac{\bar{\tau}_{yz}^{\text{total}}}{\left(\frac{dv_z}{dy}\right)} - \mu = - \dfrac{\left[\frac{\mathcal{P}_0 - \mathcal{P}_1}{L}\right] \frac{r}{2}}{\left(\frac{dv_z}{dy}\right)} - \mu$|
+
+## Dynamic Similarity and Dimensional Analysis
+
+### Flow around a sphere outside of Stoke's law
+
+|Description|Equations|
+|-:|:-|
+|★ Non-Stoke's law condition|$\mathrm{Re} \ge 0.1$|
+|Nondimensionalized continuity equation|$\breve{\nabla}\cdot\utilde{\breve{v}} = 0$|
+|x-component of momentum equation|$\dfrac{D\breve{v}_x}{D\breve{t}} = -\dfrac{\partial\breve{p}}{\partial\breve{x}} + \dfrac{1}{\mathrm{Re}}\breve{\nabla}^2 \breve{v}_x + \dfrac{1}{\mathrm{Fr}}\breve{g}_x$|
+|Drag coefficient <br/> Friction factor|$c_D = f = \dfrac{F_D}{\frac{1}{2}\rho v_\infty^2 A_{\text{approach}}}$|
+|Drag coefficient in Stoke's law region|$c_D = \dfrac{24}{\mathrm{Re}}$|
+|Drag coefficient in non-Stoke's law region|$c_D = \left(\sqrt{\dfrac{24}{\mathrm{Re}}} + 0.5407\right)^2$|
+
+#### Dimensionless groups
+
+|Description|Equations|
+|-:|:-|
+|Reynolds number|$\mathrm{Re} = \dfrac{l_0 v_0 \rho}{\mu} = \mathrm{\dfrac{inertial \ forces}{viscous \ forces}}$|
+|Froude number|$\mathrm{Fr} = \dfrac{v_0^2}{gl_0} = \mathrm{\dfrac{inertial \ forces}{gravitational \ forces}}$|
+|Capillary number|$\mathrm{Ca} = \dfrac{\mu v_0}{\sigma} = \mathrm{\dfrac{viscous \ forces}{surface \ tension \ forces}}$|
+|Weber number|$\mathrm{Fr} = \dfrac{l_0 \rho v_0^2}{\sigma} = \mathrm{\dfrac{inertial \ forces}{surface \ tension \ forces}}$|
+|Euler's number|$\mathrm{Eu} = \dfrac{(\Delta p)D^4}{\rho Q^2}$|
+
+### Dimensional analysis
+
+- *Buckingham $\pi$ theorem* - A function $f(X_1, X_2, \dots, X_k)$ with dimensional variables $X_i$ can be rewritten in a function $\Phi(\Pi_1, \Pi_2, \dots, \Pi_{k-n})$ with dimensionless variables $\Pi_j$ by enforcing dimensional consistency using $n$ fundamental dimensions.
+  - Define fundamental dimensions
+  - Choose stand-in variables for fundamental dimensions
+  - Rewrite other variables in terms of stand-in variables to get dimensionless groups
+
+## Bernoulli Analysis and Applications
+
+### N-S equation for steady flow in stream tubes
+
+|Assumptions|Equations|
+|-:|:-|
+|Constant density fluid|$\Delta \rho = 0$|
+|1D flow in $z$ direction|$v_r = v_\theta = 0$|
+|Plug flow - uniform velocity across cross section|$\langle v \rangle = v = \mathrm{constant} \newline v_z = v_z(z)$|
+|Inviscid flow|$\mu \approx 0, \mathrm{Re} \ge 10000$|
+|No sharp bends|Straight stream lines|
+
+|Description|Equations|
+|-:|:-|
+|Continuity equation|$\begin{aligned} Q_1 &= Q_2 \\\ A_1 \langle v \rangle_1 &= A_2 \langle v \rangle_2 \end{aligned}$|
+|Equation of motion|$\rho v \dfrac{dv}{dz} = -\dfrac{dp}{dz} - \rho g \dfrac{dh}{dz}$|
+
+### Bernoulli equation
+
+|Description|Equations|
+|-:|:-|
+|Bernoulli equation (energy form)|$p_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 = p_2 + \frac{1}{2}\rho v_2^2 + \rho gh_2$|
+|Bernoulli equation (head form)|$\dfrac{v_1^2}{2g} + \dfrac{p_1}{\rho g} + h_1 = \dfrac{v_2^2}{2g} + \dfrac{p_2}{\rho g} + h_2$|
+|Bernoulli head|$\mathcal{B} = \dfrac{v^2}{2g} + \dfrac{p}{\rho g} + h = \mathrm{constant}$|
+|Drag coefficient|$c_D = \dfrac{F_D}{\frac{1}{2}\rho v_\infty^2 A_{\text{approach}}}$|
+|Lift coefficient|$c_L = \dfrac{F_L}{\frac{1}{2}\rho v_\infty^2 A_{\text{planform}}}$|
+|Pressure change in contracting conduit <br/> $\Delta p \equiv p_1 - p_2$|$\Delta p = \dfrac{8\rho Q^2}{\pi^2 D_1^4}\left[\left(\dfrac{D_1}{D_2}\right)^4 - 1\right] + \rho g (h_2 - h_1)$|
+|Torricelli's law|$\langle v \rangle = \sqrt{2g\Delta h}$|
+|Pressure at stagnation point|$\begin{aligned} p &= p_{\text{static}} + p_{\text{dynamic}} \\\ &= p_{\text{static}} + \textstyle\frac{1}{2}\rho v_\infty^2 \end{aligned}$|
+
+### Flow-metering devices
+
+|Description|Equations|
+|-:|:-|
+|Manometer equation|$\Delta p = (\rho_\mathrm{m} - \rho)gH$|
+|Local velocity <br/> **Pitot tube**|$v = \sqrt{\dfrac{2\Delta p}{\rho}}$|
+|Volumetric flow rate <br/> **Venturi meter** $c_0 \in [0.96, 0.98]$ <br/> **Orfice meter** $c_0 \in [0.40, 0.80]$ <br/> **Nozzle meter** $c_0 \in [0.96, 0.98]$|$Q = c_0\pi D_0^2 \sqrt{\dfrac{\Delta p}{8\rho [1 - (\frac{D_0}{D})^4]}}$|
+|Rotameter|Calibrated specifically to the fluid with falling sphere|
+
+### Full Bernoulli analysis
+
+|Description|Equations|
+|-:|:-|
+|Full Bernoulli equation|$\dfrac{v_1^2}{2g} + \dfrac{p_1}{\rho g} + h_1 = \dfrac{v_2^2}{2g} + \dfrac{p_2}{\rho g} + h_2 + H_{L12}$|
+|Head loss|$H_{L12} = H_{L12f} + H_{L12c}$|
+|Skin friction loss $H_{L12f}$|Viscous work done per unit weight by fluid on walls of conduit in moving from 1 to 2|
+|Skin friction loss (general)|$H_{L12f} = \dfrac{\tau^0 L}{\rho g R_H}$|
+|Skin friction loss for circular tube|$H_{L12f} = \dfrac{4\tau^0 L}{\rho g D}$|
+|Fanning friction factor|$f = \dfrac{\tau^0}{\frac{1}{2}\rho \langle v \rangle^2}$|
+|Skin friction loss for circular tube|$H_{L12f} = \dfrac{2\langle v \rangle^2 L}{g D}f = \dfrac{32Q^2 L}{\pi^2 D^5 g}f$|
+|Skin friction loss for non-circular tube|$H_{L12f} = \dfrac{\langle v \rangle^2 L}{2 g R_H}f = \dfrac{Q^2 L}{2g A_c^2 R_H}f$|
+|Reynolds number for noncircular pipes|$\mathrm{Re} = \dfrac{4R_H \langle v \rangle \rho}{\mu}$|
+|Configurational loss of one fitting in circular tube|$H_{Lc} = e_v\dfrac{\langle v \rangle^2_{\text{downstream}}}{2g}$|
+|Configurational loss of all fittings in circular tube|$H_{L12c} = \dfrac{\langle v \rangle^2_{\text{down}}}{2g} (\sum\limits_i e_{v, i}) = \dfrac{8Q^2}{\pi^2 D^4 g} (\sum\limits_i e_{v, i})$|
+|**Total head loss** for circular tube|$H_{L12} = \begin{cases} \dfrac{2 \langle v \rangle^2}{Dg} [(\sum\limits_i L_i)f + \frac{D}{4} (\sum\limits_i e_{v, i})] \\\ \dfrac{32 Q^2}{\pi^2 D^5 g} [(\sum\limits_i L_i)f + \frac{D}{4} (\sum\limits_i e_{v, i})] \end{cases}$|
+|Kinetic head correction factor|$\alpha = \dfrac{\langle v^3 \rangle}{\langle v \rangle^3}$|
+
+#### Fanning friction factor correlations
+
+|Description|Equations|Conditions|
+|-:|:-|:-|
+|Hydraulically smooth pipes (Blasius)|$f = \dfrac{0.0791}{\mathrm{Re}^1/4}$|$\mathrm{Re} \in [2100, 10^5]$|
+|Hydraulically smooth pipes (Koo)|$f = 0.0014 + \dfrac{0.125}{\mathrm{Re}^{0.32}}$|$\mathrm{Re} \in [10^4, 10^7]$|
+|Pipes of general roughness (Haaland)|$\dfrac{1}{\sqrt{f}} = -3.6\log_{10} \left[\dfrac{6.9}{\mathrm{Re}} + \left(\dfrac{k/D}{3.7}\right)^{10/9}\right]$|$\mathrm{Re} \in [4\times 10^4, 10^7] \newline k/D < 0.05$|
+|Commercial standard piping (Drew)|$f = 0.0014 + \dfrac{0.090}{\mathrm{Re}^{0.27}}$|$\mathrm{Re} \in [10^4, 10^7] \newline k/D \approx 0.00015$|
+|Full rough conduit|$\dfrac{1}{\sqrt{f}} = 2.28 - 4.0 \log_{10} \left(\dfrac{k}{D}\right)$|$\mathrm{Re} > 10^4 \newline k/D > 0.01$|
+
+
 <!-- ★ -->
