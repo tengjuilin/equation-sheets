@@ -140,7 +140,7 @@ $$\footnotesize\mathbf{A}\mathbf{x} = \mathbf{b}
 #### Finding the determinant
 
 - *Determinant of a square matrix* - $\det\mathbf{A}$
-  - $\det\mathbf{B} = \begin{vmatrix} a_{11} & a_{12} \cr a_{21} & a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}$
+  - $\det\mathbf{A} = \begin{vmatrix} a_{11} & a_{12} \cr a_{21} & a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}$
 - *Minor determinant* - $M_{ij}$, the determinant of the submatrix obtained by deleting the $i$th row and the $j$th column of $\mathbf{A}$
 - *Cofactor* - $C_{ij}$, signed minor determinant
   - $C_{ij} = (-1)^{i+j}M_{ij}$
