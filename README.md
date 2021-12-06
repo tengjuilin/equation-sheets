@@ -53,7 +53,7 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
-|AMATH 301 <br/> Beginning Scientific Computing|[Jupyter Notebooks](https://github.com/tengjuilin/intro-sci-computing)|[html](http://intro-sci-computing.netlify.app/)|**Scientific Computing** - root finding, solving linear systems with direct and iterative methods, optimization, curve fitting, SVD, numerical differentiation and integration, solving systems of ODEs|:white_check_mark:|
+|AMATH 301 <br/> Beginning Scientific Computing|[Jupyter Notebooks](https://github.com/tengjuilin/intro-sci-computing)|[html](http://intro-sci-computing.netlify.app/)|**Scientific computing** - root finding, solving linear systems with direct and iterative methods, optimization, curve fitting, SVD, numerical differentiation and integration, solving systems of ODEs|:white_check_mark:|
 |AMATH 351 <br/> Intro to Differential Equations and Applications|[pdf](static/pdf/amath/amath351.pdf)|[html](https://equation-sheets.netlify.app/amath/amath351/)|**Ordinary differential equations** - 1st, 2nd order ODE with applications, systems of ODEs, Laplace transform|:white_check_mark:|
 
 ## Chemical Engineering
@@ -61,7 +61,7 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
 |NME 220 Intro to Molecular and Nanoscale Principles|[pdf](static/pdf/cheme/nme220.pdf)|[html](https://equation-sheets.netlify.app/cheme/nme220/)|**Molecular and nanoscale principles** - scaling and transport properties, atomic theory and models, wave function in quantum mechanics, nanoscience and technology, electronic structures of molecules, molecular modes|:white_check_mark:|
-|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://cheme-sci-computing.netlify.app/)|**ChemE Scientific Computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
+|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://cheme-sci-computing.netlify.app/)|**ChemE scientific computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
 |CHEM E 310 <br/> Mass and Energy Balances|[pdf](static/pdf/cheme/cheme310.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme310/)|**Material and energy balances** - units and process variables, material and energy balances of nonreactive and reactive processes, single- and multi-phase systems|:white_check_mark:|
-|CHEM E 325 Energy and Entropy|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme325/)|**ChemE thermodynamics I** - | Au21 in progress <br/> :pick:|
-|CHEM E 330 Transport Process I|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Fluid mechanics** - | Au21 in progress <br/> :pick:|
+|CHEM E 325 Energy and Entropy|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme325/)|**Thermodynamics I** - thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, single and multi-component equilibrium| Au21 in progress <br/> :pick:|
+|CHEM E 330 Transport Process I|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Basic transport** - rate laws, transport coefficients, shell balance method, generalization to 3D <br/> **Fluid mechanics** - Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, microfluidics| Au21 in progress <br/> :pick:|
