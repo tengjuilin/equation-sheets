@@ -1,6 +1,6 @@
 ---
 title: "CHEM E 330 Transport Processes I"
-date: 2021-11-21T00:00:00-07:00
+date: 2021-12-05T00:00:00-07:00
 ---
 
 ## -★- TRANSPORT PHENOMENA
@@ -579,5 +579,31 @@ date: 2021-11-21T00:00:00-07:00
 |Commercial standard piping (Drew)|$f = 0.0014 + \dfrac{0.090}{\mathrm{Re}^{0.27}}$|$\mathrm{Re} \in [10^4, 10^7] \newline k/D \approx 0.00015$|
 |Full rough conduit|$\dfrac{1}{\sqrt{f}} = 2.28 - 4.0 \log_{10} \left(\dfrac{k}{D}\right)$|$\mathrm{Re} > 10^4 \newline k/D > 0.01$|
 
+#### Kinetic head correction factor
+
+|$\mathrm{Re}$|$n$|$\alpha$|
+|-:|:-:|:-|
+|$2 \times 10^3 \sim 10^4$|$6$|$1.08$|
+|$10^4 \sim 10^5$|$7$|$1.06$|
+|$10^5 \sim 10^7$|$8$|$1.05$|
+
+### Flow through packed bed
+
+|Description|Equations|
+|-:|:-|
+|Specific area of packing element|$a_v = \dfrac{\text{area of packing element}}{\text{volume of packing element}}$|
+|Effective diameter of packing element (particle)|$D_p = \dfrac{6}{a_v}$|
+|**Darcy's law** <br/> ★ $\mathrm{Re_{bed}} \lesssim 10$|$\langle v \rangle = \dfrac{\kappa}{\mu} \left[ \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right]$|
+|Volumetric flow rate|$Q = \langle v \rangle \varepsilon A = v_0 A$|
+|Superficial velocity|$v_0 = \langle v \rangle \varepsilon$|
+|Bed Reynolds number|$\mathrm{Re_{bed}} = \dfrac{D_p v_0 \rho}{\mu}\dfrac{1}{1 - \varepsilon}$|
+|Tube Reynolds number|$\mathrm{Re_{tube}} = \dfrac{2}{3}\mathrm{Re_{bed}}$|
+|Hydrolic radius|$R_H = \dfrac{D_p\varepsilon}{6(1-\varepsilon)}$|
+|Friction factor of tube <br/> ★ $\mathrm{Re_{bed}} \le 10$|$f_{\text{tube}} = \dfrac{24(1-\varepsilon)\mu}{D_p v_0 \rho}$|
+|Friction factor of tube <br/> ★ $\mathrm{Re_{bed}} > 1000$|$f_{\text{tube}} = \dfrac{7}{12}$|
+|**Blake-Kozeny equation** <br/> ★ $\mathrm{Re_{bed}} \le 10$|$\left[ \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right] = 150 \dfrac{\mu v_0}{D_p^2}\dfrac{(1-\varepsilon)^2}{\varepsilon^3}$|
+|**Burke-Plummer equation** <br/> ★ $\mathrm{Re_{bed}} > 1000$|$\left[ \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right] = \dfrac{7}{4}\dfrac{\rho v_0^2}{D_p}\dfrac{1-\varepsilon}{\varepsilon^2}$|
+|Superficial mass flux|$G_0 = \rho v_0 = \dfrac{\dot{m}}{A}$|
+|**Ergun equation** <br/> ★ $\mathrm{Re_{bed}} \in [10, 1000]$|$\left[ \dfrac{(\mathcal{P}_0 - \mathcal{P}_L)\rho}{G_0^2} \right] \dfrac{D_p}{L}\dfrac{\varepsilon^3}{1-\varepsilon} = 150 \left[ \dfrac{1-\varepsilon}{\frac{D_p G_0}{\mu}} \right] + \dfrac{7}{4} \newline \left[ \dfrac{(\mathcal{P}_0 - \mathcal{P}_L)\rho}{G_0^2} \right] \dfrac{D_p}{L}\dfrac{\varepsilon^3}{1-\varepsilon} = 150 \dfrac{1}{\mathrm{Re\_{bed}}} + \dfrac{7}{4}$|
 
 <!-- ★ -->
