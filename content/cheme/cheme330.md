@@ -1,6 +1,6 @@
 ---
 title: "CHEM E 330 Transport Processes I"
-date: 2021-12-05T00:00:00-07:00
+date: 2021-12-08T00:00:00-07:00
 ---
 
 ## -★- TRANSPORT PHENOMENA
@@ -606,4 +606,80 @@ date: 2021-12-05T00:00:00-07:00
 |Superficial mass flux|$G_0 = \rho v_0 = \dfrac{\dot{m}}{A}$|
 |**Ergun equation** <br/> ★ $\mathrm{Re_{bed}} \in [10, 1000]$|$\left[ \dfrac{(\mathcal{P}_0 - \mathcal{P}_L)\rho}{G_0^2} \right] \dfrac{D_p}{L}\dfrac{\varepsilon^3}{1-\varepsilon} = 150 \left[ \dfrac{1-\varepsilon}{\frac{D_p G_0}{\mu}} \right] + \dfrac{7}{4} \newline \left[ \dfrac{(\mathcal{P}_0 - \mathcal{P}_L)\rho}{G_0^2} \right] \dfrac{D_p}{L}\dfrac{\varepsilon^3}{1-\varepsilon} = 150 \dfrac{1}{\mathrm{Re\_{bed}}} + \dfrac{7}{4}$|
 
-<!-- ★ -->
+### Cavitation and vortex motion
+
+|Description|Equations|
+|-:|:-|
+|Cavitation number|$\sigma = \dfrac{p_A - p_C}{\frac{1}{2}\rho v_\infty^2}$|
+
+#### Forced vortex flow in rotating cylinder
+
+|Description|Equations|
+|-:|:-|
+|Velocity profile|$v_\theta = r\Omega$|
+|Pressure difference <br/> ★ 1 defined arbitrarily, 2 defined at center|$p_2 - p_1 = \dfrac{1}{2}\rho\Omega^2 (r_2^2 - r_1^2) + \rho g (z_1 - z_2)$|
+|Height|$h = \dfrac{\Omega^2}{2g} r^2$|
+
+#### Free vortex flow during drainage
+
+|Description|Equations|
+|-:|:-|
+|Pressure difference  <br/> ★ 1 defined arbitrarily, 2 defined at $r \to\infty$|$p_2 - p_1 = \dfrac{1}{2}\rho C^2 \left(\dfrac{1}{r_1^2} - \dfrac{1}{r_2^2}\right) + \rho g (z_1 - z_2)$|
+|Depth|$h = \dfrac{C^2}{2g} \dfrac{1}{r^2}$|
+
+## Microfluidics*
+
+### Validity of continuum description
+
+|Description|Equations|
+|-:|:-|
+|Mean free path|$\lambda = \dfrac{1}{\sqrt{2}\pi d^2 n} \newline \lambda(\mathrm{\mu m}) \approx 3.1\times 10^{-3} \dfrac{T(\mathrm{K})}{\sigma^2(\mathrm{\mathring{A}^2}) p(\mathrm{atm})}$|
+|Knudsen number|$\mathrm{Kn} = \dfrac{\lambda}{L_c}$|
+
+|Characteristics|Range|
+|-:|:-|
+|Molecular flow|$\mathrm{Kn} \in (10, \infty)$|
+|Transition flow|$\mathrm{Kn} \in (0.1, 10)$|
+|N-S equations hold, but no-slip condition fails|$\mathrm{Kn} \in (0.001, 0.1)$|
+|N-S equations hold, and no-slip condition holds|$\mathrm{Kn} \in (0, 0.001)$|
+
+### Forces in microfluidic flows
+
+- Viscous force dominate over inertial forces and gravity forces
+  - Driving force
+    - Pressure
+    - Capillary (surface tension) forces
+    - Electro-kinetic forces
+    - Magnetic forces
+  - Resisting forces: viscous force, dominated by wall effects
+
+|Description|Equations|
+|-:|:-|
+|Reynolds number <br/> ★ Creeping flow|$\mathrm{Re} = \dfrac{\text{inertial forces}}{\text{viscous forces}} = \dfrac{Lv\rho}{\mu} \to 0$|
+|Froude number|$\mathrm{Fr} = \dfrac{\text{inertial forces}}{\text{gravity forces}} = \dfrac{v^2}{gL}$|
+|Viscous force dominates gravity force|$\mathrm{\dfrac{Re}{Fr}} = \dfrac{\text{gravity forces}}{\text{viscous forces}} = \dfrac{gL^2}{\mu v} \to 0$|
+
+### Generalized Hagen-Poiseuille flow
+
+|Description|Equations|
+|-:|:-|
+|Differential equation of generalized H-P flow|$0 = \dfrac{\Delta p}{L} + \mu \left(\dfrac{\partial^2 v_z}{\partial x^2} + \dfrac{\partial^2 v_z}{\partial y^2}\right)$|
+|No-slip condition <br/> $F(x, y)$ is equation of conduit perimeter|$v_z(x, y) = 0 for F(x, y) = 0$|
+|Velocity profile|$v_z(x, y) = \dfrac{\Delta p}{\mu L} F(x, y)$|
+|Volumetric flow rate|$Q = \dfrac{\Delta p}{\mu L} \displaystyle\iint F(x, y) \ dy\ dx$|
+
+### Hydraulic resistance in micro-channels
+
+|Description|Equations|
+|-:|:-|
+|Flow equation|$\Delta p = \mathcal{R}_{\text{hyd}}Q$|
+|Volumetric flow rate|$Q = \dfrac{\Delta p}{\mathcal{R}_{\text{hyd}}}$|
+
+### Capillary driving force and wicking phenomena
+
+|Description|Equations|
+|-:|:-|
+|Pressure difference|$\Delta p = \sigma\kappa = \dfrac{2\sigma}{R}$|
+|Wicking velocity|$v = \dfrac{r^2}{8\mu}\dfrac{\Delta P}{x} = \dfrac{r\sigma \cos\theta}{4\mu x}$|
+|Washburn equation|$x = \sqrt{\dfrac{r\sigma\cos\theta}{2\mu} t} \propto \sqrt{t}$|
+|Wicking into porous media|$h = \sqrt{\dfrac{r_e\sigma\cos\theta}{2\mu} t} \propto \sqrt{t}$|
