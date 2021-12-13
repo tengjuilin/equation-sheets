@@ -9,7 +9,7 @@ date: 2021-12-08T00:00:00-07:00
 
 |Description|Equations|
 |-:|:-|
-|General form|flux = (coefficient)(driving force)|
+|General form|flux = -(coefficient)(driving force)|
 |**Fourier's law** <br/> Heat conduction|$q = -k\dfrac{dT}{dy}$|
 |**Fick's law** <br/> Species diffusion|$J_A^* = -D_{AB} \dfrac{dc_a}{dy}$|
 |**Newton's law of viscosity** <br/> Momentum transfer|$\tau_{yx} = -\mu \dfrac{dv_x}{dy}$|
@@ -596,11 +596,12 @@ date: 2021-12-08T00:00:00-07:00
 |**Darcy's law** <br/> ★ $\mathrm{Re_{bed}} \lesssim 10$|$\langle v \rangle = \dfrac{\kappa}{\mu} \left[ \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right]$|
 |Volumetric flow rate|$Q = \langle v \rangle \varepsilon A = v_0 A$|
 |Superficial velocity|$v_0 = \langle v \rangle \varepsilon$|
-|Bed Reynolds number|$\mathrm{Re_{bed}} = \dfrac{D_p v_0 \rho}{\mu}\dfrac{1}{1 - \varepsilon}$|
+|Bed Reynolds number|$\begin{aligned}\mathrm{Re_{bed}} &= \dfrac{D_p v_0 \rho}{\mu}\dfrac{1}{1 - \varepsilon} \\\ &= \dfrac{D_p \langle v \rangle \rho}{\mu}\dfrac{\varepsilon}{1 - \varepsilon} \\\ &= \dfrac{D_p Q \rho}{\mu A}\dfrac{1}{1 - \varepsilon}\end{aligned} $|
 |Tube Reynolds number|$\mathrm{Re_{tube}} = \dfrac{2}{3}\mathrm{Re_{bed}}$|
 |Hydrolic radius|$R_H = \dfrac{D_p\varepsilon}{6(1-\varepsilon)}$|
 |Friction factor of tube <br/> ★ $\mathrm{Re_{bed}} \le 10$|$f_{\text{tube}} = \dfrac{24(1-\varepsilon)\mu}{D_p v_0 \rho}$|
 |Friction factor of tube <br/> ★ $\mathrm{Re_{bed}} > 1000$|$f_{\text{tube}} = \dfrac{7}{12}$|
+|Bed permeability|$\kappa = \dfrac{D_p^2}{150} \left(\dfrac{\varepsilon}{1-\varepsilon}\right)^2$|
 |**Blake-Kozeny equation** <br/> ★ $\mathrm{Re_{bed}} \le 10$|$\left[ \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right] = 150 \dfrac{\mu v_0}{D_p^2}\dfrac{(1-\varepsilon)^2}{\varepsilon^3}$|
 |**Burke-Plummer equation** <br/> ★ $\mathrm{Re_{bed}} > 1000$|$\left[ \dfrac{\mathcal{P}_0 - \mathcal{P}_L}{L} \right] = \dfrac{7}{4}\dfrac{\rho v_0^2}{D_p}\dfrac{1-\varepsilon}{\varepsilon^2}$|
 |Superficial mass flux|$G_0 = \rho v_0 = \dfrac{\dot{m}}{A}$|
