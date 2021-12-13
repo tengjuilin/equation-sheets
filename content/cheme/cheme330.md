@@ -267,7 +267,7 @@ date: 2021-12-08T00:00:00-07:00
 |-:|:-|
 |**Darcy's law** - average velocity <br/> $\kappa$ - bed permeability|$\langle v \rangle = \dfrac{\kappa}{\mu L}(\mathcal{P}_1 - \mathcal{P}_2)$|
 |**Darcy's law** - volumetric flow rate <br/> $A$ - empty bed cross section <br/> $\varepsilon$ - porosity, void fraction|$Q = \dfrac{\kappa A \varepsilon}{\mu L}(\mathcal{P}_1 - \mathcal{P}_2)$|
-|**Blake-Kozeny model** <br/> Bed permeability|$\kappa = \dfrac{D_p^2}{150} \left( \dfrac{\varepsilon}{1 - \varepsilon} \right)$|
+|**Blake-Kozeny model** <br/> Bed permeability|$\kappa = \dfrac{D_p^2}{150} \left( \dfrac{\varepsilon}{1 - \varepsilon} \right)^2$|
 |Effective packing particle diameter|$D_p = \dfrac{6}{a_v} = \dfrac{6 V}{A} \newline D_{p, \text{spheres}} = D$|
 |Bed Reynolds number|$\mathrm{Re}_{\text{bed}} = \dfrac{D_p Q \rho}{\mu A (1-\varepsilon)}$|
 |★ Laminar flow|$\mathrm{Re}_{\text{laminar}} < 10$|
