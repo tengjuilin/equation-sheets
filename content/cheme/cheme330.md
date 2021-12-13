@@ -568,6 +568,7 @@ date: 2021-12-08T00:00:00-07:00
 |Configurational loss of all fittings in circular tube|$H_{L12c} = \dfrac{\langle v \rangle^2_{\text{down}}}{2g} (\sum\limits_i e_{v, i}) = \dfrac{8Q^2}{\pi^2 D^4 g} (\sum\limits_i e_{v, i})$|
 |**Total head loss** for circular tube|$H_{L12} = \begin{cases} \dfrac{2 \langle v \rangle^2}{Dg} [(\sum\limits_i L_i)f + \frac{D}{4} (\sum\limits_i e_{v, i})] \\\ \dfrac{32 Q^2}{\pi^2 D^5 g} [(\sum\limits_i L_i)f + \frac{D}{4} (\sum\limits_i e_{v, i})] \end{cases}$|
 |Kinetic head correction factor|$\alpha = \dfrac{\langle v^3 \rangle}{\langle v \rangle^3}$|
+|Brake horse power|$\mathrm{bhp} = \dfrac{P}{\eta} = \dfrac{H_p \rho g Q}{\eta}$|
 
 #### Fanning friction factor correlations
 
