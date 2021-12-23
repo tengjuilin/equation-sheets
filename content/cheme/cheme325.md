@@ -1,6 +1,6 @@
 ---
 title: "CHEM E 325 Energy and Entropy"
-date: 2021-11-14T00:00:00-08:00
+date: 2021-12-23T00:00:00-08:00
 ---
 
 ## Thermodynamic Properties and Data
@@ -86,6 +86,49 @@ date: 2021-11-14T00:00:00-08:00
 |Constant pressure molar heat capacity|$c_P = \left(\dfrac{\partial h}{\partial T}\right)_P$|
 |Relationship between molar heat capacities|$c_P = c_v + R$|
 
+## Second Law of Thermodynamics
+
+|System Type|Second Law of Thermodynamics|
+|-:|:-|
+|Isolated system <br/> $S_{\text{gen}} \ge 0$|$\Delta S = S_{\text{gen}}$|
+|Closed system <br/> $S_{\text{gen}} \ge 0$|$\Delta S = \displaystyle\int \dfrac{\delta Q}{T} + S_{\text{gen}}$|
+|Open system <br/> $\dot{S}_{\text{gen}} \ge 0$|$\dfrac{dS}{dt} = \sum\limits_{\text{in}} \dot{n}\_i s_i - \sum\limits_{\text{out}} \dot{n}\_i s_i + \sum \dfrac{\dot{Q_i}}{T_i} + \dot{S}_{\text{gen}}$|
+|Open system in steady state <br/> $\dot{S}_{\text{gen}} \ge 0$|$0 = \sum\limits_{\text{in}} \dot{n}\_i s_i - \sum\limits_{\text{out}} \dot{n}\_i s_i + \sum \dfrac{\dot{Q_i}}{T_i} + \dot{S}_{\text{gen}}$|
+
+### Counting configurations
+
+|Description|Equations|
+|-:|:-|
+|Ergotic hypothesis|$\lvert f \rvert = \langle f \rangle$|
+|Equal probability postulate|$P_j = \dfrac{1}{\Omega}$|
+|Entropy|$S = k_B \ln\Omega$|
+|Permutability <br/> $N_A$ distinguishable particles in $N$ sites|$\Pi = \dfrac{N!}{(N-N_A)!}$|
+|Multiplicity <br/> $N_A$ indistinguishable particles in $N$ sites|$\Omega = \dfrac{N!}{N_A!(N-N_A)!}$|
+|Multiplicity <br/> $N_A, N_B, ...$ indistinguishable particles in $N$ sites|$\Omega = \dfrac{N!}{N_A!N_B!N_C! \cdots}$|
+|Stirling approximation|$\lim\limits_{a \to\infty} \ln(a!) = a \ln(a) - a$|
+|Entropy of $N$ sites with fraction $x$ activated|$S = k_BN[-x\ln(x) - (1-x)\ln(1-x)]$|
+
+### Fundamental properties
+
+|Description|Equations|
+|-:|:-|
+|Molar entropy <br/> $\mathcal{C}$ = constant|$s = R\ln(vu^{3/2}) + \mathcal{C}$|
+|Molar internal energy <br/> $\mathcal{C}$ = constant|$u = \mathcal{C}v^{-2/3}\exp\left(\dfrac{2}{3}\dfrac{s}{R}\right)$|
+|Temperature|$T = \left(\dfrac{\partial u}{\partial s}\right)_v$|
+|Pressure|$P = -\left(\dfrac{\partial u}{\partial v}\right)_s$|
+|Fundamental property relation|$du = T ds - P dv$|
+|Reversible heat at constant $v$|$\Delta u = q = \int T \ ds$|
+|Reversible work at constant $s$|$w = - \int P \ dv$|
+
+### Entropy generation
+
+|Description|Equations|
+|-:|:-|
+|Reversible process|$s_{\text{gen}} = 0$|
+|Irreversible process (caused by temperature gradient)|$s_{\text{gen}} > 0$|
+
+## First and Second Law Analysis
+
 ### Isothermal/Isoenergetic process
 
 Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has similar analysis.
@@ -99,6 +142,10 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Work (changing volume)|$w = -\displaystyle\int \dfrac{RT}{v} dv = -RT\ln\left(\dfrac{v_2}{v_1}\right)$|
 |Work (changing pressure)|$w = \displaystyle\int \dfrac{RT}{P} dP = RT\ln\left(\dfrac{P_2}{P_1}\right)$|
 |Heat|$q = -w$|
+|Entropy change|$\Delta s = \displaystyle\int \dfrac{\delta q}{T} = \dfrac{q}{T} = -\dfrac{w}{T}$|
+|Entropy change (changing volume)|$\Delta s = R\ln\left(\dfrac{v_2}{v_1}\right)$|
+|Entropy change (changing concentration)|$\Delta s = -R\ln\left(\dfrac{c_2}{c_1}\right)$|
+|Entropy change (changing pressure)|$\Delta s = -R\ln\left(\dfrac{P_2}{P_1}\right)$|
 
 ### Adiabatic process
 
@@ -109,6 +156,7 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Enthalpy change|$\Delta h = \Delta u + R \Delta T$|
 |Work (changing volume)|$w = -\displaystyle\int \dfrac{RT}{v} dv = -RT\ln\left(\dfrac{v_2}{v_1}\right)$|
 |Work (changing pressure)|$w = \displaystyle\int \dfrac{RT}{P} dP = RT\ln\left(\dfrac{P_2}{P_1}\right)$|
+|Entropy change|$\Delta s = 0$|
 
 ### Isochoric process
 
@@ -118,6 +166,7 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Work|$w = 0$|
 |Internal energy change|$\Delta u = \displaystyle\int c_v \ dT$|
 |First law|$q = \Delta u$|
+|Entropy change|$\Delta s = \displaystyle\int \dfrac{\delta q}{T} = \int \dfrac{du}{T} = \int \dfrac{c_v}{T} \ dT$|
 
 ### Isobaric process
 
@@ -128,6 +177,7 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Enthalpy change|$\Delta h = \displaystyle\int c_p \ dT$|
 |Work|$w = -P\Delta v$|
 |Heat|$q = \Delta h$|
+|Entropy change|$\Delta s = \displaystyle\int \dfrac{\delta q}{T} = \int \dfrac{dh}{T} = \int \dfrac{c_p}{T} \ dT$|
 
 ### Other processes
 
@@ -136,25 +186,58 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Incompressible condensed phases|$v_0$ is constant, small|
 |Incompressible condensed phases at low pressure|$\Delta u = \Delta h = \displaystyle\int c_p \ dT$|
 |Incompressible condensed phases at high pressure|$\Delta h = \displaystyle\int c_p \ dT + v_0(P_1 - P_0)$|
-|Phase change|$\Delta h = q$|
+|Incompressible condensed phases|$\Delta s = \displaystyle\int \dfrac{c_p}{T} dT = c_p \ln\left(\dfrac{T_1}{T_2}\right)$|
+|Phase change|$\Delta h = q \newline \Delta s = \dfrac{q}{T} =  \dfrac{\Delta h}{T}$|
 
-## Second Law of Thermodynamics
-
-|System Type|Second Law of Thermodynamics|
-|-:|:-|
-|Isolated system <br/> $S_{\text{gen}} \ge 0$|$\Delta S = S_{\text{gen}}$|
-|Closed system <br/> $S_{\text{gen}} \ge 0$|$\Delta S = \displaystyle\int \dfrac{\delta Q}{T} + S_{\text{gen}}$|
-|Open system <br/> $\dot{S}_{\text{gen}} \ge 0$|$\dfrac{dS}{dt} = \sum\limits_{\text{in}} \dot{n}\_i s_i - \sum\limits_{\text{out}} \dot{n}\_i s_i + \sum \dfrac{\dot{Q_i}}{T_i} + \dot{S}_{\text{gen}}$|
-|Open system in steady state <br/> $\dot{S}_{\text{gen}} \ge 0$|$0 = \sum\limits_{\text{in}} \dot{n}\_i s_i - \sum\limits_{\text{out}} \dot{n}\_i s_i + \sum \dfrac{\dot{Q_i}}{T_i} + \dot{S}_{\text{gen}}$|
+## Process Efficiency
 
 |Description|Equations|
 |-:|:-|
-|Ergotic hypothesis|$\lvert f \rvert = \langle f \rangle$|
-|Equal probability postulate|$P_j = \dfrac{1}{\Omega}$|
-|Entropy|$S = k_B \ln\Omega$|
-|Permutability <br/> $N_A$ distinguishable particles in $N$ sites|$\Pi = \dfrac{N!}{(N-N_A)!}$|
-|Multiplicity <br/> $N_A$ indistinguishable particles in $N$ sites|$\Omega = \dfrac{N!}{N_A!(N-N_A)!}$|
-|Multiplicity <br/> $N_A, N_B, ...$ indistinguishable particles in $N$ sites|$\Omega = \dfrac{N!}{N_A!N_B!N_C! \cdots}$|
-|Stirling approximation|$\lim\limits_{a \to\infty} \ln(a!) = a \ln(a) - a$|
+|Maximum work of heat engine|$W_{\max} = Q_{\text{in}} \left(1 - \dfrac{T_c}{T_h}\right)$|
+|Minimum work of heat heat pump|$W_{\max} = Q_{\text{out}} \left(1 - \dfrac{T_c}{T_h}\right)$|
+|Reversible work|$W_{\text{rev}} = Q_{1} \left(1 - \dfrac{T_c}{T_h}\right)$|
+|Carnot efficiency|$\eta = \dfrac{W_{\text{rev}}}{Q_1} = 1 - \dfrac{T_c}{T_h}$|
+|Ideal gas entropy|$\Delta s(T, v) = \displaystyle\int \dfrac{c_v}{T} dT + R \ln\left(\dfrac{v}{v_0}\right)$|
+|Ideal gas entropy|$\Delta s(T, P) = \displaystyle\int \dfrac{c_p}{T} dT - R \ln\left(\dfrac{P}{P_0}\right)$|
+|Lost work|$W_{\text{lost}} = T_c s_{\text{gen}}$|
+|Exthalpy for multi-stream|$\dot{E} = \dot{W}_{\text{rev}} \newline = \sum\limits\_{i}^{\text{source}} \dot{n}_i (h_i - T_0 s_i) - \sum\limits\_{i}^{\text{ground}} \dot{n}_i (h_i^\circ - T_0 s_i^\circ)$|
+|Exthalpy for single stream|$\dot{W}_{\text{rev}} = \Delta h - T_0 \Delta s$|
+
+## Phase equilibrium
+
+### Single component equilibrium
+
+|Description|Equations|
+|-:|:-|
+|Gibbs free energy (constant $T, P$)|$G = H - TS$|
+|Helmholtz free energy (constant $T, V$)|$F = A = U - TS$|
+|Entropy change of universe|$\Delta S_{\text{univ}} \ge 0$|
+|Gibbs free energy change of spontaneous process|$\Delta G \le 0$|
+|Helmholtz free energy change of spontaneous process|$\Delta F \le 0$|
+|Thermal equilibrium|$T^\alpha = T^\beta$|
+|Mechanical equilibrium|$P^\alpha = P^\beta$|
+|Chemical equilibrium|$g^\alpha = g^\beta$|
+|Clausius-Clapeyron equation|$\dfrac{d \ln P_{\text{sat}}}{d (1/T)} = -\dfrac{1}{R}\Delta h_{\text{vap}}(T)$|
+|**Clausius-Clapeyron equation** <br/> ★ modest pressure, incompressible liquid, ideal gas, constant $\Delta h_{\text{vap}}$|$\ln\left(\dfrac{P_{\text{sat}}}{P_0}\right) = -\dfrac{\Delta h_{\text{vap}}^\circ}{R} \left(\dfrac{1}{T} - \dfrac{1}{T_0}\right)$|
+|Antoine equation|$\ln(P_{\text{sat}}) = A - \dfrac{B}{C + T}$|
+
+### Multicomponent equilibrium
+
+|Description|Equations|
+|-:|:-|
+|Partial molar properties|$\bar{x}_i = \left(\dfrac{\partial x}{\partial n_i}\right)\_{\mathrm{others}, n\_{j \not = i}}$|
+|Partial molar gibbs free energy|$\bar{g}_i = \left(\dfrac{\partial G}{\partial n_i}\right)\_{T, P, n\_{j \not = i}}$|
+|Partial molar gibbs free energy|$\bar{g}_i = \bar{h}_i - T\bar{s}_i$|
+|Entropy|$S = -\left(\dfrac{\partial G}{\partial T}\right)\_{P, n\_{j}}$|
+|Volume|$V = \left(\dfrac{\partial G}{\partial P}\right)\_{T, n\_{j}}$|
+|Total derivative of gibbs free energy|$dG = -S \ dT + V \ dP + \sum\limits_i \bar{g}_i \ dn_i$|
+|Chemical potential|$\mu_i = \bar{g}_i$|
+|Chemical equilibrium|$\mu_i^\alpha = \mu_i^\beta$|
+|Raoult's law|$P_A = x_A^g P = x_A^l P_A^{\text{sat}}$|
+|Condensation curve|$P = (P_A^{\text{sat}} - P_B^{\text{sat}})x_A^l + P_B^{\text{sat}}$|
+|Boiling curve|$P = \dfrac{P_A^{\text{sat}}P_B^{\text{sat}}}{P_A^{\text{sat}} - (P_A^{\text{sat}} - P_B^{\text{sat}})x_A^g}$|
+|Henry's law <br/> ★ Low pressure, dilute solution|$C_A = K_H(T) P_A$|
+|Gibbs-Duhem Equations|$\sum \mu_i \ dn_i = 0 \newline \sum n_i \ d\mu_i = 0$|
+|Colligative property|$\mu_{\text{solvent}} = RT \ln(1 - x_A) + \mu_{\text{solvent}}^\circ$|
 
 <!-- ★ -->
