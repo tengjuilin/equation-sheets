@@ -17,26 +17,28 @@ This repository contains equations that I learned and used in science and engine
 
 You can download pdf of the equation sheets in this repository or view them [online](http://tengjuilin.netlify.app/resources/equation-sheets/). The online version is most up-to-date, and it's also configured to be printable.
 
-If you like this resource, feel free to [star](https://github.com/tengjuilin/intro-sci-computing/stargazers), [watch](https://github.com/tengjuilin/intro-sci-computing/watchers), or [fork](https://github.com/tengjuilin/intro-sci-computing/network/members).
+If you like this resource, feel free to [star](https://github.com/tengjuilin/equation-sheets/stargazers), [watch](https://github.com/tengjuilin/equation-sheets/watchers), or [fork](https://github.com/tengjuilin/equation-sheets/network/members).
 
-If you find any mistakes, please feel free to [raise an issue](https://github.com/tengjuilin/equation-sheets/issues/new).
+If you find any mistake, please feel free to [raise an issue](https://github.com/tengjuilin/equation-sheets/issues/new).
 
 ## Chemistry
 
 - [CHEM 145 Honors General Chemistry I](chem/chem145/)
   - Covered gases, thermodynamics, and equilibrium.
   - Taken in Au19 with [Professor Joshua Vaughan](https://chem.washington.edu/people/joshua-c-vaughan)
-  - Textbook: *Principles of Modern Chemistry* 7e by Oxtoby
+  - Textbook: *Principles of Modern Chemistry* 7e by Oxtoby et al.
 - [CHEM 155 Honors General Chemistry II](chem/chem155/)
   - Covered acid-base equilibria, solution equilibria, electrochemistry, kinetics, nuclear chemistry, and quantum mechanics and atomic structure.
   - Taken in Wi20 with [Professor David Ginger](https://chem.washington.edu/people/david-s-ginger)
-  - Textbook: *Principles of Modern Chemistry* 7e by Oxtoby
+  - Textbook: *Principles of Modern Chemistry* 7e by Oxtoby et al.
 - [CHEM 238 Organic Chemistry II](chem/chem238/)
   - Covered alcohol, thiol, ether, sulfide, epoxide, glycol, alkyne, diene, benzene, transition metal catalysis, IR, NMR, UV-Vis spectroscopy, and mass spectrometer.
   - Taken in Wi21 with [Professor Michael Gelb](https://chem.washington.edu/people/michael-h-gelb)
-  - Textbook: *Organic Chemistry* 6e by Loudon
+  - Textbook: *Organic Chemistry* 6e by Loudon et al.
 - [CHEM 455 Physical Chemistry](chem/chem455/)
-  - Au21 in progress
+  - Covered postulates, particle in a box, finite potential well, barrier scattering, commutator, dimer model, vibrational and rotational spectroscopy, hydrogen atom, spin, many e- atoms, Hartree-Fock orbitals, and chemical bonding.
+  - Taken in Au21 with [Professor David Masiello](https://chem.washington.edu/people/david-j-masiello)
+  - Textbook: *Quantum Chemistry and Spectroscopy* 4e by Engel
 
 ## Physics
 
@@ -83,13 +85,13 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 - [AMATH 351 Differential Equations](amath/amath351/)
   - Covered first order and second order ODEs with applications in mathematical modeling, stability, and mechanical vibrations. Covers systems of differential equations and Laplace transform.
   - Taken in Wi21 with [Alanna Gary](https://amath.washington.edu/people/alanna-gary)
-  - Optional textbook: *Elementary Differential Equations and Boundary Value Problems* 11e by Boyce
+  - Optional textbook: *Elementary Differential Equations and Boundary Value Problems* 11e by Boyce et al.
 
 ## Chemical Engineering
 
 - [NME 220 Molecular and Nanoscale Principles](cheme/nme220/)
   - Covered scaling and transport properties, atomic theory of matter, atomic models, wave functions in quantum mechanics, nanoscience and technology, electronic structures of molecules, and molecular modes and energetic properties.
-  - Taken in Sp21 with [Professor René M. Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
+  - Taken in Sp21 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
   - Textbook: Custom text
 - [CHEM E 375 Chemical Engineering Computer Skills](http://cheme-sci-computing.netlify.app/)
   - Covered chemical engineering scientific computing and numerical methods. Topics include curve fitting, balancing chemical equations, solving VLE problems, plotting VLE x/y and Txy diagrams, determining Antoine's coefficients, chemical kinetics, and time-dependent and -independent heat transfer.
@@ -97,8 +99,12 @@ If you find any mistakes, please feel free to [raise an issue](https://github.co
 - [CHEM E 310 Material and Energy Balances](cheme/cheme310/)
   - Covered units and process variables, material balances of nonreactive and reactive systems, single- and multi-phase systems, energy balances of nonreactive and reactive systems.
   - Taken in Sp21 with [Professor Elizabeth Nance](https://www.cheme.washington.edu/facultyfinder/elizabeth-nance)
-  - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder
+  - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder et al.
 - [CHEM E 325 Energy and Entropy](cheme/cheme325/)
-  - Au21 in progress
+  - Covered thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, and single and multi-component equilibrium.
+  - Taken Au21 with [Professor Davis Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
+  - Optional textbook: *Engineering and Chemical Thermodynamics* 2e by Koretsky
 - [CHEM E 330 Transport Processes I](cheme/cheme330/)
-  - Au21 in progress
+  - Covered basic transport: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
+  - Taken Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
+  - Optional textbook: *Transport Phenomena* Revised 2e by Bird et al.
