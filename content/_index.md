@@ -15,7 +15,7 @@ layout: single
 
 This repository contains equations that I learned and used in science and engineering courses at the University of Washington. Current topics include calculus, applied mathematics, chemistry, physics, and chemical engineering.
 
-You can download pdf of the equation sheets in this repository or view them [online](http://tengjuilin.netlify.app/resources/equation-sheets/). The online version is most up-to-date, and it's also configured to be printable.
+You can download pdf of the equation sheets in this repository or view them [online](http://tengjuilin.netlify.app/resources/equation-sheets/). The online version is most up-to-date, and it's also configured to be printable. You may also find the [course notes](https://github.com/tengjuilin/course-notes) helpful.
 
 If you like this resource, feel free to [star](https://github.com/tengjuilin/equation-sheets/stargazers), [watch](https://github.com/tengjuilin/equation-sheets/watchers), or [fork](https://github.com/tengjuilin/equation-sheets/network/members).
 
