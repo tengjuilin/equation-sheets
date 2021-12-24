@@ -102,7 +102,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder et al.
 - [CHEM E 325 Energy and Entropy](cheme/cheme325/)
   - Covered thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, and single and multi-component equilibrium.
-  - Taken Au21 with [Professor Davis Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
+  - Taken Au21 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
   - Optional textbook: *Engineering and Chemical Thermodynamics* 2e by Koretsky
 - [CHEM E 330 Transport Processes I](cheme/cheme330/)
   - Covered basic transport: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
