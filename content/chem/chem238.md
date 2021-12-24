@@ -110,11 +110,11 @@ date: 2021-08-17T00:00:00+08:00
 
 |Reaction|Reactant|Condition|Product|Overall|
 |-|-|-|-|-|
-|Radical bromonation of allylic/benzylic hydrogen|allylic/benzylic species, bromine gas Br2|light hv|allylic/benzylic bromide, hydrogen bromide|$\ce{PhCH3 + Br2 ->[light hv] PhCH2Br + HBr} \\ \ce{CH3-CH2=CH2 ->[light hv] BrCH2-CH2=CH2}$|
-|Controlled radical bromonation of allylic/benzylic hydrogen|allylic/benzylic species, NBS (N-bromosuccinimide)|heat/light, peroxide|allylic/benzylic bromide, succinimide|$\ce{PhCH3 + NBS ->[heat/light, peroxide][CCl4] PhCH2Br} \\ \ce{CH3-CH2=CH2 + NBS ->[light hv] BrCH2-CH2=CH2 + succinimide}$|
+|Radical bromonation of allylic/benzylic hydrogen|allylic/benzylic species, bromine gas Br2|light hv|allylic/benzylic bromide, hydrogen bromide|$\ce{PhCH3 + Br2 ->[light hv] PhCH2Br + HBr} \newline \ce{CH3-CH2=CH2 ->[light hv] BrCH2-CH2=CH2}$|
+|Controlled radical bromonation of allylic/benzylic hydrogen|allylic/benzylic species, NBS (N-bromosuccinimide)|heat/light, peroxide|allylic/benzylic bromide, succinimide|$\ce{PhCH3 + NBS ->[heat/light, peroxide][CCl4] PhCH2Br} \newline \ce{CH3-CH2=CH2 + NBS ->[light hv] BrCH2-CH2=CH2 + succinimide}$|
 |Allylic/benzylic Grignard Reagent|alkene bromide Br, magnesium Mg||alkene, MgBrOH|$\ce{-> see Ch 17 allylic Grignard reagent}$|
 |Allylic/benzylic E2 elimination|allylic/benzylic bromide|EtOH, Na+, EtO-|alkene|$\ce{Ph-CH2CH2-Br ->[Na+, EtO-][EtOH] Ph-CH2CH2-OEt}$|
-|Oxidation of allylic/benzylic alcohol with MnO2|allylic/benzylic alcohol, manganese dioxide MnO2|CH2Cl2|aldehyde/ketone, Mn(OH)2|$\ce{PhCH2OH + MnO2 ->[][CH2Cl2] PhCH=O + Mn(OH)2} \\ \ce{H2C=CH-CH2OH + MnO2 ->[][CH2Cl2] H2C=CH-CH2=O + Mn(OH)2}$|
+|Oxidation of allylic/benzylic alcohol with MnO2|allylic/benzylic alcohol, manganese dioxide MnO2|CH2Cl2|aldehyde/ketone, Mn(OH)2|$\ce{PhCH2OH + MnO2 ->[][CH2Cl2] PhCH=O + Mn(OH)2} \newline \ce{H2C=CH-CH2OH + MnO2 ->[][CH2Cl2] H2C=CH-CH2=O + Mn(OH)2}$|
 |Benzylic oxidation of alkylbenzene|alkylbenzene|Cr(VI): Na2CrO7/CrO3; Mn(VII): KMnO4; O2 + catalyst|benzylic carboxylic acid|$\ce{PhR ->[Na2CrO7/CrO3][or KMnO4 or O2 + catalyst] PhCOOH}$|
 |Biosynthesis of terpene|isopentenyl pyrophosphate IPP, gamma,gamma-dimethylallyl pyrophosphate DMAP|prenyl transferase|terpene, HOPP|$\ce{IPP + DMAP ->[prenyl transferase SN1] terpene, HOPP}$|
 
@@ -122,7 +122,7 @@ date: 2021-08-17T00:00:00+08:00
 
 |Reaction|Reactant|Condition|Product|Overall|
 |-|-|-|-|-|
-|Vinylic/aryl halide under SN1, SN2 conditions|Vinylic/aryl halide|SN1, SN2|no reaction|$\ce{CH2=CHX + Nu ->[SN1, SN2] no reaction} \\ \ce{PhX + Nu ->[SN1, SN2] no reaction}$|
+|Vinylic/aryl halide under SN1, SN2 conditions|Vinylic/aryl halide|SN1, SN2|no reaction|$\ce{CH2=CHX + Nu ->[SN1, SN2] no reaction} \newline \ce{PhX + Nu ->[SN1, SN2] no reaction}$|
 |Elimination of vinylic halide|vinylic halide, nucleophile (hydroxide)|harsh conditions, high temp|vinylic alkyne, bromide, water|$\ce{Ph-CH=CH-Br + KOH ->[][200^{\circ}C] Ph-C#C-H + KBr + H2O}$|
 |Nucleophilic aromatic substitution of aryl halide|nitro aryl halide, nucleophile||nitro aryl nucleophile: halide ion|$\ce{O2N-Ph-X + Nu- -> O2N-Ph-Nu + X-}$|
 |Heck reaction (aryl)|aryl bromide/iodide, alkene|Pd(0) catalyst (Pd(OAc)2, Pd(PPh3)4)|aryl alkene, hydrogen bromide|$\ce{PhBr + alkene ->[Pd(0)] Ph-alkene + HBr}$|
