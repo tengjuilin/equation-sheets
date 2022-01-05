@@ -108,3 +108,9 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered basic transport: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
   - Taken Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Optional textbook: *Transport Phenomena* Revised 2e by Bird et al.
+- [CHEM E 326 Chemical Engineering Thermodynamics](cheme/cheme326/)
+  - In progress Wi22 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
+  - Textbook: *Engineering and Chemical Thermodynamics* 2e by Koretsky
+- [CHEM E 340 Transport Process II](cheme/cheme340/)
+  - In progress Wi22 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
+  - Optional textbook: *Fundamentals of Heat and Mass Transfer* 8e by Bergman et al.
