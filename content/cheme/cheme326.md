@@ -105,7 +105,7 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Work (changing pressure)|$w = \displaystyle\int \dfrac{RT}{P} dP = RT\ln\left(\dfrac{P_2}{P_1}\right)$|
 |Entropy change|$\Delta s = 0$|
 |Heat capacity ratio|$\gamma = \dfrac{c_P}{c_v}$|
-|PVT relationship|$P_1 V_1^\gamma = P_2 V_2^\gamma \newline T_1 V_1^{\gamma+1} = T_2 V_2^{\gamma+1} \newline P_1^{(1/\gamma)-1} T_1 = P_2^{(1/\gamma)-1} T_2$|
+|PVT relationship|$P_1 V_1^\gamma = P_2 V_2^\gamma \newline T_1 V_1^{\gamma-1} = T_2 V_2^{\gamma-1} \newline P_1^{(1/\gamma)-1} T_1 = P_2^{(1/\gamma)-1} T_2$|
 
 ### Isochoric process
 

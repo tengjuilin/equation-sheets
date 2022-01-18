@@ -283,7 +283,7 @@ Note: constructive and destructive interference refers to reflected light, not t
 |Isobaric process (quasistatic adiabatic)|$\Delta S = 0$|
 |Heat|$Q = 0$|
 |Thermal energy and work|$\Delta E_{\text{th}} = W = NC_V \Delta T$|
-|PVT relationship|$P_1 V_1^\gamma = P_2 V_2^\gamma \newline T_1 V_1^{\gamma+1} = T_2 V_2^{\gamma+1} \newline P_1^{(1/\gamma)-1} T_1 = P_2^{(1/\gamma)-1} T_2$|
+|PVT relationship|$P_1 V_1^\gamma = P_2 V_2^\gamma \newline T_1 V_1^{\gamma-1} = T_2 V_2^{\gamma-1} \newline P_1^{(1/\gamma)-1} T_1 = P_2^{(1/\gamma)-1} T_2$|
 
 ### Isobaric process
 
