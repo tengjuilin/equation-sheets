@@ -177,4 +177,144 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 
 {{< image src="/cheme/cheme-326-refrigeration-cycle.png" caption="Ideal refrigeration cycle. (Engineering and Chemical Thermodynamics 2e by Koretsky p170.)" >}}
 
+## Intermolecular Potentials
+
+|Description|Equations|
+|-:|:-|
+|Conservative force|$F_{ij} = -\nabla \Gamma_{ij}$|
+|Potential|$\Gamma_{ij} = -\int F_{ij} \ dr$|
+
+### Attractive potentials (SI unit)
+
+|Description|Equations (SI unit)|
+|-:|:-|
+|Coulomb interaction <br/> (electrostatic, point charges)|$\Gamma_{ij}(r) = \dfrac{Q_i Q_j}{4\pi\varepsilon_0}\dfrac{1}{r}$|
+|Dipole-dipole interaction <br/> (polar, electric dipole, Keesom)|$\Gamma_{ij}(r) = -\dfrac{(2)}{3}\dfrac{\mu_i^2 \mu_j^2}{(4\pi\varepsilon_0)^2}\dfrac{1}{kT}\dfrac{1}{r^6}$|
+|Dipole-induced dipole interaction <br/> (induction, Debye)|$\Gamma_{ij}(r) = -\dfrac{\alpha_i \mu_j^2}{(4\pi\varepsilon_0)^2}\dfrac{1}{r^6}$|
+|Induced dipole-induced dipole interaction <br/> (dispersion, London)|$\Gamma_{ij}(r) = -\dfrac{3}{2}\dfrac{\alpha_i \alpha_j}{(4\pi\varepsilon_0)^2}\dfrac{I_i I_j}{I_i + I_j}\dfrac{1}{r^6}$|
+
+|Description|Equations (SI unit)|
+|-:|:-|
+|van der Waals interaction|$\Gamma_{ij}^{\text{vdw}} = \Gamma_{ij}^{\text{K}} + \Gamma_{ij}^{\text{D}} + \Gamma_{ij}^{\text{L}} = -\dfrac{C_{\text{vdw}}}{r^6}$|
+|Keesom coefficient|$C^{\text{K}} = \dfrac{(2)}{3}\dfrac{\mu_i^2 \mu_j^2}{(4\pi\varepsilon_0)^2}\dfrac{1}{kT}$|
+|Debye coefficient|$C^{\text{D}} = \dfrac{\alpha_i \mu_j^2 + \alpha_j \mu_i^2}{(4\pi\varepsilon_0)^2}$|
+|London coefficient|$C^{\text{L}} = \dfrac{3}{2}\dfrac{\alpha_i \alpha_j}{(4\pi\varepsilon_0)^2}\dfrac{I_i I_j}{I_i + I_j}$|
+
+### Attractive potentials (CGS unit)
+
+|Description|Equations (CGS unit)|
+|-:|:-|
+|Coulomb interaction <br/> (electrostatic, point charges)|$\Gamma_{ij}(r) = \dfrac{Q_i Q_j}{r}$|
+|Dipole-dipole interaction <br/> (polar, electric dipole, Keesom)|$\Gamma_{ij}(r) = -\dfrac{(2)}{3}\dfrac{\mu_i^2 \mu_j^2}{kT}\dfrac{1}{r^6}$|
+|Dipole-induced dipole interaction <br/> (induction, Debye)|$\Gamma_{ij}(r) = -\dfrac{\alpha_i \mu_j^2}{r^6}$|
+|Induced dipole-induced dipole interaction <br/> (dispersion, London)|$\Gamma_{ij}(r) = -\dfrac{3}{2}\dfrac{\alpha_i \alpha_j}{r^6}\dfrac{I_i I_j}{I_i + I_j}$|
+
+|Description|Equations (CGS unit)|
+|-:|:-|
+|van der Waals interaction|$\Gamma_{ij}^{\text{vdw}} = \Gamma_{ij}^{\text{K}} + \Gamma_{ij}^{\text{D}} + \Gamma_{ij}^{\text{L}} = -\dfrac{C_{\text{vdw}}}{r^6}$|
+|Keesom coefficient|$C^{\text{K}} = \dfrac{(2)}{3}\dfrac{\mu_i^2 \mu_j^2}{kT}$|
+|Debye coefficient|$C^{\text{D}} = \alpha_i \mu_j^2 + \alpha_j \mu_i^2$|
+|London coefficient|$C^{\text{L}} = \dfrac{3}{2}\alpha_i \alpha_j\dfrac{I_i I_j}{I_i + I_j}$|
+
+### Repulsive potentials
+
+|Description|Equations (SI unit)|
+|-:|:-|
+|Hard sphere model|$\Gamma = \begin{cases} 0 & r > \sigma \\\ \infty & r \le \sigma \end{cases}$|
+|Surtherland model|$\Gamma = \begin{cases} -\dfrac{C_{\text{vdw}}}{r^6} & r > \sigma \\\ \infty & r \le \sigma \end{cases}$|
+|Lennard-Jones potential|$\Gamma = \dfrac{C_{\text{rep}}}{r^{12}} - \dfrac{C_{\text{vdw}}}{r^6}$|
+|Lennard-Jones potential|$\Gamma = 4\varepsilon \left[ \left(\dfrac{\sigma}{r}\right)^{12} - \left(\dfrac{\sigma}{r}\right)^6 \right]$|
+
+## Equations of State
+
+### Principle of corresponding states
+
+|Description|Equations|
+|-:|:-|
+|Ideal gas law|$Pv = RT$|
+|Compressibility factor|$z = \dfrac{Pv}{RT}$|
+|Reduced temperature|$T_r = \dfrac{T}{T_c}$|
+|Reduced pressure|$P_r = \dfrac{P}{P_c}$|
+|Pitzer acentric factor|$\omega = -1 - \log_{10} [P_r^{\text{sat}}(T_r = 0.7)]$|
+|Generalized compressibility|$z = z^{(0)} + \omega z^{(1)}$|
+
+### Cubic EOS
+
+#### van der Waals EOS
+
+|Description|Equations|
+|-:|:-|
+|van der Waals EOS <br/> (pressure explicit form)|$P = \dfrac{RT}{v-b} - \dfrac{a}{v^2}$|
+|van der Waals EOS <br/> (cubic form)|$Pv^3 - (RT + Pb)v^2 + av - ab = 0$|
+|van der Waals EOS <br/> (reduced form)|$P = \dfrac{8T_r}{3v_r - 1} - \dfrac{3}{v_r^2}$|
+|Intermolecular force (pressure) correction|$a = \dfrac{27}{64}\dfrac{(RT_c)^2}{P_c}$|
+|Volume correction|$b = \dfrac{RT_c}{8P_c}$|
+|Critical compressibility factor|$z_c = \frac{3}{8}$|
+
+#### Redlich-Kwong EOS
+
+|Description|Equations|
+|-:|:-|
+|Redlich-Kwong EOS|$P = \dfrac{RT}{v-b} - \dfrac{a}{\sqrt{T}v(v+b)}$|
+|Intermolecular force (pressure) correction|$a = 0.42748 \dfrac{R^2 T_c^{2.5}}{P_c}$|
+|Volume correction|$b = 0.08664 \dfrac{RT_c}{P_c}$|
+|Critical compressibility factor|$z_c = \frac{1}{3}$|
+
+#### Peng-Robinson EOS
+
+|Description|Equations|
+|-:|:-|
+|Peng-Robinson EOS|$P = \dfrac{RT}{v-b} - \dfrac{a \alpha(T)}{v(v+b) + b(v-b)}$|
+|Intermolecular force (pressure) correction|$a = 0.45724 \dfrac{R^2 T_c^{2}}{P_c}$|
+|Volume correction|$b = 0.07780 \dfrac{RT_c}{P_c}$|
+|Constant|$\alpha(T) = [1 + \kappa(1 - \sqrt{T_r})]^2$|
+|Constant|$\kappa = 0.37464 + 1.54226\omega - 0.26992\omega^2$|
+|Critical compressibility factor|$z_c = 0.307$|
+
+### Virial EOS
+
+|Description|Equations|
+|-:|:-|
+|Virial EOS|$z = \dfrac{Pv}{RT} = 1 + \dfrac{B}{v} + \dfrac{C}{v^2} + \dfrac{D}{v^3} + \cdots$|
+|Second virial coefficient|$B = \dfrac{RT_c B_r}{P_c}$|
+|Reduced second virial coefficient|$B_r = B^{(0)} + \omega B^{(1)}$|
+|0th order correction|$B^{(0)} = 0.083 - \dfrac{0.422}{T_r^{1.6}}$|
+|1st order correction|$B^{(1)} = 0.139 - \dfrac{0.172}{T_r^{4.2}}$|
+
+### Mixing rules of EOS parameters
+
+#### Cubic EOS
+
+|Description|Equations|
+|-:|:-|
+|$a$ for binary mixtures|$a_{\text{mix}} = y_1^2 a_1 + 2 y_1y_2 a_{12} + y_2^2 a_2$|
+|$a$ of different species interaction|$a_{12} = \sqrt{a_1 a_2}(1 - k_{12})$|
+|$b$ for binary mixtures|$b_{\text{mix}} = y_1b_1 + y_2b_2$|
+|$a$ for multicomponent mixtures|$a_{\text{mix}} = \sum\limits_i\sum\limits_j y_i y_j a_{ij}$|
+|$b$ for multicomponent mixtures|$b_{\text{mix}} = \sum\limits_i y_i b_{i}$|
+
+#### Virial EOS
+
+|Description|Equations|
+|-:|:-|
+|Second virial coefficient for binary mixture|$B_{\text{mix}} = y_1^2 B_{11} + 2 y_1 y_2 B_{12} + y_2^2 B_{22}$|
+|Second virial coefficient for multicomponent mixture|$B_{\text{mix}} = \sum\limits_i\sum\limits_j y_i y_j B_{ij}$|
+|Third virial coefficient for multicomponent mixture|$C_{\text{mix}} = \sum\limits_i\sum\limits_j\sum\limits_k y_i y_j y_k C_{ijk}$|
+
+#### Principle of corresponding state
+
+|Description|Equations|
+|-:|:-|
+|Pseudocritical temperature|$T_{pc} = \sum y_i T_{c, i}$|
+|Pseudocritical pressure|$P_{pc} = \sum y_i P_{c, i}$|
+|Pseudocritical acentric factor|$\omega_{pc} = \sum y_i \omega_{c, i}$|
+
+### EOS for liquids and solids
+
+|Description|Equations|
+|-:|:-|
+|Thermal expansion coefficient|$\beta = \dfrac{1}{v} \left(\dfrac{\partial v}{\partial T}\right)_P$|
+|Isothermal compressibility|$\kappa = -\dfrac{1}{v} \left(\dfrac{\partial v}{\partial P}\right)_T$|
+|Rackett equation|$v_l^{\text{sat}} = \dfrac{RT_c}{P_c} (0.29056 - 0.08775 \omega)^{(1 + (1 - T_r)^{2/7})}$|
+
 <!-- ★ -->
