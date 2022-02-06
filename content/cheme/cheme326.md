@@ -317,4 +317,81 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Isothermal compressibility|$\kappa = -\dfrac{1}{v} \left(\dfrac{\partial v}{\partial P}\right)_T$|
 |Rackett equation|$v_l^{\text{sat}} = \dfrac{RT_c}{P_c} (0.29056 - 0.08775 \omega)^{(1 + (1 - T_r)^{2/7})}$|
 
+## Thermodynamic Relations
+
+### Mathematical Relations
+
+|Description|Equations|
+|-:|:-|
+|Total differential|$dz = \left(\dfrac{\partial z}{\partial x}\right)_y dx + \left(\dfrac{\partial z}{\partial y}\right)_x dy$|
+|Clairaut's theorem <br/> Symmetry of second derivative|$\dfrac{\partial}{\partial x} \left(\dfrac{\partial z}{\partial y} \right) = \dfrac{\partial}{\partial y} \left( \dfrac{\partial z}{\partial x} \right)$|
+|Chain rule|$\dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial x}$|
+|Cyclic relation <br/> Triple chain rule|$\left(\dfrac{\partial x}{\partial y}\right)_z \left(\dfrac{\partial y}{\partial z}\right)_x \left(\dfrac{\partial z}{\partial x}\right)_y = -1$|
+
+### Thermodynamic Relations
+
+|Relations|Internal energy $u$|Enthalpy $h$|Helmholz energy $a$|Gibbs energy $g$|
+|-:|:-|:-|:-|:-|
+|Definition|-|$h = u + Pv$|$a = u - Ts$|$g = h - Ts$|
+|Fundamental property relations|$du = Tds - Pdv$|$dh = Tds + vdP$|$da = -sdT - Pdv$|$dg = -sdT + vdP$|
+|Fundamental grouping|$\lbrace u, s, v \rbrace$|$\lbrace h, s, P \rbrace$|$\lbrace a, T, v \rbrace$|$\lbrace g, T, P \rbrace$|
+|Fundamental grouping relations|$\left(\frac{\partial u}{\partial s}\right)_v = T$|$\left(\frac{\partial h}{\partial s}\right)_P = T$|$\left(\frac{\partial a}{\partial T}\right)_v = -s$|$\left(\frac{\partial g}{\partial T}\right)_P = -s$|
+|Fundamental grouping relations|$\left(\frac{\partial u}{\partial v}\right)_s = -P$|$\left(\frac{\partial h}{\partial P}\right)_s = v$|$\left(\frac{\partial a}{\partial v}\right)_T = -P$|$\left(\frac{\partial g}{\partial P}\right)_T = v$|
+|Maxwell's relations|$\left(\frac{\partial T}{\partial v}\right)_s = -\left(\frac{\partial P}{\partial s}\right)_v$|$\left(\frac{\partial T}{\partial P}\right)_s = \left(\frac{\partial v}{\partial s}\right)_P$|$\left(\frac{\partial s}{\partial v}\right)_T = \left(\frac{\partial P}{\partial T}\right)_v$|$\left(\frac{\partial s}{\partial P}\right)_T = -\left(\frac{\partial v}{\partial T}\right)_P$|
+
+{{< image src="/cheme/cheme-326-thermodynamic-relations.png" caption="Thermodynamic relations. (Engineering and Chemical Thermodynamics 2e by Koretsky p274.)" >}}
+
+### Measurable properties
+
+|Description|Equations|
+|-:|:-|
+|Constant volume heat capacity|$c_v = \left(\dfrac{\partial u}{\partial T}\right)_v = T \left(\dfrac{\partial s}{\partial T}\right)_v$|
+|Constant pressure heat capacity|$c_P = \left(\dfrac{\partial h}{\partial T}\right)_P = T \left(\dfrac{\partial s}{\partial T}\right)_P$|
+|Constant volume heat capacity of real gas|$c_v^{\text{real}} = c_v^{\text{ideal}} + \displaystyle\int_{v_{\text{ideal}}}^{v_{\text{real}}} \left[T \left(\dfrac{\partial^2 P}{\partial T^2}\right)_v\right] dv$|
+|Constant pressure heat capacity of real gas|$c_P^{\text{real}} = c_P^{\text{ideal}} - \displaystyle\int_{P_{\text{ideal}}}^{P_{\text{real}}} \left[T \left(\dfrac{\partial^2 v}{\partial T^2}\right)_P\right] dP$|
+|Thermal expansion coefficient|$\beta = \dfrac{1}{v} \left(\dfrac{\partial v}{\partial T}\right)_P$|
+|Thermal expansion coefficient of ideal gas|$\beta = \dfrac{1}{T}$|
+|Isothermal compressibility|$\kappa = -\dfrac{1}{v} \left(\dfrac{\partial v}{\partial P}\right)_T$|
+|Isothermal compressibility of ideal gas|$\kappa = \dfrac{1}{P}$|
+
+### Property changes
+
+|Description|Equations|
+|-:|:-|
+|Entropy change $s(T, v)$|$ds = \dfrac{c_v}{T} dT + \left(\dfrac{\partial P}{\partial T}\right)_v dv$|
+|Entropy change $s(T, P)$|$ds = \dfrac{c_P}{T} dT + \left(\dfrac{\partial v}{\partial T}\right)_P dP$|
+|Internal energy change $u(T, v)$|$du = c_v dT + \left[T \left(\dfrac{\partial P}{\partial T}\right)_v - P\right] dv$|
+|Enthalpy change $h(T, P)$|$dh = c_P dT + \left[-T \left(\dfrac{\partial v}{\partial T}\right)_P + v\right] dP$|
+
+### Property changes $(T, P)$
+
+|General $f(T, P)$|Ideal gas $\beta = \frac{1}{T}, \kappa = \frac{1}{P}$|
+|:-|:-|
+|$ds = \dfrac{c_P}{T} dT - \beta v \ dP$|$ds = \dfrac{c_P}{T} dT - \dfrac{R}{P} dP$|
+|$dv = \beta v \ dT - \kappa v \ dP$|$dv = \dfrac{v}{T}dT - \dfrac{v}{P}dP$|
+|$du = (c_P - \beta Pv)dT + (\kappa Pv - \beta vT)dP$|$du = (c_P - R)dT$|
+|$dh = (c_P - \beta Pv)dT + v \ dP$|$dh = c_P \ dT$|
+|$da = -s \ dT + (\kappa Pv - \beta vT)dP$|$da = -s \ dT$|
+|$dg = -s \ dT + v \ dP$|$dg = -s \ dT + v \ dP$|
+
+### Departure functions
+
+|Description|Equations|
+|-:|:-|
+|General departure function|$\mathrm{dep = real - ideal}$|
+|Enthalpy departure function|$\Delta h^{\text{dep}} = h^{\text{real}} - h^{\text{ideal}}$|
+|Entropy departure function|$\Delta s^{\text{dep}} = s^{\text{real}} - s^{\text{ideal}}$|
+|Dimensionless enthalpy departure function|$\dfrac{\Delta h^{\text{dep}}}{RT_c} = T_r^2 \displaystyle\int_0^P \left[-\dfrac{1}{P_r}\left(\dfrac{\partial z}{\partial T_r}\right)_P \right] dP_r$|
+|Dimensionless entropy departure function|$\dfrac{\Delta s^{\text{dep}}}{R} = \displaystyle\int_0^P -\left[\dfrac{z-1}{P_r} + \dfrac{T_r}{P_r}\left(\dfrac{\partial z}{\partial T_r}\right)_P \right] dP_r$|
+|Dimensionless enthalpy departure function with Lee-Kesler EOS|$\dfrac{\Delta h^{\text{dep}}}{RT_c} = \left[\dfrac{\Delta h^{\text{dep}}}{RT_c}\right]^{(0)} + \omega \left[\dfrac{\Delta h^{\text{dep}}}{RT_c}\right]^{(1)}$|
+|Dimensionless entropy departure function with Lee-Kesler EOS|$\dfrac{\Delta s^{\text{dep}}}{R} = \left[\dfrac{\Delta s^{\text{dep}}}{R}\right]^{(0)} + \omega \left[\dfrac{\Delta s^{\text{dep}}}{R}\right]^{(1)}$|
+
+### Joule-Thomson Expansion
+
+|Description|Equations|
+|-:|:-|
+|**Joule-Thomson expansion** <br/> Adiabatic reversible throttling|$\dot{q} = 0 \newline \dot{w}_s = 0 \newline \Delta h = 0$|
+|Joule-Thomson coefficient|$\mu_{\text{JT}} = \left(\dfrac{\partial T}{\partial P}\right)_h$|
+|Joule-Thomson coefficient|$\mu_{\text{JT}} = \dfrac{\left[-T \left(\dfrac{\partial v}{\partial T}\right)_P + v\right]}{c_P^{\text{real}}}$|
+
 <!-- ★ -->
