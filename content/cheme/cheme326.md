@@ -394,4 +394,66 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Joule-Thomson coefficient|$\mu_{\text{JT}} = \left(\dfrac{\partial T}{\partial P}\right)_h$|
 |Joule-Thomson coefficient|$\mu_{\text{JT}} = \dfrac{\left[-T \left(\dfrac{\partial v}{\partial T}\right)_P + v\right]}{c_P^{\text{real}}}$|
 
+## Phase Equilibria
+
+### Single-component equilibrium
+
+|Description|Equations|
+|-:|:-|
+|Gibbs free energy|$g = h - Ts$|
+|Second law of thermodynamics|$dG_i \le 0$|
+|Criteria for chemical equilibrium|$g_i^\alpha = g_i^\beta$|
+|**Clapeyron equation** <br/> General phase equilibrium|$\dfrac{dP}{dT} = \dfrac{\Delta s}{\Delta v} = \dfrac{\Delta h}{T\Delta v}$|
+|**Clausius-Clapeyron equation** <br/> ★ Vapor-liquid equilibrium <br/> ★ Ideal gas, negligible liquid volume|$\dfrac{dP^{\text{sat}}}{P^{\text{sat}}} = \dfrac{\Delta h_{\text{vap}} dT}{RT^2}$|
+|**Clausius-Clapeyron equation** <br/> ★ Vapor-liquid equilibrium <br/> ★ Ideal gas, negligible liquid volume <br/> ★ $\Delta h_{\text{vap}}$ independent of $T$|$\ln\dfrac{P_2^{\text{sat}}}{P_1^{\text{sat}}} = -\dfrac{\Delta h_{\text{vap}}}{R} \left(\dfrac{1}{T_2} - \dfrac{1}{T_1}\right)$|
+|Antoine's equation|$\ln P^{\text{sat}} = A - \dfrac{B}{C+T}$|
+
+### Properties of mixtures
+
+|Description|Equations|
+|-:|:-|
+|Extensive total solution (mixture) property|$K$|
+|Intensive total solution (mixture) property|$k = \dfrac{K}{n}$|
+|Extensive pure species property|$K_i$|
+|Intensive pure species property|$k_i = \dfrac{K_i}{n_i}$|
+|Partial molar property|$\overline{K}\_i = \left(\dfrac{\partial K}{\partial n_i}\right)\_{T, P, n_{j\not= i}}$|
+|Limiting case of partial molar property|$\displaystyle\lim_{x_i \to 1} \overline{K}_i = k_i \newline \lim_{x_i \to 0} \overline{K}_i = \overline{K}_i^\infty$|
+|Differential of extensive property|$dK = \left(\frac{\partial K}{\partial T}\right)\_{P, n_i} dT + \left(\frac{\partial K}{\partial P}\right)\_{T, n_i} dP + \sum \overline{K}\_i dn_i$|
+|Relation between properties <br/> ★ Constant T, P|$K = \sum n_i \overline{K}_i \newline k = \sum x_i \overline{K}_i$|
+|**Gibbs-Duhem equation** <br/> ★ Constant T, P|$\sum n_i d\overline{K}_i = 0$|
+|Corollary of Gibbs-Duhem equation <br/> ★ Binary mixture|$x_1 \dfrac{d\overline{K_1}}{x_1} + x_2 \dfrac{d\overline{K_2}}{x_1} = 0$|
+
+### Property changes of mixtures
+
+|Description|Equations|
+|-:|:-|
+|Extensive property change of mixing|$\Delta K_{\text{mix}} = K - \sum n_i k_i \newline \Delta K_{\text{mix}} = \sum n_i (\overline{K}_i - k_i)$|
+|Intensive property change of mixing|$\Delta k_{\text{mix}} = k - \sum x_i k_i \newline \Delta k_{\text{mix}} = \sum x_i (\overline{K}_i - k_i)$|
+|Enthalpy of mixing|$\Delta h_{\text{mix}} = \sum x_i (\overline{h}_i - h_i)$|
+|Enthalpy of mixing|$\Delta h_{\text{mix}} = \dfrac{\Delta \tilde{h}\_s}{n+1} = \Delta \tilde{h}\_s x_1$|
+|Enthalpy of solution|$\Delta \tilde{h}\_s = \dfrac{\Delta h_{\text{mix}}}{x_1} = \Delta h_{\text{mix}}(n+1)$|
+|Entropy of mixing <br/> ★ Ideal gas, regular solution|$\Delta s_{\text{mix}} = -R\sum y_i \ln y_i$|
+|Partial molar property change of mixing|$\overline{\Delta K}_{\text{mix}, i} = \overline{K}_i - k_i$|
+
+### Determination of partial molar properties
+
+|Description|Equations|
+|-:|:-|
+|Partial molar volume of species 1 <br/> ★ Virial EOS|$\overline{V}\_1 = \dfrac{RT}{P} + (y_1^2 + 2y_1 y_2)B_{11} + 2y_2^2 B_{12} - y_2^2 B_{22}$|
+|Partial molar volume of species 2 <br/> ★ Virial EOS|$\overline{V}\_2 = \dfrac{RT}{P} - y_1^2 B_{11} + 2y_1^2 B_{12} + (y_2^2 + 2y_1 y_2)B_{22}$|
+|Volume change of mixing <br/> ★ Virial EOS|$\Delta v_{\text{mix}} = y_1 y_2(2B_{12} - B_{11} - B_{22})$|
+|Partial molar property|$\overline{K}\_i = k_i + \overline{\Delta K}_{\text{mix}, i}$|
+|Graphical method <br/> Slope is difference|$\dfrac{dk}{dx_1} = \overline{K}_1 - \overline{K}_2$|
+|Graphical method <br/> $\overline{K}_2$ is intercept|$k = x_1 \dfrac{dk}{dx_1} + \overline{K}_2$|
+|Graphical method <br/> $\overline{K}_2$ explicit|$\overline{K}_2 = k - x_1 \dfrac{dk}{dx_1}$|
+
+### Multicomponent equilibrium
+
+|Description|Equations|
+|-:|:-|
+|Chemical potential|$\mu_i = \overline{G}\_i = \left(\dfrac{\partial G}{\partial n_i}\right)\_{T, P, n_{j \not= i}}$|
+|Criteria for chemical equilibrium|$\mu_i^\alpha = \mu_i^\beta$|
+|General multicomponent equilibrium|$\Delta \left[ -\dfrac{\overline{H}\_i}{T^2}dT - \dfrac{\overline{V}\_i}{T}dP + \dfrac{1}{T} \left[\dfrac{\partial \mu_i}{\partial x_i}\right]\_{T, P} dx_i \right] = 0$|
+|Vapor liquid equilibrium <br/> ★ Ideal gas|$\begin{aligned} &-\dfrac{h\_i^v}{T^2}dT - R\dfrac{dP}{P} + R\dfrac{dx_i^v}{x_i^v} = -\dfrac{\overline{H}\_i^l}{T^2}dT - \dfrac{\overline{V}\_i^l}{T}dP + \dfrac{1}{T} \left[\dfrac{\partial \mu_i^l}{\partial x_i}\right]\_{T, P} dx_i \end{aligned}$|
+
 <!-- ★ -->
