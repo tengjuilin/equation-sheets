@@ -155,7 +155,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - Homogeneous - $g(x) = 0$
 - Non-homogeneous - $g(x) \not= 0$
 - Linearly independent - $c_{1}f(x) + c_{2}g(x) = 0$ can only be satisfied by choosing $c_{1} = c_{2} = 0$ for functions $f, g$
-- Wronskian - $W(f, g)(x) = fg' - f'g$
+- Wronskian - $W(f, g)(x) = fg' - f' g$
 
 #### Principle of superposition
 
@@ -168,7 +168,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 #### Wronskian and linear (in)dependence
 
 - Two functions $f$ and $g$ are linearly dependent
-  - if their Wronskian $W(f, g)(x) = fg' - f'g = 0$.
+  - if their Wronskian $W(f, g)(x) = fg' - f' g = 0$.
 - Corollary
   - two linearly independent functions $f$ and $g$ has $W(f, g)(x) \not= 0$.
 
