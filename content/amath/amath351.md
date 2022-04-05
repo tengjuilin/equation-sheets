@@ -256,7 +256,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 5. Write the general solution $y(x) = y_{H}(x) + y_{P}(x)$.
 6. IVP
 
-#### Rules for guessing $y_{H}$
+#### Rules for guessing $y_{P}$
 
 - Consider each term of nonhomogeneity $g(x)$ separately.
 - Beware of the constants
