@@ -5,7 +5,7 @@ date: 2021-08-17T00:00:00+08:00
 
 ## First Order Differential Equations
 
-### First Order ODE Concepts
+### First order ODE concepts
 
 - *Differential equations (DE)* - relationship between an unknown function $y$ and its derivative
   - $F(y(x), y'(x), y''(x), ...) = 0$
@@ -21,7 +21,7 @@ date: 2021-08-17T00:00:00+08:00
 - *Interval of validity* - the largest interval where the solution is valid.
 - *Distinct solution* - $y_{1}(x) \not = y_{2}(x)$ for some $x$
 
-#### Existence and Uniqueness Theorem
+#### Existence and uniqueness theorem
 
 - [x] 1st order ODE
 - Consider the IVP $y' = f(t, y)$, $y(0) = 0$.
@@ -104,7 +104,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 3. Substitution: <br/> $y(x, u(x)) \xleftarrow{u(x)} u(x)$ <br/> $y(x)$
 4. IVP
 
-### Mathematical Modeling
+### Mathematical modeling
 
 #### Radioactive decay
 
@@ -149,7 +149,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 ## Second Order Differential Equations
 
-### Second Order ODE Concepts
+### Second order ODE concepts
 
 - Second order linear differential equation - $r(x)y'' + p(x)y' + q(x)y = g(x)$
 - Homogeneous - $g(x) = 0$
@@ -464,7 +464,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 ## Laplace Transform
 
-### Laplace Transform Concepts
+### Laplace transform concepts
 
 - Laplace transform - $\mathcal{L}\{f(t)\} = F(s) = \displaystyle\int_{0}^{\infin} e^{-st}f(t) \ dt$
 - Heaviside function (unit step function)
