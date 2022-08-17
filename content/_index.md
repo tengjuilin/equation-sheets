@@ -123,5 +123,6 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - In progress Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Textbook: *An Introduction to Interfaces and Colloids: The Bridge to Nanoscience* 1e by Berg
 - [CHEM E 457 Principles of Molecular Engineering](cheme/cheme457/)
-  - In progress Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
+  - Covered probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, and phase transitions.
+  - Taken in Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
   - Textbook: *Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience* 2e by Dill and Bromberg
