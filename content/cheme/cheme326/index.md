@@ -633,7 +633,7 @@ Isoenergetic process ($\Delta u = 0 \implies \Delta T = 0$) of ideal gas  has si
 |Description|Equations|
 |-:|:-|
 |Wilson equation|$g^E = -R T\left[x_{a} \ln \left(x_{a}+\Lambda_{a b} x_{b}\right) + x_{b} \ln \left(x_{b}+\Lambda_{b a} x_{a}\right)\right]$|
-|Activity coefficient|$\begin{aligned} \overline{G}\_i^{E} &= RT\ln\gamma_i \\\ \overline{G}\_a^{E} &= -R T\left[\ln \left(x_{a}+\Lambda_{ab} x_{b}\right)+x_{b}\left(\dfrac{\Lambda_{b a}}{x_{b}+\Lambda_{ba}x_{a}}-\dfrac{\Lambda_{a b}}{x_{a}+\Lambda_{a b} x_{b}}\right)\right] \\\ \overline{G}_b^{E} &= -R T\left[\ln \left(x_{b}+\Lambda_{ba}x_{b}\right)+x_{a}\left(\dfrac{\Lambda_{a b}}{x_{a}+\Lambda_{a b} x_{b}}-\dfrac{\Lambda_{b a}}{x_{b}+\Lambda_{ba}x_{a}}\right)\right] \end{aligned}$|
+|Activity coefficient|$\begin{aligned} \overline{G}\_i^{E} &= RT\ln\gamma_i \\\ \overline{G}\_a^{E} &= -R T\left[\ln \left(x_{a}+\Lambda_{ab} x_{b}\right)+x_{b}\left(\dfrac{\Lambda_{b a}}{x_{b}+\Lambda_{ba}x_{a}}-\dfrac{\Lambda_{a b}}{x_{a}+\Lambda_{a b} x_{b}}\right)\right] \\\ \overline{G}_b^{E} &= -R T\left[\ln \left(x_{b}+\Lambda_{ba}x_{a}\right)+x_{a}\left(\dfrac{\Lambda_{a b}}{x_{a}+\Lambda_{a b} x_{b}}-\dfrac{\Lambda_{b a}}{x_{b}+\Lambda_{ba}x_{a}}\right)\right] \end{aligned}$|
 |Wilson parameters|$\Lambda_{ab} = \dfrac{v_b}{v_a}\exp\left(-\dfrac{\lambda_{ab}}{RT}\right) \newline \Lambda_{ba} = \dfrac{v_a}{v_b}\exp\left(-\dfrac{\lambda_{ba}}{RT}\right)$|
 
 ##### Non-random two-liquid model (NRTL)
