@@ -62,11 +62,11 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 
 - [MATH 124 Calculus I](math/math124/)
   - Covered limits, continuity, derivatives, extreme values, L'Hospital's rule, intermediate value theorem, mean value theorem, and applications of differentiation.
-  - Taken Au17 in high school as AP Calculus BC with Mr. Trey
+  - Taken in Au17 in high school as AP Calculus BC with Mr. Trey
   - Textbook: *Calculus Early Transendentals* 8e by Stewart
 - [MATH 125 Calculus II](math/math125/)
   - Covered indefinite and definite integrals, fundamental theorem of calculus, u-substitution, integration by parts, integral approximations, trigonometric integrals and substitutions, improper integrals, and applications of integration.
-  - Taken Sp17 in high school as AP Calculus BC with Mr. Trey
+  - Taken in Sp17 in high school as AP Calculus BC with Mr. Trey
   - Textbook: *Calculus Early Transendentals* 8e by Stewart
 - [MATH 126 Calculus III](math/math126/)
   - Covered vectors, equation of lines, planes, cylinders, and quadratic surfaces, vector functions, partial derivatives, tangent plane approximation, extreme values, double integrals on Cartesian and polar coordinates, and Taylor series.
@@ -87,7 +87,8 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Taken in Wi21 with [Alanna Gary](https://amath.washington.edu/people/alanna-gary)
   - Optional textbook: *Elementary Differential Equations and Boundary Value Problems* 11e by Boyce et al.
 - [AMATH 353 Partial Differential Equations and Waves](amath/amath353/)
-  - In progress Sp22 with [Professor Mark Kot](https://amath.washington.edu/people/mark-kot)
+  - Covered traveling waves, wave equation, d'Alembert's solution, standing waves, separation of variables, and conservation laws.
+  - Taken in Sp22 with [Professor Mark Kot](https://amath.washington.edu/people/mark-kot)
   - Textbook: *An Introduction to the Mathematical Theory of Wave* 1e by Knobel
 
 ## Chemical Engineering
@@ -105,24 +106,34 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder et al.
 - [CHEM E 325 Energy and Entropy](cheme/cheme325/)
   - Covered thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, and single and multi-component equilibrium.
-  - Taken Au21 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
+  - Taken in Au21 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
   - Optional textbook: *Engineering and Chemical Thermodynamics* 2e by Koretsky
 - [CHEM E 326 Chemical Engineering Thermodynamics](cheme/cheme326/)
   - Covered thermodynamic relations, single- and multi-component phase equilibrium, fugacity-based equilibrium, phase equilibrium applications, and chemical equilibrium.
-  - Taken Wi22 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
+  - Taken in Wi22 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
   - Textbook: *Engineering and Chemical Thermodynamics* 2e by Koretsky
 - [CHEM E 330 Transport Processes I](cheme/cheme330/)
   - Covered basic transport: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
-  - Taken Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
+  - Taken in Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Optional textbook: *Transport Phenomena* Revised 2e by Bird et al.
 - [CHEM E 340 Transport Process II](cheme/cheme340/)
   - Covered 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, and radiation.
-  - Taken Wi22 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
+  - Taken in Wi22 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
   - Optional textbook: *Fundamentals of Heat and Mass Transfer* 8e by Bergman et al.
+- [CHEM E 435 Transport Process III](cheme/cheme435/)
+  - In progress Au22 with [Professor Jorge Marchand](https://www.cheme.washington.edu/facultyfinder/jorge-marchand)
+  - Textbook: *Separation Process Principles with Applications Using Process Simulators* 4e by Seader
 - [CHEM E 455 Surface and Colloid Science Laboratory](cheme/cheme455/)
-  - In progress Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
+  - Taken in Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Textbook: *An Introduction to Interfaces and Colloids: The Bridge to Nanoscience* 1e by Berg
 - [CHEM E 457 Principles of Molecular Engineering](cheme/cheme457/)
   - Covered probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, and phase transitions.
   - Taken in Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
   - Textbook: *Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience* 2e by Dill and Bromberg
+- [CHEM E 465 Reactor Design](cheme/cheme465/)
+  - In progress Au22 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
+  - Textbook: *Essentials of Chemical Reaction Engineering* 2e by Fogler
+- [CHEM E 512 Methods of Engineering Analysis](cheme/cheme512/)
+  - In progress Au22 with [Professor Shachi Mittal](https://www.cheme.washington.edu/facultyfinder/shachi-mittal)
+  - Optional textbook: *Mathematical Methods in Chemical Engineering* 1e by Varma
+  - Study textbooks: *Advanced Engineering Mathematics* 6e by Zill; *Advanced Engineering Mathematics* 10e by Kreyszig

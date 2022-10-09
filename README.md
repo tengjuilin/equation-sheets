@@ -55,7 +55,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |-|-|-|-|:-:|
 |AMATH 301 <br/> Beginning Scientific Computing|[Jupyter Notebooks](https://github.com/tengjuilin/intro-sci-computing)|[html](http://intro-sci-computing.netlify.app/)|**Scientific computing** - root finding, solving linear systems with direct and iterative methods, optimization, curve fitting, SVD, numerical differentiation and integration, solving systems of ODEs|:white_check_mark:|
 |AMATH 351 <br/> Intro to Differential Equations and Applications|[pdf](static/pdf/amath/amath351.pdf)|[html](https://equation-sheets.netlify.app/amath/amath351/)|**Ordinary differential equations** - 1st, 2nd order ODE with applications, systems of ODEs, Laplace transform|:white_check_mark:|
-|AMATH 353 <br/> Partial Differential Equations and Waves|[pdf]|[html](https://equation-sheets.netlify.app/amath/amath353/)|**Partial differential equations**|Sp22 in progress <br/> :pick:|
+|AMATH 353 <br/> Partial Differential Equations and Waves|[pdf]|[html](https://equation-sheets.netlify.app/amath/amath353/)|**Partial differential equations**|Sp22 completed <br/> :pick:|
 
 ## Chemical Engineering
 
@@ -68,5 +68,8 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |CHEM E 326 <br/> Chemical Engineering Thermodynamics|[pdf](static/pdf/cheme/cheme326.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme326/)|**Thermodynamics II** - thermodynamic relations, single- and multi-component phase equilibrium, fugacity-based equilibrium, phase equilibrium applications, chemical equilibrium|:white_check_mark:|
 |CHEM E 330 <br/> Transport Process I|[pdf](static/pdf/cheme/cheme330.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Basic transport** - rate laws, transport coefficients, shell balance method, generalization to 3D <br/> **Fluid mechanics** - Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, microfluidics|:white_check_mark:|
 |CHEM E 340 <br/> Transport Process II|[pdf](static/pdf/cheme/cheme340.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme340/)|**Heat transfer** - 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, radiation|:white_check_mark:|
-|CHEM E 455 <br/> Surface and Colloid Science Laboratory|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme455/)|**Interface and colloid science**|Sp22 in progress <br/> :pick:|
+|CHEM E 435 <br/> Transport Process III|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme435/)|**Separation process and mass transfer**|Au22 in progress <br/> :pick:|
+|CHEM E 455 <br/> Surface and Colloid Science Laboratory|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme455/)|**Interface and colloid science**|Sp22 completed <br/> :pick:|
 |CHEM E 457 <br/> Principles of Molecular Engineering|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme457/)|**Statistical mechanics** - probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, phase transitions|:white_check_mark:|
+|CHEM E 465 <br/> Reactor Design|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme465/)|**Chemical reaction engineering**|Au22 in progress <br/> :pick:|
+|CHEM E 512 <br/> Methods of Engineering Analysis|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme512/)|**Engineering mathematics**|Au22 in progress <br/> :pick:|
