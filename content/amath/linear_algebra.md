@@ -76,7 +76,7 @@ Let $V$ be a set of elements on which vector addition and scalar multiplication 
 - *Nonhomogeneous* - not all constants are zero $\mathbf{A}\mathbf{x} = \mathbf{b}$
 - *Elementary row operations*
   - $cR_i$ - Multiply a row by a nonzero constant
-  - $R_1 \leftrightarrow R_j$ - Interchange any two rows
+  - $R_i \leftrightarrow R_j$ - Interchange any two rows
   - $cR_i + R_j$ - Add a nonzero multiple of one row to any other row
 - *Row equivalent* - matrix obtained by a sequence of elementary row operations on another matrix
 - *Row reduction* - procedure of carrying out elementary row operations on a matrix
@@ -112,7 +112,7 @@ Let $V$ be a set of elements on which vector addition and scalar multiplication 
 - *Rank* - maximum number of linearly independent row vector in a matrix
   - Rank by row reduction: $\mathbf{A}$ is row equivalent to a row-echelon form $\mathbf{B}$
     - Row space of $\mathbf{A}$ = Row space of $\mathbf{B}$
-    - Nonzero rows of $\mathbf{b}$ form a basis for the row space of $\mathbf{A}$
+    - Nonzero rows of $\mathbf{B}$ form a basis for the row space of $\mathbf{A}$
     - $\mathrm{rank}(\mathbf{A})$ = number of nonzero rows in $\mathbf{B}$
 - Consistency of nonhomogeneous systems
   - $\mathbf{A}\mathbf{x} = \mathbf{b}$ is consistent $\iff \mathrm{rank}(\mathbf{A}) = \mathrm{rank}(\mathbf{A}|\mathbf{B})$
