@@ -197,4 +197,89 @@ date: 2022-11-03T00:00:00-08:00
 |$E_D > E_U$|$\uparrow T, \uparrow S_{D/U}$|
 |$E_D < E_U$|$\downarrow T, \uparrow S_{D/U}$|
 
+## Enzymatic Reactions
+
+|Description|Equations|
+|-:|:-|
+|Pseudo-steady-state hypothesis|$r_{A*} = \sum r_{i, A*} = 0$|
+
+### Mechanism development
+
+|Rate law|Mechanism (rule of thumb)|
+|-:|:-|
+|Species concentration in denominator|Species collision with active intermediate|
+|Constant in denominator|Reaction of spontaneous decomposition of active intermediate|
+|Species concentration in numerator|Species produce active intermediate|
+
+### Michaelis-Menten kinetics
+
+|Description|Equations|
+|-:|:-|
+|Overall reaction|$\ce{E + S -> E + P}$|
+|Reaction mechanism|$\ce{S + E <=>[\mathit{k}\_1][\mathit{k}_\{-1}] ES} \newline \ce{ES + W ->[\mathit{k}\_{2}] P + E}$|
+|Enzyme balance|$\ce{[E_T] = [E] + [ES]} \newline \ce{[E] = [E_T] - [ES]}$|
+|Pseudo-steady-state approximation|$\begin{aligned}r_{\ce{ES}} &= k_1\ce{[S][E]} - k_{-1} \ce{[ES]} - k_2 \ce{[ES][W]} = 0 \\\ r_{\ce{ES}} &= k_1\ce{[S]([E_T] - [ES])} - k_{-1} \ce{[ES]} - k_2 \ce{[ES][W]} = 0 \end{aligned} \newline \ce{[ES]} = \dfrac{k_1 \ce{[S][E_T]}}{k_1 \ce{[S]} + k_{-1} + k_2 \ce{[W]}}$|
+|Turnover number (# substrates converted to product per unit time on one enzyme at saturation)|$k_{\mathrm{cat}} = k_2 \ce{[W]}$|
+|Michaelis-Menten constant (attraction of enzyme of its substrate, [Substrate] which rate of rxn is 1/2 max)|$K_M = \dfrac{k_{\mathrm{cat}} + k_{-1}}{k_1}$|
+|Maximum rate|$V_{\max} = k_{\mathrm{cat}} \ce{[E_T]}$|
+|**Michaelis-Menten equation** <br/> Rate of reaction|$\begin{aligned}r_{\ce{P}} &= k_{2} \ce{[ES][W]} \\\ &= \dfrac{k_1 k_{2} \ce{[S][E_T][W]}}{k_1 \ce{[S]} + k_{-1} + k_2 \ce{[W]}} \\\ &= \dfrac{k_{\mathrm{cat}} \ce{[S][E_T]}}{K_M + \ce{[S]}} \\\ &= \dfrac{V_{\max} \ce{[S]}}{K_M + \ce{[S]}} \end{aligned}$|
+|**Lineweaver-Burk equation**|$\dfrac{1}{r_{\ce{P}}} = \dfrac{K_M}{V_{\max}}\dfrac{1}{\ce{[S]}} + \dfrac{1}{V_{\max}}$|
+|Eadie-Hofstee equation|$r_{\ce{P}} = V_{\max} - K_M\dfrac{r_{\ce{P}}}{\ce{[S]}}$|
+|Hanes-Woolf equation|$\dfrac{\ce{[S]}}{r_{\ce{P}}} = \dfrac{K_M}{V_{\max}} + \dfrac{1}{V_{\max}}\ce{[S]}$|
+
+### Product-enzyme complex
+
+|Description|Equations|
+|-:|:-|
+|Overall reaction|$\ce{E + S -> E + P}$|
+|Reaction mechanism|$\ce{S + E <=> ES <=> PE <=> P + E}$|
+|Briggs-Haldane equation|$r_{\ce{P}} = \dfrac{V_{\max}(\ce{[S]} - \ce{[P]} / K_C)}{\ce{[S]} + K_{\max} + K_P \ce{[P]}}$|
+
+### Batch enzymatic reactor
+
+|Description|Equations|
+|-:|:-|
+|Time |$\begin{aligned}t &= \dfrac{K_M}{V_{\max}}\ln\left(\dfrac{\ce{[A]_0}}{\ce{[A]}}\right) + \dfrac{\ce{[A]\_0 - [A]}}{V\_{\max}} \\\ &= \dfrac{K_M}{V\_{\max}} \ln\left(\dfrac{1}{1-X}\right) + \dfrac{\ce{[A]_0}X}{V\_{\max}} \end{aligned}$|
+|Linearized form|$\dfrac{1}{t} \ln\left(\dfrac{\ce{[A]_0}}{\ce{[A]}}\right) = \dfrac{V\_{\max}}{K_M} - \dfrac{\ce{[A]_0 - [A]}}{K_M t}$|
+
+### Enzymatic inhibition
+
+#### Competitive inhibition
+
+|Description|Equations|
+|-:|:-|
+|Reaction mechanism|$\ce{E + S <=> ES} \newline \ce{ES -> E + P} \newline \ce{E + I <=> EI} \text{ (inactive)}$|
+|Reaction rate|$r_{\ce{P}} = \dfrac{V_{\max}\ce{[S]}}{\ce{[S]} + K_M \left[1 + \dfrac{\ce{[I]}}{K_I}\right]}$|
+|Lineweaver-Burk form <br/> $\uparrow K_I, \uparrow \text{slope}$|$\dfrac{1}{r_{\ce{P}}} = \dfrac{1}{\ce{[S]}} \left[\dfrac{K_M}{V_{\max}} \left[ 1 + \dfrac{\ce{[I]}}{K_I}\right] \right] + \dfrac{1}{V_{\max}}$|
+
+#### Uncompetitive inhibition
+
+|Description|Equations|
+|-:|:-|
+|Reaction mechanism|$\ce{E + S <=> ES} \newline \ce{ES -> E + P} \newline \ce{ES + I <=> ESI} \text{ (inactive)}$|
+|Reaction rate|$r_{\ce{P}} = \dfrac{V_{\max}\ce{[S]}}{K_M + \ce{[S]} \left[ 1 + \dfrac{\ce{[I]}}{K_I}\right]}$|
+|Lineweaver-Burk form <br/> $\uparrow K_I, \uparrow \text{intercept}$|$\dfrac{1}{r_{\ce{P}}} = \dfrac{1}{\ce{[S]}} \dfrac{K_M}{V_{\max}} + \dfrac{1}{V_{\max}} \left[ 1 + \dfrac{\ce{[I]}}{K_I}\right]$|
+
+#### Noncompetitive (mixed) inhibition
+
+|Description|Equations|
+|-:|:-|
+|Reaction mechanism|$\ce{E + S <=> ES} \newline \ce{ES -> E + P} \newline \ce{E + I <=> EI} \text{ (inactive)} \newline \ce{ES + I <=> ESI} \text{ (inactive)} \newline \ce{S + EI <=> ESI} \text{ (inactive)}$|
+|Reaction rate|$r_{\ce{P}} = \dfrac{V_{\max}\ce{[S]}}{(\ce{[S]} + K_M) \left[ 1 + \dfrac{\ce{[I]}}{K_I}\right]}$|
+|Lineweaver-Burk form <br/> $\uparrow K_I, \uparrow \text{slope}, \uparrow \text{intercept}$|$\dfrac{1}{r_{\ce{P}}} = \dfrac{1}{\ce{[S]}} \dfrac{K_M}{V_{\max}} \left[ 1 + \dfrac{\ce{[I]}}{K_I}\right] + \dfrac{1}{V_{\max}} \left[ 1 + \dfrac{\ce{[I]}}{K_I}\right]$|
+
+## Catalytic Reactions
+
+### Reaction mechanisms
+
+|Reaction|Mechanism|Rate Law|
+|-:|:-|:-|
+|Adsorption|$\ce{A + ^* <=> A^*}$|$r_{\ce{A}} = k_{\ce{A}}\left[P_{\ce{A}} \ce{[^\*] - \dfrac{\ce{[A^*]}}{K_{\ce{A}}}}\right]$|
+|Desorption|$\ce{A^* <=> A + ^*}$|$r_{\ce{D}} = k_{\ce{D}}\left[\ce{[A^*] - \dfrac{P_{\ce{A}} \ce{[^\*]}}{K_{\ce{D}}}}\right]$|
+|Single site surface rxn|$\ce{A^* <=>[\mathit{k}\_S][\mathit{k}_{-S}] B^*}$|$r\_{\ce{S}} = k_{\ce{S}} \left[\ce{[A^\*]} - \dfrac{\ce{[B^*]}}{K_{\ce{S}}}\right]$|
+|Dual site (I) surface rxn|$\ce{A^* + ^* <=>[\mathit{k}\_S][\mathit{k}_{-S}] B^* + ^*}$|$r\_{\ce{S}} = k_{\ce{S}} \left[\ce{[A^\*][^\*]} - \dfrac{\ce{[B^*][^\*]}}{K_{\ce{S}}}\right]$|
+|Dual site (II) surface rxn|$\ce{A^* + B^* <=>[\mathit{k}\_S][\mathit{k}_{-S}] C^* + D^*}$|$r\_{\ce{S}} = k_{\ce{S}} \left[\ce{[A^\*][B^\*]} - \dfrac{\ce{[C^*][D^\*]}}{K_{\ce{S}}}\right]$|
+|Dual site (III) surface rxn|$\ce{A^* + B^{\*}\' <=>[\mathit{k}\_S][\mathit{k}_{-S}] C^{\*}\' + D^*}$|$r\_{\ce{S}} = k_{\ce{S}} \left[\ce{[A^\*][B^{\*}\']} - \dfrac{\ce{[C^{\*}\'][D^\*]}}{K_{\ce{S}}}\right]$|
+|Eley-Rideal surface rxn|$\ce{A^* + B (g) <=>[\mathit{k}\_S][\mathit{k}_{-S}] C^{\*}}$|$r\_{\ce{S}} = k_{\ce{S}} \left[\ce{[A^\*]} P_{\ce{B}} - \dfrac{\ce{[C^{\*}]}}{K_{\ce{S}}}\right]$|
+
 <!-- ★ -->
