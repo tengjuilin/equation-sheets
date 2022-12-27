@@ -1,3 +1,7 @@
 body {
     font-size: 14px;
 }
+
+.single .content .admonition {
+    overflow: hidden !important;
+}
