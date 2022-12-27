@@ -85,8 +85,8 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
-|CHEM E 330 <br/> Transport Process I|[pdf](static/pdf/cheme/cheme330.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Basic transport** - rate laws, transport coefficients, shell balance method, generalization to 3D <br/> **Fluid mechanics** - Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, microfluidics|:white_check_mark:|
-|CHEM E 340 <br/> Transport Process II|[pdf](static/pdf/cheme/cheme340.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme340/)|**Heat transfer** - 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, radiation|:white_check_mark:|
+|CHEM E 330 <br/> Transport Process I|[pdf](static/pdf/cheme/cheme330.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Transport fundamentals** - rate laws, transport coefficients, shell balance method, generalization to 3D <br/> **Fluid mechanics** - Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, microfluidics|:white_check_mark:|
+|CHEM E 340 <br/> Transport Process II|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme340/)|**Heat transfer** - 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, radiation|Wi22 completed <br/> :pick:|
 |CHEM E 435 <br/> Transport Process III|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme435/)|**Separation process and mass transfer** - mass transfer and diffusion, single stage equilibrium, multistage cascade, absorption and stripping, distillation, membrane separations|:white_check_mark:|
 
 ### Chemical Reaction Engineering

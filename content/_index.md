@@ -126,7 +126,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 ### Transport Processes
 
 - [CHEM E 330 Transport Processes I](cheme/cheme330/)
-  - Covered basic transport: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
+  - Covered transport fundamentals: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
   - Taken in Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Optional textbook: *Transport Phenomena* Revised 2e by Bird et al.
 - [CHEM E 340 Transport Process II](cheme/cheme340/)
