@@ -22,6 +22,12 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - [Calculus](#calculus)
   - [Applied Mathematics](#applied-mathematics)
   - [Chemical Engineering](#chemical-engineering)
+    - [Chemical Engineering Fundamentals](#chemical-engineering-fundamentals)
+    - [Thermodynamics and Statistical Mechanics](#thermodynamics-and-statistical-mechanics)
+    - [Transport Processes](#transport-processes)
+    - [Chemical Reaction Engineering](#chemical-reaction-engineering)
+    - [Process Engineering](#process-engineering)
+    - [Nanoscience and Molecular Engineering](#nanoscience-and-molecular-engineering)
 
 ## Chemistry
 
@@ -59,19 +65,46 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 
 ## Chemical Engineering
 
+### Chemical Engineering Fundamentals
+
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
-|NME 220 <br/> Intro to Molecular and Nanoscale Principles|[pdf](static/pdf/cheme/nme220.pdf)|[html](https://equation-sheets.netlify.app/cheme/nme220/)|**Molecular and nanoscale principles** - scaling and transport properties, atomic theory and models, wave function in quantum mechanics, nanoscience and technology, electronic structures of molecules, molecular modes|:white_check_mark:|
-|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://cheme-sci-computing.netlify.app/)|**ChemE scientific computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
 |CHEM E 310 <br/> Mass and Energy Balances|[pdf](static/pdf/cheme/cheme310.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme310/)|**Material and energy balances** - units and process variables, material and energy balances of nonreactive and reactive processes, single- and multi-phase systems|:white_check_mark:|
+|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://cheme-sci-computing.netlify.app/)|**ChemE scientific computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
+|CHEM E 512 <br/> Methods of Engineering Analysis|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme512/)|**Engineering mathematics**|Au22 completed <br/> :pick:|
+
+### Thermodynamics and Statistical Mechanics
+
+|Course|PDF|Online|Topics and Description|Status|
+|-|-|-|-|:-:|
 |CHEM E 325 <br/> Energy and Entropy|[pdf](static/pdf/cheme/cheme325.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme325/)|**Thermodynamics I** - thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, single and multi-component equilibrium|:white_check_mark:|
 |CHEM E 326 <br/> Chemical Engineering Thermodynamics|[pdf](static/pdf/cheme/cheme326.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme326/)|**Thermodynamics II** - thermodynamic relations, single- and multi-component phase equilibrium, fugacity-based equilibrium, phase equilibrium applications, chemical equilibrium|:white_check_mark:|
+|CHEM E 457 <br/> Principles of Molecular Engineering|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme457/)|**Statistical mechanics** - probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, phase transitions|:white_check_mark:|
+
+### Transport Processes
+
+|Course|PDF|Online|Topics and Description|Status|
+|-|-|-|-|:-:|
 |CHEM E 330 <br/> Transport Process I|[pdf](static/pdf/cheme/cheme330.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Basic transport** - rate laws, transport coefficients, shell balance method, generalization to 3D <br/> **Fluid mechanics** - Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, microfluidics|:white_check_mark:|
 |CHEM E 340 <br/> Transport Process II|[pdf](static/pdf/cheme/cheme340.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme340/)|**Heat transfer** - 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, radiation|:white_check_mark:|
 |CHEM E 435 <br/> Transport Process III|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme435/)|**Separation process and mass transfer** - mass transfer and diffusion, single stage equilibrium, multistage cascade, absorption and stripping, distillation, membrane separations|:white_check_mark:|
+
+### Chemical Reaction Engineering
+
+|Course|PDF|Online|Topics and Description|Status|
+|-|-|-|-|:-:|
+|CHEM E 465 <br/> Reactor Design|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme465/)|**Chemical reaction engineering**|:white_check_mark:|
+
+### Process Engineering
+
+|Course|PDF|Online|Topics and Description|Status|
+|-|-|-|-|:-:|
+|CHEM E 480 <br/> Process Dynamics and Control|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme480/)|**Process dynamics and control**|Wi23 in progress <br/> :pick:|
+|CHEM E 485 <br/> Process Design I|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme485/)|**Process design**|Wi23 in progress <br/> :pick:|
+
+### Nanoscience and Molecular Engineering
+
+|Course|PDF|Online|Topics and Description|Status|
+|-|-|-|-|:-:|
+|NME 220 <br/> Intro to Molecular and Nanoscale Principles|[pdf](static/pdf/cheme/nme220.pdf)|[html](https://equation-sheets.netlify.app/cheme/nme220/)|**Molecular and nanoscale principles** - scaling and transport properties, atomic theory and models, wave function in quantum mechanics, nanoscience and technology, electronic structures of molecules, molecular modes|:white_check_mark:|
 |CHEM E 455 <br/> Surface and Colloid Science Laboratory|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme455/)|**Interface and colloid science**|Sp22 completed <br/> :pick:|
-|CHEM E 457 <br/> Principles of Molecular Engineering|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme457/)|**Statistical mechanics** - probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, phase transitions|:white_check_mark:|
-|CHEM E 465 <br/> Reactor Design|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme465/)|**Chemical reaction engineering**|Au22 completed <br/> :pick:|
-|CHEM E 480 <br/> Process Dynamics and Control|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme480/)|**Process Dynamics and Control**|Wi23 in progress <br/> :pick:|
-|CHEM E 485 <br/> Process Design I|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme485/)|**Process Design**|Wi23 in progress <br/> :pick:|
-|CHEM E 512 <br/> Methods of Engineering Analysis|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme512/)|**Engineering mathematics**|Au22 completed <br/> :pick:|

@@ -93,17 +93,23 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 
 ## Chemical Engineering
 
-- [NME 220 Molecular and Nanoscale Principles](cheme/nme220/)
-  - Covered scaling and transport properties, atomic theory of matter, atomic models, wave functions in quantum mechanics, nanoscience and technology, electronic structures of molecules, and molecular modes and energetic properties.
-  - Taken in Sp21 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
-  - Textbook: Custom text
-- [CHEM E 375 Chemical Engineering Computer Skills](http://cheme-sci-computing.netlify.app/)
-  - Covered chemical engineering scientific computing and numerical methods. Topics include curve fitting, balancing chemical equations, solving VLE problems, plotting VLE x/y and Txy diagrams, determining Antoine's coefficients, chemical kinetics, and time-dependent and -independent heat transfer.
-  - Taken in Sp21 with [Professor Jim Pfaendtner](https://www.cheme.washington.edu/facultyfinder/jim-pfaendtner)
+### Chemical Engineering Fundamentals
+
 - [CHEM E 310 Material and Energy Balances](cheme/cheme310/)
   - Covered units and process variables, material balances of nonreactive and reactive systems, single- and multi-phase systems, energy balances of nonreactive and reactive systems.
   - Taken in Sp21 with [Professor Elizabeth Nance](https://www.cheme.washington.edu/facultyfinder/elizabeth-nance)
+- [CHEM E 375 Chemical Engineering Computer Skills](http://cheme-sci-computing.netlify.app/)
+  - Covered chemical engineering scientific computing and numerical methods. Topics include curve fitting, balancing chemical equations, solving VLE problems, plotting VLE x/y and Txy diagrams, determining Antoine's coefficients, chemical kinetics, and time-dependent and -independent heat transfer.
+  - Taken in Sp21 with [Professor Jim Pfaendtner](https://www.cheme.washington.edu/facultyfinder/jim-pfaendtner)
   - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder et al.
+<!-- - [CHEM E 512 Methods of Engineering Analysis](cheme/cheme512/)
+  - Covered first, second, and higher-order homogeneous and nonhomogeneous ODEs, systems of ODEs, Laplace transform, series solution, PDEs, perturbation methods, and elementary data science.
+  - Taken in Au22 with [Professor Shachi Mittal](https://www.cheme.washington.edu/facultyfinder/shachi-mittal)
+  - Optional textbook: *Mathematical Methods in Chemical Engineering* 1e by Varma
+  - Study textbooks: *Advanced Engineering Mathematics* 6e by Zill; *Advanced Engineering Mathematics* 10e by Kreyszig -->
+
+### Thermodynamics and Statistical Mechanics
+
 - [CHEM E 325 Energy and Entropy](cheme/cheme325/)
   - Covered thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, and single and multi-component equilibrium.
   - Taken in Au21 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
@@ -112,6 +118,13 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered thermodynamic relations, single- and multi-component phase equilibrium, fugacity-based equilibrium, phase equilibrium applications, and chemical equilibrium.
   - Taken in Wi22 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
   - Textbook: *Engineering and Chemical Thermodynamics* 2e by Koretsky
+- [CHEM E 457 Principles of Molecular Engineering](cheme/cheme457/)
+  - Covered probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, and phase transitions.
+  - Taken in Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
+  - Textbook: *Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience* 2e by Dill and Bromberg
+
+### Transport Processes
+
 - [CHEM E 330 Transport Processes I](cheme/cheme330/)
   - Covered basic transport: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
   - Taken in Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
@@ -127,22 +140,26 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 <!-- - [CHEM E 455 Surface and Colloid Science Laboratory](cheme/cheme455/)
   - Taken in Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Textbook: *An Introduction to Interfaces and Colloids: The Bridge to Nanoscience* 1e by Berg -->
-- [CHEM E 457 Principles of Molecular Engineering](cheme/cheme457/)
-  - Covered probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, and phase transitions.
-  - Taken in Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
-  - Textbook: *Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience* 2e by Dill and Bromberg
+
+### Chemical Reaction Engineering
+
 - [CHEM E 465 Reactor Design](cheme/cheme465/)
   - Covered rate law, reactor sizing, stoichiometry, isothermal reactor deign, rate law determination, multiple reactions, enzymatic and catalytic reactions, and nonisothermal reactor design.
   - Taken in Au22 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
   - Textbook: *Essentials of Chemical Reaction Engineering* 2e by Fogler
-<!-- - [CHEM E 480 Process Dynamics and Control](cheme/cheme480/)
+
+<!-- ### Process Engineering
+
+- [CHEM E 480 Process Dynamics and Control](cheme/cheme480/)
   - In progress Wi23 with [Professor James Carothers](https://www.cheme.washington.edu/facultyfinder/james-carothers)
   - Textbook:
 - [CHEM E 485 Process Design I](cheme/cheme485/)
   - In progress Wi23 with [Professor Vincent Holmberg](https://www.cheme.washington.edu/facultyfinder/vincent-holmberg)
-  - Textbook:
-- [CHEM E 512 Methods of Engineering Analysis](cheme/cheme512/)
-  - Covered first, second, and higher-order homogeneous and nonhomogeneous ODEs, systems of ODEs, Laplace transform, series solution, PDEs, perturbation methods, and elementary data science.
-  - Taken in Au22 with [Professor Shachi Mittal](https://www.cheme.washington.edu/facultyfinder/shachi-mittal)
-  - Optional textbook: *Mathematical Methods in Chemical Engineering* 1e by Varma
-  - Study textbooks: *Advanced Engineering Mathematics* 6e by Zill; *Advanced Engineering Mathematics* 10e by Kreyszig -->
+  - Textbook: -->
+
+### Nanoscience and Molecular Engineering
+
+- [NME 220 Molecular and Nanoscale Principles](cheme/nme220/)
+  - Covered scaling and transport properties, atomic theory of matter, atomic models, wave functions in quantum mechanics, nanoscience and technology, electronic structures of molecules, and molecular modes and energetic properties.
+  - Taken in Sp21 with [Professor René Overney](https://www.cheme.washington.edu/facultyfinder/rene-overney)
+  - Textbook: Custom text
