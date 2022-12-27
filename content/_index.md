@@ -121,19 +121,28 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Taken in Wi22 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
   - Optional textbook: *Fundamentals of Heat and Mass Transfer* 8e by Bergman et al.
 - [CHEM E 435 Transport Process III](cheme/cheme435/)
-  - In progress Au22 with [Professor Jorge Marchand](https://www.cheme.washington.edu/facultyfinder/jorge-marchand)
+  - Covered mass transfer, single equilibrium stages, multistage cascades, absorption and stripping, distillation, and membrane separations.
+  - Taken in Au22 with [Professor Jorge Marchand](https://www.cheme.washington.edu/facultyfinder/jorge-marchand)
   - Textbook: *Separation Process Principles with Applications Using Process Simulators* 4e by Seader
-- [CHEM E 455 Surface and Colloid Science Laboratory](cheme/cheme455/)
+<!-- - [CHEM E 455 Surface and Colloid Science Laboratory](cheme/cheme455/)
   - Taken in Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
-  - Textbook: *An Introduction to Interfaces and Colloids: The Bridge to Nanoscience* 1e by Berg
+  - Textbook: *An Introduction to Interfaces and Colloids: The Bridge to Nanoscience* 1e by Berg -->
 - [CHEM E 457 Principles of Molecular Engineering](cheme/cheme457/)
   - Covered probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, and phase transitions.
   - Taken in Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
   - Textbook: *Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience* 2e by Dill and Bromberg
 - [CHEM E 465 Reactor Design](cheme/cheme465/)
-  - In progress Au22 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
+  - Covered rate law, reactor sizing, stoichiometry, isothermal reactor deign, rate law determination, multiple reactions, enzymatic and catalytic reactions, and nonisothermal reactor design.
+  - Taken in Au22 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
   - Textbook: *Essentials of Chemical Reaction Engineering* 2e by Fogler
+<!-- - [CHEM E 480 Process Dynamics and Control](cheme/cheme480/)
+  - In progress Wi23 with [Professor James Carothers](https://www.cheme.washington.edu/facultyfinder/james-carothers)
+  - Textbook:
+- [CHEM E 485 Process Design I](cheme/cheme485/)
+  - In progress Wi23 with [Professor Vincent Holmberg](https://www.cheme.washington.edu/facultyfinder/vincent-holmberg)
+  - Textbook:
 - [CHEM E 512 Methods of Engineering Analysis](cheme/cheme512/)
-  - In progress Au22 with [Professor Shachi Mittal](https://www.cheme.washington.edu/facultyfinder/shachi-mittal)
+  - Covered first, second, and higher-order homogeneous and nonhomogeneous ODEs, systems of ODEs, Laplace transform, series solution, PDEs, perturbation methods, and elementary data science.
+  - Taken in Au22 with [Professor Shachi Mittal](https://www.cheme.washington.edu/facultyfinder/shachi-mittal)
   - Optional textbook: *Mathematical Methods in Chemical Engineering* 1e by Varma
-  - Study textbooks: *Advanced Engineering Mathematics* 6e by Zill; *Advanced Engineering Mathematics* 10e by Kreyszig
+  - Study textbooks: *Advanced Engineering Mathematics* 6e by Zill; *Advanced Engineering Mathematics* 10e by Kreyszig -->
