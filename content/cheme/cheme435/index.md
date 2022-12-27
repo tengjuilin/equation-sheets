@@ -412,6 +412,17 @@ General principles are the same for different types of ternary phase diagrams. H
 |Separation factor|$\alpha_{i, j} = \alpha^*_{i, j} \left[\dfrac{(x\_{j, F} / x\_{j, P}) - r\alpha\_{i, j}}{(x\_{j, F} / x\_{j, P}) - r}\right]$|
 |Cut (fraction of feed permeated)|$\theta = \dfrac{\dot{n}_P}{\dot{n}_F}$|
 
+### Summary of transport through membranes
+
+|Type of transport|Permselective|Membrane Type|Driving Force|Permeability|
+|-:|:-:|:-:|:-:|-|
+|(L) **Bulk flow**|No|Macroporous|$\Delta P$|$\begin{aligned}P_M = \dfrac{\rho\varepsilon^3}{2(1 - \varepsilon)^2 \tau a_v^2 \mu}\end{aligned}$|
+|(L) **Molecular diffusion**|Yes|Microporous|$\Delta c$|$P_M = D_{e, i} = \dfrac{\varepsilon D_i K_{r, i}}{\tau}$|
+|(G) **Molecular diffusion** <br/> ★ high P <br/> ★ $d_p > d_m$|Yes|Microporous|$\Delta P_i \newline \Delta P = 0$|$P_{M, i} = \dfrac{D_{e, i}}{RT}$|
+|(G) **Knudsen diffusion** <br/> ★ low P <br/> ★ $d_p \sim d_m$|Yes|Microporous|$\Delta P_i \newline \Delta P = 0$|$P_{M, i} = \dfrac{D_{e, i}}{RT}$|
+|(L) **Solution diffusion**|Yes|Nonporous (dense)|$\Delta c$|$P_{M, i} = K_i D_i$|
+|(G) **Solution diffusion**|Yes|Nonporous (dense)|$\Delta P_i \newline \Delta P = 0$|$P_{M, i} = H_i D_i$|
+
 ### Reverse osmosis
 
 |Description|Equations|
