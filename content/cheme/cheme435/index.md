@@ -44,7 +44,7 @@ lightgallery: true
 - Magnetophoresis - magnetic field
 - Crystallization - solubility
 
-## Thermo Review
+## Thermodynamics Review
 
 |Description|Equations|
 |-:|:-|
@@ -54,11 +54,19 @@ lightgallery: true
 |Partial fugacity coefficient|$\phi_i = \dfrac{f_i}{x_iP}$|
 |Activity|$a_i = \dfrac{\bar{f}_i}{f_i^\circ}$|
 |Activity coefficient|$\gamma_i = \dfrac{a_i}{x_i}$|
+
+### $K$-values
+
+|Description|Equations|
+|-:|:-|
 |$K$-value (vapor-liquid equilibrium ratio)|$K_i = \dfrac{y_i}{x_i}$|
 |Distribution ratio (partition coefficient, liquid-liquid equilibrium ratio|$K_{D_i} = \dfrac{x_i^\alpha}{x_i^\beta}$|
 |Relative volatility|$\alpha_{i, j} = \dfrac{K_i}{K_j}$|
 |Relative selectivity|$\beta{i, j} = \dfrac{K_{D_i}}{K_{D_j}}$|
-|||
+|Raoult's law <br/> ★ Ideal solution|$K_i = \dfrac{P_i^*}{P}$|
+|Modified Raoult's law <br/> ★ Low pressure|$K_i = \gamma_{i, L}\dfrac{P_i^*}{P}$|
+|Poynting correction <br/> ★ Moderate pressure|$K_i = \gamma_{i, L}\phi_{i, V}^\mathrm{sat}\left(\dfrac{P_i^\mathrm{sat}}{P}\right) \exp\left[\dfrac{1}{RT}\displaystyle\int^P_{P_i^{\mathrm{sat}}} v_{i, L} dP \right]$|
+|Henry's law <br/> ★ Dilute species|$K_i = \dfrac{H_i}{P}$|
 
 ## Mass Transfer and Diffusion
 
@@ -221,7 +229,7 @@ General principles are the same for different types of ternary phase diagrams. H
 
 <br/>
 
-{{< image src="/cheme/cheme435/cheme435-ternary-phase-diagram.png" caption="Equilateral ternary phase diagram. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p101.)" >}}
+{{< image src="/cheme/cheme435/cheme435-ternary-phase-diagram.png" caption="Equilateral ternary phase diagram. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p101, Figure 4.14.)" >}}
 
 ## Multistage Cascades
 
@@ -240,12 +248,14 @@ General principles are the same for different types of ternary phase diagrams. H
 
 |Description|Equations|
 |-:|:-|
-|Molar flow rate of solute-free absorbent|$L$|
-|Molar flow rate of solute-free gas (carrier gas)|$V$|
+|Molar flow rate of solute-free absorbent|$L'$|
+|Molar flow rate of solute-free gas (carrier gas)|$V'$|
 |Mass ratio of solute to solvent-free absorbent in the liquid|$X$|
 |Mass ration of solute to solute-free gas in the vapor|$Y$|
 |Equilibrium curve|$K_n = \dfrac{y_n}{x_n} = \dfrac{Y_n}{X_n}\dfrac{1 + X_n}{1 + Y_n}$|
-|Slope of operating line|$\dfrac{L}{V}$|
+|Slope of operating line|$\dfrac{L\'}{V\'}$|
+
+{{< image src="/cheme/cheme435/cheme435-absorber-stripper.png" caption="Equilibrium curve and operating lines of absorber and stripper. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p144, 146, Figures 6.9, 6.12.)" >}}
 
 #### Absorption
 
@@ -316,6 +326,8 @@ General principles are the same for different types of ternary phase diagrams. H
 |$q$-parameter|$q = \dfrac{\overline{L} - L}{F} = 1 + \dfrac{\overline{V} - V}{F}$|
 |$q$-line|$y = \left(\dfrac{q}{q - 1}\right)x + \left(\dfrac{z_F}{q - 1}\right)$|
 
+{{< image src="/cheme/cheme435/cheme435-distillation.png" caption="Equilibrium curve and operating lines of rectifying and stripping sections of distillation column. Optimal feed stage is indicated by the transition between operating lines on the equilibrium curve. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p195, 196, 197, 200, Figures 7.5, 7.6, 7.7, 7.10.)" >}}
+
 ### Limiting conditions
 
 |Description|Equations|
@@ -349,7 +361,7 @@ General principles are the same for different types of ternary phase diagrams. H
 |Specific surface area|$a_v = \dfrac{a}{1 - \varepsilon}$|
 |Total pore surface area|$a = a_v (1 - \varepsilon)$|
 |Tortuosity correction of membrane width|$\tau l_M$|
-|Bulk flow flux <br/> ★ General pore|$N = \dfrac{\rho\varepsilon^2}{2(1-\varepsilon)^2 \tau a_v^2 \mu l_M}(P_0 - P_L)$|
+|**Bulk flow flux** <br/> ★ General pore|$N = \dfrac{\rho\varepsilon^2}{2(1-\varepsilon)^2 \tau a_v^2 \mu l_M}(P_0 - P_L)$|
 |Ergun equation|$\dfrac{P_0 - P_L}{l_M} = \dfrac{150 \mu v_0 (1-\varepsilon)^2}{D_P^2 \varepsilon^3} + \dfrac{1.75 \rho v_0^2 (1 - \varepsilon)}{D_P \varepsilon^3}$|
 |Mean spherical particle diameter|$D_P = \dfrac{6}{a_v}$|
 
