@@ -166,6 +166,7 @@ td {
 // ========== Site printing ========== //
 @media print {
     article, .page {
+        max-width: 1000px !important;
         width: 100% !important;
         padding-top: 0 !important;
     }
