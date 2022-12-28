@@ -138,6 +138,7 @@ lightgallery: true
 |Mass transfer coefficient (no bulk flow)|$k_c = \dfrac{D_{AB}}{\delta}$|
 |Mass transfer coefficient (with bulk flow)|$k\'\_c = \dfrac{D_{AB}}{\delta (1 - x_A)\_{\mathrm{LM}}}$|
 |Molar flux of species A <br/> ★ Interface (i), bulk (b)|$N_A = \pm k_c (c_{A, i} - c_{A, b}) \newline N_A = \pm k\'\_c (c_{A, i} - c_{A, b})$|
+|Film thickness|$\delta = \dfrac{D_{AB}}{k_c} = \dfrac{D_{AB}}{k\'_c (1 - x_A)\_{\mathrm{LM}}}$|
 
 #### Mass transfer coefficient and driving force
 
@@ -177,6 +178,19 @@ lightgallery: true
 
 ### Rachford-Rice algorithm for isothermal flash calculation
 
+{{< admonition type=info title="Symbol Conventions" open=false >}}
+
+- **Molar** flow rates
+  - $F$ - Feed
+  - $V$ - Output vapor
+  - $L$ - Output liquid
+- **Molar** fraction of component i
+  - $x_i$ - In the liquid
+  - $y_i$ - In the vapor
+  - $z_i$ - Overall
+
+{{< /admonition >}}
+
 |Description|Equations|
 |-:|:-|
 |Road map|Known -  $K_i, z_i, F$ <br/> Solve - $\Psi \to V \to L \to x_i, y_i \to Q$|
@@ -190,6 +204,8 @@ lightgallery: true
 |Liquid mole fraction|$y_i = \dfrac{z_i K_i}{1 + \Psi(K_i - 1)}$|
 |Heat|$Q = h_V V + h_L L - h_F F$|
 
+{{< image src="/cheme/cheme435/cheme435-flash-operations.png" caption="Flash operations of flash vaporization and partial condensation. (*Separation Process Principles with Applications Using Process Simulators* 4e by Seader p93, Figures 4.8, 4.9.)" >}}
+
 ### Bubble and dew point calculations
 
 |Description|Equations|
@@ -198,6 +214,27 @@ lightgallery: true
 |Dew point|$\Psi = 1 \newline \sum \dfrac{z_i}{K_i} = 1 \newline \sum x_i P_i^* (T) = P$|
 
 ### Ternary liquid-liquid extraction
+
+{{< admonition type=info title="Symbol Conventions" open=false >}}
+
+- Components
+  - $A$ - Carrier (feed solvent)
+  - $B$ - Solute
+  - $C$ - Solvent
+- **Mass** flow rates
+  - $F$ - Feed
+  - $S$ - Solvent
+  - $E$ - Extract (Majority of solvent $C$ carrier extracted solute $B$)
+  - $R$ - Raffinate
+- **Mass** fraction of component i
+  - $x_i$ - In the liquid
+  - $y_i$ - In the vapor
+  - $z_i$ - Overall
+- **Mass** ratio of component i
+  - $X_i$ - In the liquid
+  - $Y_i$ - In the vapor
+
+{{< /admonition >}}
 
 |Description|Equations|
 |-:|:-|
@@ -208,28 +245,33 @@ lightgallery: true
 |Extraction factor of solute B|$\mathcal{E} = \dfrac{K\'_{D_B} S}{F_A}$|
 |Fraction of solute B unextracted|$\dfrac{X_{R, B}}{X_{F, B}} = \dfrac{1}{1 + \mathcal{E}}$|
 
+{{< image src="/cheme/cheme435/cheme435-liquid-liquid-extraction.png" caption="Liquid-liquid extraction of ternary mixture. (*Separation Process Principles with Applications Using Process Simulators* 4e by Seader p98, Figure 4.12.)" >}}
+
 #### Ternary phase diagram
 
 General principles are the same for different types of ternary phase diagrams. Here, algorithm for using **equilateral** ternary phase diagrams is presented.
 
-- Identify chemical species at the apexes: feed solvent (A), feed solute (B), and pure solvent (S).
-  - Apexes are pure components.
-  - Lines parallel to the apex are used to read values.
-  - Label each side of the triangle according to the apex.
+- Identify chemical species at the apexes: feed solvent (A), feed solute (B), and pure solvent (S)
+  - Apexes are pure components
+  - Lines parallel to the apex are used to read values
+  - Label each side of the triangle according to the apex
 - Identify compositions of entering streams: feed (F) and solvent (S)
-  - Assume feed only contains A and B, and solvent is pure S.
+  - Assume feed only contains A and B, and solvent is pure S
   - Calculate composition of mixture (M) with component balances
     - $x_{M, A} = \dfrac{x_{F, A} F}{F + S}, \quad x_{M, B} = \dfrac{x_{F, B} F}{F + S}, \quad x_{M, C} = \dfrac{S}{F + S}$
 - Interpolate tie line on the ternary phase diagram
 - Identify compositions of exiting streams: extract (E) and raffinate (R)
-  - E and R lies on the intersection of tie line and phase boundary line.
+  - E and R lies on the intersection of tie line and miscibility boundary (binodal) curve
   - E has a larger S component than R (extracted component is dissolved in solvent), being closer to point S
+- Identify plait point (P)
+  - P lies between E and R on the miscibility boundary curve
+  - P the the point where E and R merge together and tie line collapses to a point
 - Determine flow rate ratio with inverse level rule
   - $\dfrac{E}{F + S} = \dfrac{E}{E + R} = \dfrac{\overline{MR}}{\overline{ER}}, \quad \dfrac{E}{R} = \dfrac{\overline{MR}}{\overline{ME}}$
 
 <br/>
 
-{{< image src="/cheme/cheme435/cheme435-ternary-phase-diagram.png" caption="Equilateral ternary phase diagram. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p101, Figure 4.14.)" >}}
+{{< image src="/cheme/cheme435/cheme435-ternary-phase-diagram.png" caption="Sample equilateral ternary phase diagram. (*Separation Process Principles with Applications Using Process Simulators* 4e by Seader p101, Figure 4.14.)" >}}
 
 ## Multistage Cascades
 
@@ -242,20 +284,49 @@ General principles are the same for different types of ternary phase diagrams. H
 |Countercurrent cascade ($N$ stages)|$\dfrac{X_{R, B}}{X_{F, B}} = \left[\displaystyle\sum_{n = 0}^N \mathcal{E}^n\right]^{-1} = \dfrac{\mathcal{E} - 1}{\mathcal{E}^{N+1} - 1}$|
 |Countercurrent cascade ($\infty$ stages)|$\begin{cases} \dfrac{X_{\infty, B}}{X_{F, B}} = 0, & \mathcal{E} \in [1, \infty) \\\ \dfrac{X_{\infty, B}}{X_{F, B}} = 1 - \mathcal{E}, & \mathcal{E} \in (-\infty, 1) \end{cases}$|
 
+{{< image src="/cheme/cheme435/cheme435-multistage-cascades.png" caption="Multistage arrangements of cocurrent, crosscurrent, and countercurrent. (*Separation Process Principles with Applications Using Process Simulators* 4e by Seader p120, Figures 5.4.)" >}}
+
 ## Absorption and Stripping
 
 ### Graphical method for trayed towers
 
-|Description|Equations|
-|-:|:-|
-|Molar flow rate of solute-free absorbent|$L'$|
-|Molar flow rate of solute-free gas (carrier gas)|$V'$|
-|Mass ratio of solute to solvent-free absorbent in the liquid|$X$|
-|Mass ration of solute to solute-free gas in the vapor|$Y$|
-|Equilibrium curve|$K_n = \dfrac{y_n}{x_n} = \dfrac{Y_n}{X_n}\dfrac{1 + X_n}{1 + Y_n}$|
-|Slope of operating line|$\dfrac{L\'}{V\'}$|
+{{< admonition type=info title="Symbol Conventions" open=false >}}
 
-{{< image src="/cheme/cheme435/cheme435-absorber-stripper.png" caption="Equilibrium curve and operating lines of absorber and stripper. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p144, 146, Figures 6.9, 6.12.)" >}}
+- **Molar** flow rates
+  - $L$ - Total liquid feed
+  - $V$ - Total gas feed
+  - $L\'$ - solute-free absorbent - constant at each stage
+  - $V\'$ - solute-free gas (carrier gas) - constant at each stage
+- **Mole** ratio of solute to solute-free absorbent
+  - $X$ - In the liquid
+  - $Y$ - In the vapor
+
+{{< /admonition >}}
+
+{{< image src="/cheme/cheme435/cheme435-absorber-stripper.png" caption="Equilibrium curve and operating lines of absorber and stripper. (*Separation Process Principles with Applications Using Process Simulators* 4e by Seader p144, 146, Figures 6.9, 6.12.)" >}}
+
+- Construct the equilibrium curve from thermodynamics
+  - $K_n = \dfrac{y_n}{x_n} = \dfrac{Y_n}{X_n}\dfrac{1 + X_n}{1 + Y_n} \implies Y_n = \dfrac{K_n X_n}{1 + X_n - K_n X_n}$
+- Identify absorption and stripping process
+  - Absorption - Use liquid to remove components from gas mixture
+  - Stripping - Use gas to remove components from liquid mixture
+- Construct operating line for $\infty$ stages for $L\'\_{\min}$ or $V\'\_{\min}$
+  - Absorption ($L\'\_{\min}$)
+    - Identify (liquid in, gas out) = $(X_0, Y_1)$
+    - Identify (liquid out, gas in) = $(X_N, Y_{N+1})$ with minimum operating line intersects and ends at the equilibrium curve
+  - Stripping ($V\'\_{\min}$)
+    - Identify (gas in, liquid out) = $(X_1, Y_0)$
+    - Identify (liquid out, gas in) = $(X_{N+1}, Y_N)$ with minimum  operating line intersects and ends at the equilibrium curve
+  - Slope of operating line = $\dfrac{L\'}{V\'}$
+- Determine number of equilibrium stages for $L\'$ and $V\'$
+  - Absorption ($L\'$)
+    - Construct operating line with point (liquid in, gas out) = $(X_0, Y_1)$ and slope = $\dfrac{L\'}{V\'}$
+    - From $(X_0, Y_1)$, draw horizontal line toward the equilibrium curve and vertical lines back to the operating line until it reaches $(X_N, Y_{N+1})$
+  - Stripping ($V\'$)
+    - Construct operating line with point (gas in, liquid out) = $(X_1, Y_0)$ and slope = $\dfrac{L\'}{V\'}$
+    - From $(X_1, Y_0)$, draw horizontal line toward the equilibrium curve and vertical lines back to the operating line until it reaches $(X_{N+1}, Y_N)$
+  - The number of equilibrium stages is the number of intersections on the equilibrium curve
+    - Interpolate number of stages if not exact
 
 #### Absorption
 
@@ -294,47 +365,50 @@ General principles are the same for different types of ternary phase diagrams. H
 
 {{< admonition type=info title="Symbol Conventions" open=false >}}
 
-- Molar flow rates
+- **Molar** flow rates
   - $F$ - Feed
   - $D$ - Distillate
   - $B$ - Bottoms
-  - $L$ - Liquid in the rectifying section
+  - $L$ - Liquid in the rectifying section, Reflux
   - $V$ - Vapor in the rectifying section
   - $\overline{L}$ - Liquid in the stripping section
-  - $\overline{V}$ - Vapor in the stripping section
-- Ratio
-  - $\alpha_{1, 2}$ - Relative volatility
-  - $R$ - Reflux ratio
-  - $V_B$ - Boilup ratio
-- Mole fraction of the light key component
+  - $\overline{V}$ - Vapor in the stripping section, Boilup
+- **Mole** fraction of the light key component
   - $x$ - In the liquid
   - $y$ - In the vapor
   - $x_D$ - In the distillate
   - $x_B$ - In the bottoms
+- Ratio
+  - $\alpha_{1, 2}$ - Relative volatility
+  - $R$ - Reflux ratio
+  - $V_B$ - Boilup ratio
+
 {{< /admonition >}}
 
 |Description|Equations|
 |-:|:-|
 |McCabe-Thiele assumptions|1. Equal and constant $\Delta H_{\text{vap}}$ <br/> 2. Negligible $C_P \Delta T$ and $\Delta H_{\text{mix}}$ <br/> 3. Insulated column $q = 0$ <br/> 4. No pressure drop $\Delta P = 0$|
-|Constant molar overflow|$L_1 = L_i = L \newline V_1 = V_i = V$|
+|Constant molar overflow in rectifying section|$L_1 = L_i = L \newline V_1 = V_i = V$|
+|Constant molar overflow in stripping section|$\overline{L}_1 = \overline{L}_i = \overline{L} \newline \overline{V}_1 = \overline{V}_i = \overline{V}$|
+|Non-equal flow rate in rectifying and stripping sections|$L \not= \overline{L} \newline V \not= \overline{V}$|
 |Reflux ratio|$R = \dfrac{L}{D}$|
 |Boilup ratio|$V_B = \dfrac{\overline{V}}{B}$|
 |Equilibrium curve|$y_1 = \dfrac{\alpha_{1, 2}x_1}{1 + x_1(\alpha_{1, 2} - 1)}$|
 |Rectifying section operating line|$y = \left(\dfrac{R}{R + 1}\right)x + \left(\dfrac{x_D}{R + 1}\right)$|
-|Rectifying section operating line|$y = \left(\dfrac{V_B + 1}{V_B}\right)x + \left(\dfrac{x_B}{V_B}\right)$|
+|Stripping section operating line|$y = \left(\dfrac{V_B + 1}{V_B}\right)x - \left(\dfrac{x_B}{V_B}\right)$|
 |$q$-parameter|$\begin{cases} q > 1 & \text{subcooled liq} \\\ q = 1 & \text{saturated liq (bubble pt)} \\\ q \in (0, 1) & \text{liq + vap} \\\ q = 0 & \text{saturated vap (dew pt)} \\\ q < 0 & \text{superheated vap} \end{cases}$|
 |$q$-parameter|$q = \dfrac{\overline{L} - L}{F} = 1 + \dfrac{\overline{V} - V}{F}$|
 |$q$-line|$y = \left(\dfrac{q}{q - 1}\right)x + \left(\dfrac{z_F}{q - 1}\right)$|
 
-{{< image src="/cheme/cheme435/cheme435-distillation.png" caption="Equilibrium curve and operating lines of rectifying and stripping sections of distillation column. Optimal feed stage is indicated by the transition between operating lines on the equilibrium curve. (Separation Process Principles with Applications Using Process Simulators 4e by Seader p195, 196, 197, 200, Figures 7.5, 7.6, 7.7, 7.10.)" >}}
-
-### Limiting conditions
+#### Limiting conditions
 
 |Description|Equations|
 |-:|:-|
 |Total reflux <br/> (Useless)|$R_\infty = \infty \newline N_{\min} = 0 \newline L = V \newline D = B = 0$|
 |Minimum reflux|$R_{\min} = \dfrac{(L/V)\_{\min}}{1 - (L/V)\_{\min}} \newline N_\infty = \infty \newline V_{B, \min} = \dfrac{1}{(\overline{L}/\overline{V})_{\min} - 1}$|
 |Perfect separation|$x_D = 1, \quad x_B = 0 \newline R \ge R_{\min}  \begin{cases} R_{\min} = \dfrac{1}{z_F (\alpha_{1, 2} - 1)} & q = 1 \\\ R_{\min} = \dfrac{\alpha_{1, 2}}{z_F (\alpha_{1, 2} - 1)} - 1 & q = 0 \end{cases}$|
+
+{{< image src="/cheme/cheme435/cheme435-distillation.png" caption="Equilibrium curve and operating lines of rectifying and stripping sections of distillation column. Optimal feed stage is indicated by the transition between operating lines on the equilibrium curve. (*Separation Process Principles with Applications Using Process Simulators* 4e by Seader p195, 196, 197, 200, Figures 7.5, 7.6, 7.7, 7.10.)" >}}
 
 ## Membrane Separations
 
