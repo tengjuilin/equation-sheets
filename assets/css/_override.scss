@@ -181,3 +181,11 @@ td {
 .home-profile {
     display: none;
 }
+
+.single .content ul, .single .content ol, .single .content ul p, .single .content ol p {
+    margin: 0 !important;
+}
+
+ul h3, ol h3, ul h4, ol h4 {
+    margin: 0.25rem 0 !important;
+}
