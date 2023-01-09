@@ -148,14 +148,16 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Taken in Au22 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
   - Textbook: *Essentials of Chemical Reaction Engineering* 2e by Fogler
 
-<!-- ### Process Engineering
+### Process Engineering
 
 - [CHEM E 480 Process Dynamics and Control](cheme/cheme480/)
   - In progress Wi23 with [Professor James Carothers](https://www.cheme.washington.edu/facultyfinder/james-carothers)
-  - Textbook:
+  - Textbook: *Process Dynamics and Control* 4e by Seborg et al.
 - [CHEM E 485 Process Design I](cheme/cheme485/)
   - In progress Wi23 with [Professor Vincent Holmberg](https://www.cheme.washington.edu/facultyfinder/vincent-holmberg)
-  - Textbook: -->
+  - Textbook: *Analysis, Synthesis, and Design of Chemical Processes* 5e by Turton et al.
+  - Aspen Plus refresher: [<i class="fab fa-youtube"></i> National Chung Hsing University](https://lms.nchu.edu.tw/course/10352/intro) (English solutions, Mandarin Chinese instructions)
+  - Aspen Plus lectures and case studies: [<i class="fab fa-youtube"></i> NPTEL, Indian Institute of Technology, Guwahati](https://www.youtube.com/playlist?list=PLwdnzlV3ogoWmaPmHqavPktjRTvXcZxb7)
 
 ### Nanoscience and Molecular Engineering
 
