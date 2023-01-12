@@ -466,29 +466,29 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 ### Laplace transform concepts
 
-- Laplace transform - $\mathcal{L}\{f(t)\} = F(s) = \displaystyle\int_{0}^{\infin} e^{-st}f(t) \ dt$
+- Laplace transform - $\mathcal{L}[f(t)] = F(s) = \displaystyle\int_{0}^{\infin} e^{-st}f(t) \ dt$
 - Heaviside function (unit step function)
   - $u_c(t) = u(t-c) = \begin{cases} 0 & t < c \cr 1 & t \ge c \end{cases}$
 
 ### Properties of Laplace transform
 
 - Laplace transform is linear
-  - $\mathcal{L}\{c_{1}f(t)+c_{2}g(t)\} = c_{1}\mathcal{L}\{f(t)\} + c_{2}\mathcal{L}\{g(t)\}$
+  - $\mathcal{L}[c_{1}f(t)+c_{2}g(t)] = c_{1}\mathcal{L}[f(t)] + c_{2}\mathcal{L}[g(t)]$
 - Laplace transforms of derivatives incorporate initial conditions
-  - $\mathcal{L}\{f'(t)\} = sF(s) - f(0)$
-  - $\mathcal{L}\{f''(t)\} = s^2F(s)-sf(0)-f'(0)$
-  - $\mathcal{L}\{f^{(n)}(t)\} = s^nF(s)-s^{n-1}f(0) - ... - f^{(n-1)}(0)$
+  - $\mathcal{L}[f'(t)] = sF(s) - f(0)$
+  - $\mathcal{L}[f''(t)] = s^2F(s)-sf(0)-f'(0)$
+  - $\mathcal{L}[f^{(n)}(t)] = s^nF(s)-s^{n-1}f(0) - ... - f^{(n-1)}(0)$
 - Heaviside function has a simple Laplace transforms
-  - $\mathcal{L}\{u_c(t)\} = \dfrac{e^{-sc}}{s}$
+  - $\mathcal{L}[u_c(t)] = \dfrac{e^{-sc}}{s}$
 
 ### Translation theorems
 
 - Time domain translation
-  - $\mathcal{L}\{f(t-c)u_{c}(t)\} = e^{-sc}\mathcal{L}\{f(t)\}$
-  - $\mathcal{L}^{-1}\{e^{-sc}\mathcal{L}\{f(t)\}\} = f(t-c)u_c(t)$
+  - $\mathcal{L}[f(t-c)u_{c}(t)] = e^{-sc}\mathcal{L}[f(t)]$
+  - $\mathcal{L}^{-1}[e^{-sc}\mathcal{L}[f(t)]] = f(t-c)u_c(t)$
 - Laplace domain translation
-  - $\mathcal{L}\{e^{ct}f(t)\} = F(s-c)$
-  - $\mathcal{L}^{-1}\{F(s-c)\} = e^{ct}f(t)$
+  - $\mathcal{L}[e^{ct}f(t)] = F(s-c)$
+  - $\mathcal{L}^{-1}[F(s-c)] = e^{ct}f(t)$
 
 ### Solving ODEs with Laplace transform
 
