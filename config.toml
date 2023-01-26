@@ -6,6 +6,7 @@ languageCode = "en"
 title = "Equation Sheets"
 
 theme = "LoveIt"
+enableEmoji = true
 
 [params]
   # theme version
