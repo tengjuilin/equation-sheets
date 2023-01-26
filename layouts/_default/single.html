@@ -79,4 +79,14 @@
         {{- /* Footer */ -}}
         {{- partial "single/footer.html" . -}}
     </article>
+
+    <!-- Allow TOC to detect headers nested in list items -->
+    <script>
+        for (let num = 1; num <= 6; num++) {
+            headerLinkList = document.querySelectorAll('li > h' + num);
+            for (let i = 0; i < headerLinkList.length; i++) {
+                headerLinkList[i].classList.add('headerLink');
+            }
+        }
+    </script>
 {{- end -}}
