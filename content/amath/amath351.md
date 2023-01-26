@@ -8,7 +8,7 @@ date: 2021-08-17T00:00:00+08:00
 ### First order ODE concepts
 
 - *Differential equations (DE)* - relationship between an unknown function $y$ and its derivative
-  - $F(y(x), y'(x), y''(x), ...) = 0$
+  - $F(y(x), y\'(x), y\'\'(x), ...) = 0$
 - *Order* - order of the highest order derivative in the DE
 - *Ordinary differential equation (ODE)* - contains derivative with respect to only 1 variable
 - *Partial differential equation (PDE)* - contains derivative with respect to multiple variables
@@ -24,14 +24,14 @@ date: 2021-08-17T00:00:00+08:00
 #### Existence and uniqueness theorem
 
 - [x] 1st order ODE
-- Consider the IVP $y' = f(t, y)$, $y(0) = 0$.
+- Consider the IVP $y\' = f(t, y)$, $y(0) = 0$.
   - first order ODE only
 - If $f$ and $\frac{\partial f}{\partial y}$ are continuous for $\lvert t \rvert \le a, \lvert y \rvert \le b$,
   - then there exists a $\lvert t \rvert \le h \le a$ such that there exists a unique solution $y(t) = \phi(t)$ of the IVP.
 
 ### Solving initial value problems (IVP)
 
-Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$. Solve the ODE $F(y(x), y'(x), y''(x), ...) = 0$
+Given some initial values $y(0) = a_{0}, y\'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$. Solve the ODE $F(y(x), y\'(x), y\'\'(x), ...) = 0$
 
 1. Find the general solution to the ODE (or verify a given solution).
 2. Plug in any initial values to determine the values of unknown constants in the ODE general solution.
@@ -55,7 +55,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] 1st order
 - [x] Linear
 
-1. Write the DE in the form of $y'(x) + p(x)y(x) = q(x)$.
+1. Write the DE in the form of $y\'(x) + p(x)y(x) = q(x)$.
 2. Find the integrating factor $\mu(x) = \exp(\int p(x)dx)$.
 3. The solution is in the form $y(x) = \dfrac{\displaystyle\int \mu(x)q(x)dx + C}{\mu(x)}$.
 4. IVP
@@ -66,18 +66,18 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Nonlinear, linear
 - [x] Exact
 
-1. Write the DE in the form of $N(x, y)y' + M(x, y) = 0$
+1. Write the DE in the form of $N(x, y)y\' + M(x, y) = 0$
    1. Let $y = f(x, y)$.
    2. Let $M(x, y) = \dfrac{\partial f}{\partial x}$, and $N(x, y) = \dfrac{\partial f}{\partial y}$
 2. Check if the DE is an exact DE by verifying $\dfrac{\partial M}{\partial y} = \dfrac{\partial N}{\partial x}$
 3. Find the solution $f(x, y)$ using one of the following methods:
    - Method A1
       1. Find $\displaystyle f(x, y) = \int \partial f = \int M \ \partial x = f_{\text{main}}(x, y) + h(y)$.
-      2. Solve for $h'(y)$ in $N = \dfrac{\partial f}{\partial y} = \dfrac{\partial f_{\text{main}}}{\partial y} + h'(y)$.
+      2. Solve for $h\'(y)$ in $N = \dfrac{\partial f}{\partial y} = \dfrac{\partial f_{\text{main}}}{\partial y} + h\'(y)$.
       3. Solve for $h(y)$ and plug in $f(x, y)$.
    - Method A2
       1. Find $\displaystyle f(x, y) = \int \partial f = \int N \ \partial y = f_{\text{main}}(x, y) + g(x)$.
-      2. Solve for $g'(x)$ in $M = \dfrac{\partial f}{\partial x} = \dfrac{\partial f_{\text{main}}}{\partial x} + g'(x)$.
+      2. Solve for $g\'(x)$ in $M = \dfrac{\partial f}{\partial x} = \dfrac{\partial f_{\text{main}}}{\partial x} + g\'(x)$.
       3. Solve for $g(x)$ and plug in $f(x, y)$.
    - Method B
      - Do not consider int. const. $g(x)$ and $h(y)$ in the following steps.
@@ -93,14 +93,14 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Nonlinear, linear
 
 1. Substitute function $y$ with $u$ to find an easy-to-solve ODE by...
-   1. Given DE $y' = f(x, y)$,
-      - write the DE in terms of $y'$
+   1. Given DE $y\' = f(x, y)$,
+      - write the DE in terms of $y\'$
       - find the substitution $u = u(x, y(x))$
       - find the inverse substitution $y = y(x, u(x))$
-   2. By chain rule, find $u' = \dfrac{\partial u}{\partial x} + \dfrac{\partial u}{\partial y} y'$.
-   3. Substitution (replace $y'$ with original ODE): <br/> $u' = \dfrac{\partial u}{\partial x} + \dfrac{\partial u}{\partial y} y' \xleftarrow{y'} y' = f(x, y)$ <br/> $u' = \dfrac{\partial u}{\partial x} + \dfrac{\partial u}{\partial y} f(x, y) \equiv F(x, y, u)$
-   4. Substitution (replace $y$ with inverse substitution): <br/> $u' = F(x, y, u) \xleftarrow{y} y(x, u(x))$ <br/> $u' = F(x, y(x, u), u) \equiv G(x, u)$
-2. Solve the ODE $u' = G(x, u)$ for $u(x)$.
+   2. By chain rule, find $u\' = \dfrac{\partial u}{\partial x} + \dfrac{\partial u}{\partial y} y\'$.
+   3. Substitution (replace $y\'$ with original ODE): <br/> $u\' = \dfrac{\partial u}{\partial x} + \dfrac{\partial u}{\partial y} y\' \xleftarrow{y\'} y\' = f(x, y)$ <br/> $u\' = \dfrac{\partial u}{\partial x} + \dfrac{\partial u}{\partial y} f(x, y) \equiv F(x, y, u)$
+   4. Substitution (replace $y$ with inverse substitution): <br/> $u\' = F(x, y, u) \xleftarrow{y} y(x, u(x))$ <br/> $u\' = F(x, y(x, u), u) \equiv G(x, u)$
+2. Solve the ODE $u\' = G(x, u)$ for $u(x)$.
 3. Substitution: <br/> $y(x, u(x)) \xleftarrow{u(x)} u(x)$ <br/> $y(x)$
 4. IVP
 
@@ -120,23 +120,23 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 |Description|Equations|
 |-:|:---|
-|Logistic equation <br/> ($r, k > 0$)|$P'(t) = r \left( 1-\dfrac{P}{k} \right)P$|
-|**Bernoulli equation**|$y' + p(t)y = q(t)y^{n}$|
+|Logistic equation <br/> ($r, k > 0$)|$P\'(t) = r \left( 1-\dfrac{P}{k} \right)P$|
+|**Bernoulli equation**|$y\' + p(t)y = q(t)y^{n}$|
 |General solutions of Bernoulli equation <br/>($n = 1,2,3$)|$n = 0: y(t) = \dfrac{\displaystyle\int e^{\int p(t) dt} q(t) dt + C}{e^{\int p(t) dt}} \newline n = 1: y(t) = Ce^{\int q(t)-p(t) \ dt} \newline n = 2: y(t) = \dfrac{-e^{-\int p(t) dt}}{\displaystyle\int e^{-\int p(t) dt} q(t) dt + C}$|
 |General solutions of Bernoulli equation|$\forall n: y(t) = \left( \dfrac{1-n}{f(t)} \displaystyle\int q(t)f(t) dt \right)^{1/(1-n)}$ <br/> where $f(t) = e^{\int (1-n) p(t) dt}$|
-|**Riccati equation**|$y' = q_{0}(t) + q_{1}(t)y + q_{2}(t)y^{2}$|
-|Solving  Riccati equation known particular solution $y_{1}$|$y = y_{1} + \dfrac{1}{v(t)}$, where $v$ satisfies <br/> $v'(t) = -(q_{1} + 2q_{2}y_{1})v - q_{2}$|
+|**Riccati equation**|$y\' = q_{0}(t) + q_{1}(t)y + q_{2}(t)y^{2}$|
+|Solving  Riccati equation known particular solution $y_{1}$|$y = y_{1} + \dfrac{1}{v(t)}$, where $v$ satisfies <br/> $v\'(t) = -(q_{1} + 2q_{2}y_{1})v - q_{2}$|
 |General solutions of Riccati equation <br/> known particular solution $y_{1}$|$y = y_{1} + \dfrac{\mu(t)}{-\displaystyle\int \mu(t)q_{2} dt + C}$ <br/> where $\mu(t) = e^{\int q_{1}+2q_{2}y_{1} \ dt}$|
 
 ### Stability and phase plane analysis
 
-1. Plot $P'(t)$ vs $P(t)$.
-2. Find fixed point $P^{*}$ such that $P' = 0$
-   - x-intercept of $P'(t)$ vs $P(t)$ plot
+1. Plot $P\'(t)$ vs $P(t)$.
+2. Find fixed point $P^{*}$ such that $P\' = 0$
+   - x-intercept of $P\'(t)$ vs $P(t)$ plot
    - a solution with initial value $P(0) = P^{*}$ is constant over time
 3. Draw flow arrows near fixed points
-   - $P' > 0$ flows to the right
-   - $P' < 0$ flows to the left
+   - $P\' > 0$ flows to the right
+   - $P\' < 0$ flows to the left
 4. Identify stability of fixed points by flow arrows
    - stable - solution approaches the fixed point
    - unstable - solution diverges from the fixed point
@@ -151,30 +151,30 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 ### Second order ODE concepts
 
-- Second order linear differential equation - $r(x)y'' + p(x)y' + q(x)y = g(x)$
+- Second order linear differential equation - $r(x)y\'\' + p(x)y\' + q(x)y = g(x)$
 - Homogeneous - $g(x) = 0$
 - Non-homogeneous - $g(x) \not= 0$
 - Linearly independent - $c_{1}f(x) + c_{2}g(x) = 0$ can only be satisfied by choosing $c_{1} = c_{2} = 0$ for functions $f, g$
-- Wronskian - $W(f, g)(x) = fg' - f' g$
+- Wronskian - $W(f, g)(x) = fg\' - f\' g$
 
 #### Principle of superposition
 
 - [x] 2nd order homogeneous ODE
 
-- Consider 2nd order homogeneous ODE $r(x)y'' + p(x)y' + q(x)y = 0$.
+- Consider 2nd order homogeneous ODE $r(x)y\'\' + p(x)y\' + q(x)y = 0$.
 - If Wronskian $W(y_{1}, y_{2}) \not = 0$ ($y_{1}$ and $y_{2}$ are linearly independent solution of the ODE),
   - then the general solution of the ODE is $y(x) = c_{1}y_{1}(x) + c_{2}y_{2}(x)$.
 
 #### Wronskian and linear (in)dependence
 
 - Two functions $f$ and $g$ are linearly dependent
-  - if their Wronskian $W(f, g)(x) = fg' - f' g = 0$.
+  - if their Wronskian $W(f, g)(x) = fg\' - f\' g = 0$.
 - Corollary
   - two linearly independent functions $f$ and $g$ has $W(f, g)(x) \not= 0$.
 
 #### Abel's theorem
 
-- If $y_{1}$ and $y_{2}$ be any two solutions of $y'' + p(x)y' + q(x)y = 0$,
+- If $y_{1}$ and $y_{2}$ be any two solutions of $y\'\' + p(x)y\' + q(x)y = 0$,
   - then $W(y_{1}, y_{2}) = xe^{-\int p(d) dx}$.
 - Corollary: reduction of order formula
   - Known $y_{1}$, then $y_{2} = y_{1}\displaystyle\int\dfrac{W}{y_{1}^{2}}dx$
@@ -191,7 +191,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Constant coefficient
 - [x] Homogeneous
 
-1. Write the ODE in the form of $ay'' + by' + cy = 0$.
+1. Write the ODE in the form of $ay\'\' + by\' + cy = 0$.
 2. Write the characteristic equation $a\lambda^{2} + b\lambda + c = 0$.
 3. Solve the characteristic equation $\lambda_{1}, \lambda_{2} = \dfrac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$.
    - If $\lambda_{1} \not = \lambda_{2}$ and $\lambda_{1}, \lambda_{2} \in \Reals$,
@@ -213,7 +213,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Homogeneous
 
 0. Given a solution $y_{1}$.
-1. Write the ODE in the form of $y'' + p(x) y' + q(x)y = 0$.
+1. Write the ODE in the form of $y\'\' + p(x) y\' + q(x)y = 0$.
 2. Calculate the Wronskian by Abel's Theorem $W = ce^{-\int p(x)dx}$.
 3. Find $y_{2}$ by reduction of order formula $y_{2} = y_{1} \displaystyle\int \dfrac{W}{y_{1}^{2}} \ dx$.
 4. Pick a convenient coefficient $c$ (but $c \not= 0$).
@@ -228,7 +228,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Homogeneous
 - [x] Euler equation
 
-1. Write the ODE in the form of $x^{2}y'' + \alpha xy' + \beta y = 0$.
+1. Write the ODE in the form of $x^{2}y\'\' + \alpha xy\' + \beta y = 0$.
 2. Write the indicial equation $s^{2} + (\alpha - 1)s + \beta = 0$.
 3. Solve the indicial equation $s_{1}, s_{2} = \dfrac{1 - \alpha \pm \sqrt{(\alpha - 1)^{2} - 4\beta}}{2}$.
    - If $s_{1} \not = s_{2}$ and $s_{1}, s_{2} \in \Reals$,
@@ -249,7 +249,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Constant coefficient
 - [x] Nonhomogeneous
 
-1. Write the ODE in the form of $L[y] \equiv ay'' + by' + cy = g(x)$.
+1. Write the ODE in the form of $L[y] \equiv ay\'\' + by\' + cy = g(x)$.
 2. Calculate the solution $y_{H}$ to the homogeneous problem $L[y_{H}] = 0$.
 3. Guess a particular solution $y_{P}$ to the nonhomogeneous problem $L[y_{H}] = g(x)$.
 4. Substitute $y_{P}$ into the ODE and solve for any constants.
@@ -286,7 +286,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Non-constant coefficient, constant coefficient
 - [x] Nonhomogeneous
 
-1. Write the ODE in the form of $L[y] \equiv y'' + p(x)y' + r(x)y = g(x)$.
+1. Write the ODE in the form of $L[y] \equiv y\'\' + p(x)y\' + r(x)y = g(x)$.
 2. Calculate the solution to the homogeneous problem $L[y_{H}] = 0$
    - $y_{H} = c_{1}y_{1} + c_{2}y_{2}$
 3. Calculate the Wronskian $W(y_{1}, y_{2})$
@@ -299,16 +299,16 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 - A mass on a spring moves vertically in a fluid bath on Earth.
 - Newton's second law adds up all the forces
-  - $\sum F = mx''(t)$
-  - $F_{\mathrm{damper}} = -\gamma x'(t)$
+  - $\sum F = mx\'\'(t)$
+  - $F_{\mathrm{damper}} = -\gamma x\'(t)$
   - $F_{\mathrm{spring}} = -kx(t)$
   - $F_{\mathrm{external}}$
-- ODE: $mx''(t) + \gamma x'(t) + kx(t) = F_{\mathrm{ext}}(t)$
+- ODE: $mx\'\'(t) + \gamma x\'(t) + kx(t) = F_{\mathrm{ext}}(t)$
 
 #### Unforced oscillation
 
 - No external force on the system: $F_{\mathrm{ext}}(t) \equiv 0$
-- Homogeneous ODE: $\boxed{mx'' + \gamma x' + kx = 0} \ (m > 0, \gamma, k \ge 0)$
+- Homogeneous ODE: $\boxed{mx\'\' + \gamma x\' + kx = 0} \ (m > 0, \gamma, k \ge 0)$
   - Overdamped system
     - $\gamma^{2} - 4mk > 0$
     - $\lambda_{1} \not= \lambda_{2} \in \Reals$
@@ -344,7 +344,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 - Has external force on the system: $F_{\mathrm{ext}}(t) \not= 0$
 - Investigate a special case of oscillating external force $F_{\mathrm{ext}}(t) \equiv F_{0}\cos(\Omega t)$
-- Non-homogeneous ODE: $\boxed{mx'' + \gamma x' + kx = F_{0}\cos(\Omega t)} \ (m, \gamma, k \ge 0)$
+- Non-homogeneous ODE: $\boxed{mx\'\' + \gamma x\' + kx = F_{0}\cos(\Omega t)} \ (m, \gamma, k \ge 0)$
   - No damping, no resonance
     - $\gamma = 0, \Omega \not= \omega_{0} = \sqrt{\dfrac{k}{m}}$
     - General solution: $x(t) = \left( c_{1} + \dfrac{F_{0}}{m(\omega_{0}^{2} - \Omega_{0}^{2})} \right) \cos(\omega_{0}t) + c_{2}\sin(\omega_{0} t)$
@@ -406,24 +406,24 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 
 1. Define $n$ auxiliary variables $y_1$, ..., $y_n$ for $n$th order ODE
    1. Let $y_1$ be the original function in the ODE
-   2. Let $y_2 = y_1'$
+   2. Let $y_2 = y_1\'$
    3. ...
-   4. Let $y_n = y_{n-1}'$
+   4. Let $y_n = y_{n-1}\'$
 2. Rearrange the ODE to isolate the highest order derivative, and write it in terms of the auxiliary variables.
 3. Write a system of ODEs with derivatives of auxiliary variables on the left hand side and their expression on the right hand side in terms of the auxiliary variables
-   1. $y_1' = y_2$ (by definition)
+   1. $y_1\' = y_2$ (by definition)
    2. ...
-   3. $y_{n-1}' = y_{n}$ (by definition)
-   4. $y_{n}' =$ highest order derivative in step 2
+   3. $y_{n-1}\' = y_{n}$ (by definition)
+   4. $y_{n}\' =$ highest order derivative in step 2
 
 #### Linear system of ODEs
 
-- $\begin{cases} y_1' = a_{11}y_1 + a_{12}y_2 + ... + a_{1n}y_{n} + b_1 \cr y_2' = a_{21}y_1 + a_{22}y_2 + ... + a_{2n}y_{n} + b_2 \cr \vdots \cr y_n' = a_{n1}y_1 + a_{n2}y_2 + ... + a_{nn}y_{n} + b_n \end{cases} \Rightarrow \boxed{\mathbf{y}' = A\mathbf{y} + \mathbf{b}}$
-  - where $\mathbf{y} = \begin{bmatrix} y_1 \cr y_2 \cr \vdots \cr y_n \end{bmatrix}, \mathbf{y}' = \begin{bmatrix} y_1' \cr y_2' \cr \vdots \cr y_n' \end{bmatrix}, \mathbf{b} = \begin{bmatrix} b_1 \cr b_2 \cr \vdots \cr b_n \end{bmatrix}, A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \cr a_{21} & a_{22} & \cdots & a_{2n} \cr \vdots & \vdots & \ddots & \vdots \cr a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}$
+- $\begin{cases} y_1\' = a_{11}y_1 + a_{12}y_2 + ... + a_{1n}y_{n} + b_1 \cr y_2\' = a_{21}y_1 + a_{22}y_2 + ... + a_{2n}y_{n} + b_2 \cr \vdots \cr y_n\' = a_{n1}y_1 + a_{n2}y_2 + ... + a_{nn}y_{n} + b_n \end{cases} \Rightarrow \boxed{\mathbf{y}\' = A\mathbf{y} + \mathbf{b}}$
+  - where $\mathbf{y} = \begin{bmatrix} y_1 \cr y_2 \cr \vdots \cr y_n \end{bmatrix}, \mathbf{y}\' = \begin{bmatrix} y_1\' \cr y_2\' \cr \vdots \cr y_n\' \end{bmatrix}, \mathbf{b} = \begin{bmatrix} b_1 \cr b_2 \cr \vdots \cr b_n \end{bmatrix}, A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \cr a_{21} & a_{22} & \cdots & a_{2n} \cr \vdots & \vdots & \ddots & \vdots \cr a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}$
 - Homogeneous - $\mathbf{b} = \mathbf{0}$
 - Nonhomogeneous - $\mathbf{b} \not= \mathbf{0}$
 - Superposition principle
-  - If the vectors $\mathbf{x}_1, \mathbf{x}_2, ..., \mathbf{x}_n$ are linearly independent solutions of the homogeneous system $\mathbf{x}' = P\mathbf{x}$
+  - If the vectors $\mathbf{x}_1, \mathbf{x}_2, ..., \mathbf{x}_n$ are linearly independent solutions of the homogeneous system $\mathbf{x}\' = P\mathbf{x}$
     - then the general solution $\mathbf{x}$ is the linear combination of them <br/> $\mathbf{x} = c_1\mathbf{x}_1 + c_2\mathbf{x}_2 + ... + c_n\mathbf{x}_n$
 
 #### Solving homogeneous constant-coefficient systems of ODEs
@@ -434,7 +434,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Constant coefficient
 - [x] Homogeneous
 
-1. Write the system of ODEs in the form of $\mathbf{x}' = P\mathbf{x}$
+1. Write the system of ODEs in the form of $\mathbf{x}\' = P\mathbf{x}$
 2. For $P\mathbf{v} = \lambda\mathbf{v}$, find the eigenvalues of $\lambda$ by solving $\det(P-\lambda I_n) = 0$
 3. For $P\mathbf{v} = \lambda\mathbf{v}$, find the eigenvectors of by substitution of $\lambda$
 4. Write the general solution
@@ -454,7 +454,7 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - [x] Homogeneous
 - [x] Euler system
 
-1. Write the system of ODEs in the form of $\mathbf{x}' = P\mathbf{x}$
+1. Write the system of ODEs in the form of $\mathbf{x}\' = P\mathbf{x}$
 2. For $P\mathbf{v} = \lambda\mathbf{v}$, find the eigenvalues of $\lambda$ by solving $\det(P-\lambda I_n) = 0$
 3. For $P\mathbf{v} = \lambda\mathbf{v}$, find the eigenvectors of by substitution of $\lambda$
 4. Write the general solution
@@ -475,9 +475,9 @@ Given some initial values $y(0) = a_{0}, y'(0) = a_{1}, ..., y^{(n)}(0) = a_{n}$
 - Laplace transform is linear
   - $\mathcal{L}[c_{1}f(t)+c_{2}g(t)] = c_{1}\mathcal{L}[f(t)] + c_{2}\mathcal{L}[g(t)]$
 - Laplace transforms of derivatives incorporate initial conditions
-  - $\mathcal{L}[f'(t)] = sF(s) - f(0)$
-  - $\mathcal{L}[f''(t)] = s^2F(s)-sf(0)-f'(0)$
-  - $\mathcal{L}[f^{(n)}(t)] = s^nF(s)-s^{n-1}f(0) - ... - f^{(n-1)}(0)$
+  - $\mathcal{L}[f\'(t)] = sF(s) - f(0)$
+  - $\mathcal{L}[f\'\'(t)] = s^2F(s)-sf(0)-f\'(0)$
+  - $\mathcal{L}[f^{(n)}(t)] = s^nF(s)-s^{n-1}f(0) - s^{n-2}f^{(1)}(0) - ... - f^{(n-1)}(0)$
 - Heaviside function has a simple Laplace transforms
   - $\mathcal{L}[u_c(t)] = \dfrac{e^{-sc}}{s}$
 
