@@ -289,7 +289,7 @@ Electrical component is not shown on PFD as utility streams
 
   |Name|Diagrams|Level of project definition|Purpose|Method|Expected accuracy index|Preparation effort index|
   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-  |**Order-of-magnitude estimate** <br/> (Ratio/feasibility estimate)|BFD|0 - 2 %|Screening or feasibility|Stochastic or judgement|4 - 20|1 <br/> (Lowest)|
+  |**Order-of-magnitude estimate** <br/> (Ratio/feasibility estimate)|BFD|0 - 2 %|Screening or feasibility|Stochastic or judgement|4 - 20|1 <br/> (Lowest) <br/> [0.015%, 0.300%] total plant cost|
   |**Study estimate** <br/> (Major equipment/factored estimate)|PFD|1 - 15 %|Concept study or feasibility|Primarily stochastic|3 - 12|2 - 4|
   |**Preliminary estimate** <br/> (Scope estimate)|PFD|10 - 40 %|Budget, authorization, or control|Mixed but primarily stochastic|2 - 6|3 - 10|
   |**Definitive estimate** <br/> (Project control estimate)|PFD, P&ID|30 - 70 %|Control or bid/tender|Primarily deterministic|1 - 3|5 - 20|
@@ -299,6 +299,8 @@ Electrical component is not shown on PFD as utility streams
 
   - **Equipment cost attribute (capacity)** - equipment parameter used to correlate capital costs
   - **Six-tenth rule** - equipment without known cost exponent $n$ can be estimated with $n = 0.6$
+    - **Economy of scale** - Larger equipment has lower cost of equipment per unit capacity
+    - $n < 1$
   - Cost index
     - Marshall and Swift process industry index
     - Chemical engieering plant cvost index (**CEPCI**)
@@ -307,51 +309,84 @@ Electrical component is not shown on PFD as utility streams
   |-:|:-|
   |Capacity and cost <br/> $n \in [0.4, 0.8]$|$\dfrac{C_2}{C_1} = \left(\dfrac{A_2}{A_1}\right)^n$|
   |Time and cost|$\dfrac{C_2}{C_1} = \dfrac{I_2}{I_1}$|
+  |Time and capacity adjustments|$\dfrac{C_2}{C_1} = \left(\dfrac{A_2}{A_1}\right)^n \left(\dfrac{I_2}{I_1}\right)$|
 
 - ### Estimating total capital cost
 
-  - Total capital cost
-    - Direct project expenses
-      - **Equipment free on board (fob) cost** $C_p$ - purchased cost of equipment at manufacturer's site
-      - **Materials required for installation** $C_M$ - piping, insulation, fireproofing, foundations, structural support, instrumentation, electrical, painting
-      - **Labor to install equipment and material** $C_L$
-    - Indirect project expenses
-      - **Freight insurance and taxes** $C_{\text{FIT}}$ - transportation, insurance, and tax cost for shipping equipment to plant site
-      - **Construction overhead** $C_O$ - fringe benefit (vacation, sick leave, retirement benefits), labor burden (social security, unemployment insurance), salary and overhead for supervisory personnel
-      - **Contractor engineering expenses** $C_E$ - salary and overhead for engineering, drafting, and project management personnel
-    - Contingency and fee
-      - **Contingency** $C_{\text{Cont}}$ - covers unforeseen circumstances: loss of time from weather and strikes, small change in design, unpredicted price increase
-      - **Contractor fee** $C_{\text{Fee}}$
-    - Auxiliary facility
-      - **Site development** $C_{\text{Site}}$ - purchase of land; grading and excavation of site; installation and hookup of electrical, water, and sewer system; construction of all internal roads, walkways, and parking lots
-      - **Auxiliary buildings** $C_{\text{Aux}}$ - administration offices, maintenance shope, control rooms, warehouses, service buildings (cafeteria, dressing rooms, medical facilities)
-      - **Off-sites and utilities** $C_{\text{Off}}$ - raw material and final product storage and loading/unloading facility; equipment for process utility; central environmental control facility; fire protection system
+  - Total module cost $C_{\text{TM}} = C_{\text{BM}}^\circ + C_{\text{Cont}} + C_{\text{Fee}}$
+    - Bare module cost $C_{\text{BM}}^\circ = C_{\text{DE}} + C_{\text{IDE}}$
+      - Direct project expenses $C_{\text{DE}} = C_p + C_M + C_L$
+        - **Equipment free on board (f.o.b.) cost** $C_p$ - purchased cost of equipment at manufacturer's site
+        - **Materials required for installation** $C_M$ - piping, insulation, fireproofing, foundations, structural support, instrumentation, electrical, painting
+        - **Labor to install equipment and material** $C_L$
+      - Indirect project expenses $C_{\text{IDE}} = C_{\text{FIT}} + C_O + C_E$
+        - **Freight insurance and taxes** $C_{\text{FIT}}$ - transportation, insurance, and tax cost for shipping equipment to plant site
+        - **Construction overhead** $C_O$ - fringe benefit (vacation, sick leave, retirement benefits), labor burden (social security, unemployment insurance), salary and overhead for supervisory personnel
+        - **Contractor engineering expenses** $C_E$ - salary and overhead for engineering, drafting, and project management personnel
+    - **Contingency** $C_{\text{Cont}}$ - covers unforeseen circumstances: loss of time from weather and strikes, small change in design, unpredicted price increase
+    - **Contractor fee** $C_{\text{Fee}}$
+  - Auxiliary facility
+    - **Site development** $C_{\text{Site}}$ - purchase of land; grading and excavation of site; installation and hookup of electrical, water, and sewer system; construction of all internal roads, walkways, and parking lots
+    - **Auxiliary buildings** $C_{\text{Aux}}$ - administration offices, maintenance shope, control rooms, warehouses, service buildings (cafeteria, dressing rooms, medical facilities)
+    - **Off-sites and utilities** $C_{\text{Off}}$ - raw material and final product storage and loading/unloading facility; equipment for process utility; central environmental control facility; fire protection system
+
+  |Level 5 cost|Level 4 cost|Level 3 cost|Level 2 cost|Level 1 cost|Definition|Expression in terms of $C_p^\circ$|
+  |:-:|:-:|:-:|:-:|:-:|-|-|
+  |Grassroot cost|-|-|-|-|$C_{GR} = C_{\text{TM}} + C_{\text{Aux}}$||
+  |\||Total module cost|-|-|-|$\begin{aligned}C_{\text{TM}} = C_{\text{BM}}^\circ + C_{\text{Cont}} + C_{\text{Fee}}\end{aligned}$|$\begin{aligned}=C_p^\circ (1 + \alpha_M)(1 + \alpha_L + \alpha_{\text{FIT}} + \alpha_L \alpha_O + \alpha_E)(1 + \alpha_{\text{Cont}} + \alpha_{\text{Fee}})\end{aligned}$|
+  |\||\||Bare module cost|-|-|$C_{\text{BM}}^\circ = C_{\text{DE}} + C_{\text{IDE}}$|$=C_p^\circ (1 + \alpha_M)(1 + \alpha_L + \alpha_{\text{FIT}} + \alpha_L \alpha_O + \alpha_E)$|
+  |\||\||\||Direct project expenses|-|$C_{\text{DE}} = C_p^\circ + C_M + C_L$|$=C_p^\circ (1 + \alpha_M)(1 + \alpha_L)$|
+  |\||\||\||\||Equipment|$C_p^\circ = C_p^\circ$|$=C_p^\circ$|
+  |\||\||\||\||Materials|$C_M = \alpha_M C_p^\circ$|$=C_p^\circ \alpha_M$|
+  |\||\||\||\||Labor|$C_L = \alpha_L (C_p^\circ + C_M)$|$=C_p^\circ (1 + \alpha_M)\alpha_L$|
+  |\||\||\||Indirect project expenses|-|$C_{\text{IDE}} = C_{\text{FIT}} + C_O + C_E$|$=C_p^\circ (1 + \alpha_M)(\alpha_{\text{FIT}} + \alpha_L \alpha_O + \alpha_E)$|
+  |\||\||\||\||Freight|$C_{\text{FIT}} = \alpha_{\text{FIT}} (C_p^\circ + C_M)$|$=C_p^\circ (1 + \alpha_M)\alpha_{\text{FIT}}$|
+  |\||\||\||\||Overhead|$C_O = \alpha_O C_L$|$=C_p^\circ (1 + \alpha_M)\alpha_L \alpha_O$|
+  |\||\||\||\||Engineering|$C_E = \alpha_E (C_p^\circ + C_M)$|$=C_p^\circ (1 + \alpha_M)\alpha_E$|
+  |\||\||Contingency|-|-|$C_{\text{Cont}} = \alpha_{\text{Cont}}C_{\text{BM}}^\circ$|$=C_p^\circ (1 + \alpha_M)(1 + \alpha_L + \alpha_{\text{FIT}} + \alpha_L \alpha_O + \alpha_E)\alpha_{\text{Cont}}$|
+  |\||\||Fee|-|-|$C_{\text{Fee}} = \alpha_{\text{Fee}}C_{\text{BM}}^\circ$|$=C_p^\circ (1 + \alpha_M)(1 + \alpha_L + \alpha_{\text{FIT}} + \alpha_L \alpha_O + \alpha_E)\alpha_{\text{Fee}}$|
+  |\||Auxiliary fee|-|-|-|$C_{\text{Aux}}$||
 
 - ### Bare module cost
 
-  - Estimation method
-    1. Estimate bare module cost at base case $C_p^\circ$ (Figures A.1 - 1.17, Table A.1)
-    2. Identify relationship of bare module factor $F_{BM}$
-       1. Equation A.4, Table A.5 - exchangers, pumps, vessels
-       2. Table A.5 - other equipment
-    3. Estimate pressure factor $F_P$
-       1. Equation A.2 - A.3, Table A.2 - exchanger, pumps, vessels
-    4. Estimate material factor $F_M$
-       1. Equation A.4, Table A.3, Figure A.18 - exchanger, pumps, vessels
-    5. Estimate bare module factor of other equipment (Table A.6, Figure A.19)
-    6. Calculate bare module cost $C_{BM}$ (Equation 7.6)
-    7. Calculate time correction with CECPI (Equation 7.4)
-
-  - **Lang factor technique** - cost to build major expansion to existing plant
-  - **Module costing technique** - cost of a new plant
-  - **Bare module cost** - sum of direct and indirect cost based on base case of equipment built with carbon steel at 1 atm
+  - **Lang factor technique** - used to estimate cost to build major expansion to existing plant
+    - $C = F_{\text{Lang}} \sum C_{p, i}$
+  - **Module costing technique** - used to estimate cost of a new plant
+    - $C_{BM} = C_p^\circ F_{BM}$
+    - **Bare module cost** - sum of direct and indirect cost based on base case of equipment built with carbon steel at 1 atm
+    - Module costing technique protocol
+      - Estimate bare module cost of exchangers, pumps, vessels
+        1. Calculate bare module cost (2001) $C_{BM} = C_p^\circ F_{BM}$
+           1. Estimate equipment cost at base case $C_p^\circ$
+              1. $\log C_P^\circ = K_1 + K_2 \log A + K_3 [\log A]^2$
+              2. (Table A.1 gives $K_i$)
+              3. Figures A.1 - A.17
+           2. Identify relationship of bare module factor $F_{BM}$
+              1. $F_{BM} = B_1 + B_2 F_M F_P$
+              2. (Table A.4 gives $B_i$)
+           3. Estimate pressure factor $F_P$
+              1. $\log F_P = C_1 + C_2 \log P + C_3 [\log P]^2 \quad (P [\mathrm{barg}])$
+              2. (Table A.2 gives $C_i$)
+              3. Vessel
+                 1. $t = \dfrac{PD}{2SE - 1.2P} + \mathrm{CA} = \dfrac{PD}{2[850 - 0.6P]} + 0.00315 \quad (P [\mathrm{barg}], D[\mathrm{m}])$
+                 2. $t_{\min} = 0.0063 \ \mathrm{m}$
+                 3. $F_P =\begin{cases} \dfrac{t}{t_{\min}} & P > -0.5 \ \mathrm{barg} && t > t_{\min} \\\ 1 & P > -0.5 \ \mathrm{barg} && t < t_{\min} \\\ 1.25 & P < -0.5 \ \mathrm{barg}\end{cases}$
+           4. Estimate material factor $F_M$
+              1. Table A.3 + Figure A.18 - exchanger, pumps, vessels
+        2. Calculate bare module cost with CECPI time correction
+           1. $C_2 = C_1 \dfrac{I_2}{I_1}$
+      - Estimate bare module factor of other equipment
+        1. Table A.5 + Table A.6 + Figure A.19 - compressors, blowers, drives, evaporators, vaporizers, fans, fired heaters, furnaces, power recovery equipment, trays, demister pads, tower packing
+        2. Table A.7 - conveyor, crystallizers, dryers, dust collectors, filters, mixers, reactors, screens
+        3. Calculate bare module cost with CECPI time correction
+           1. $C_2 = C_1 \dfrac{I_2}{I_1}$
 
   {{< admonition type=info title="Symbol Conventions" open=false >}}
 
 - Cost
   - $C$ - total cost
-  - $C_p$ - Equipment cost
-  - $C_p^\circ$ - Equipment cost at base condition
+  - $C_p$ - Purchased cost of equipment
+  - $C_p^\circ$ - Purchased cost of equipment at base condition (built with carbon steel at 1 atm)
   - $C_{BM}$ - Base module cost
 - Factors
   - $F_{\text{Lang}}$ - Lang factor
@@ -371,17 +406,6 @@ Electrical component is not shown on PFD as utility streams
   - $t_{\min}$ - minimum allowable vessel thickness [=] 0.0063 m
 
 {{< /admonition >}}
-
-  |Description|Equation|
-  |-:|:-|
-  |Lang factor technique for capital cost (total module)|$C = F_{\text{Lang}} \sum C_{p, i}$|
-  |Time Module costing technique|$C_{BM} = C_p^\circ F_{BM}$|
-  |Bare module factor|$F_{BM} = [1 + \alpha_L + \alpha_{\text{FIT}} + \alpha_L \alpha_O + \alpha_E][1 + \alpha_M]$|
-  |Base equipment cost correlation <br/> ★ Table A.1|$\log C_P^\circ = K_1 + K_2 \log A + K_2 [\log A]^2$|
-  |Pressure factor for process vessels <br/> ★ $t_{\text{vessel}}> 0.0063 \ \mathrm{m}$|$F_P = \dfrac{\frac{PD}{2SE - 1.2P} + \mathrm{CA}}{t_{\min}} = \dfrac{\frac{PD}{2[850 - 0.6P]} + 0.00315}{0.0063} $|
-  |Pressure factor for other equipment <br/> ★ $P [=] \mathrm{barg}$|$\log F_P = C_1 + C_2 \log P + C_3 [\log P]^2$|
-  |Bare module factor correlation <br/> ★ Heat exchanger, vessels, pumps|$F_{BM} = B_1 + B_2 F_M F_P$|
-  |Other bare module factor correlation|★ Table A.5|
 
 - ### Grassroots and total module cost
 
@@ -451,16 +475,12 @@ Electrical component is not shown on PFD as utility streams
   |Total manufacturing cost|$\mathrm{COM} = 0.28 \mathrm{FCI} + 2.73 C_{OL} + 1.23(C_{UT} + C_{WT} + C_{RM})$|
   |Total manufacturing cost without depreciation|$\mathrm{COM}\_d = 0.18 \mathrm{FCI} + 2.73 C_{OL} + 1.23(C_{UT} + C_{WT} + C_{RM})$|
 
-- ### Cost of operating labor
+- ### Cost of operating labor $C_{OL}$
 
-  - 1 operator
-    - 49 week/year
-    - 5 shift/week
-    - 8 hour/shift
-  - 1 plant = 1095 shift/year
-    - 365 day/year
-    - 3 shift/day (8 hour/shift)
-  - Wage
+  - 1 operator = 245 shift/year (49 week/year, 5 shift/week, 8 hour/shift)
+  - 1 plant = 1095 shift/year (365 day/year, 3 shift/day, 8 hour/shift)
+  - 4.5 operator/$N_{OL}$
+  - Wage estimation
     - :heavy_multiplication_x: Do not use CEPCI
     - :heavy_check_mark: Use *The Oil and Gas Journal and Engineering News Record*
       - 66910 $/year (2080 hour/year) (May 2016, Texas)
@@ -472,8 +492,78 @@ Electrical component is not shown on PFD as utility streams
   |Number of particular solid process|$P$|
   |Number of nonparticular process <br/> ★ Compressor, tower, reactor, heater, exchanger|$N_{np}$|
 
-- ### Utility cost
+- ### Utility cost $C_{UT}$
 
-  - Only electricity can be predicted by CEPCI
+  - **Battery limit** - boundary of responsibility; PFD only include core unit operations, but not units that generate utilities.
+  - Types of fuels
+    - **Coal** - negative environmental impact, used near mines
+    - **No. 6 fue oil** - heavy oil with high sulfur content
+    - **Natural gas** - high regional variation of price
+    - **No. 2 fuel oil** - used near coast, large price fluctuation
+    - **Electricity** - generated by all sources
+      - Only electricity can be predicted by CEPCI
+  - Utility supply methods
+    - Purchasing from public or private utility
+    - Supplied by company
+    - Self-generated and used by a single process unit
+  - Types of utilities
+    - **Air supply** - pressurized and dried air
+    - **Steam from boilers** - process steam providing latent heat
+    - **Steam generated from process** - process steam  providing heat
+    - **Cooling tower water** - process cooling water
+    - **Other water**
+    - Electrical substation
+    - Fuels
+    - Refrigeration
+    - Thermal system
+    - Waste disposal
+    - Wastewater treatment
+  - Estimate utility cost
+    - Capital investment to build a facility to supply utility - use grassroot cost for FCI
+    - Table 8.3
+
+- ### Raw material cost $C_{RM}$
+
+  - Table 8.4
+  - **Stream factor (SF)** - fraction of time that the plant is operating in a year
+    - $\mathrm{SF} \in [0.90, 0.96]$
+
+- ### Waste treatment cost $C_{WT}$
+
+  - Table 8.3
+
+---
+
+## -★- Synthesis and Optimization of Chemical Processes
+
+## Ch11 Design Heuristics
+
+- **Heuristic** - statement concerning equipment sizes, operating conditions, and equipment performance that reduces need for calculations
+- **Shortcut method** - faster method that replaces extensive calculation to evaluate equipment sizes, operating conditions, and equipment performance
+
+- Compressors
+  - If $P_{out}/P_{in} > 3$, use multiple stages of compressors (which will raise $T$) and intercooling between compressors
+  - If hot inlet gas, cool it before compression
+- Heat exchangers
+  - Heat integration - use heat generated in one part of the process to heat up other parts
+  - If $\Delta T_{lm} > 100 \deg C$, need better heat integration
+  - If stream have diff $T$ for mixing, need better heat integration
+
+## Ch12 Reactor and Separation Design Heuristics
+
+- Table 12.1 - choice of separation units
+  - Example: separate A, B, C needs $\ge 2$ sep units. need design decisions to optimize cost-effectiveness
+    - Sep A, then Sep B and C
+    - Sep B, then Sep A and C
+    - Sep C, then Sep A and B
+  - Almost always need $(n-1)$ separation units for $n$ species
+  - Number of ways to configure separation units: $S = \dfrac{[2(N-1)]!}{N! (N-1)!}$
+    - Example: separate 4 components, need 3 columns, $S=5$ configurations
+- Table 12.2 - choice of sequencing separation units
+  - Remove the largest product stream first if possible
+
+<!-- |Description|Equations|
+|-:|:-|
+||| -->
 
 <!-- ★ -->
