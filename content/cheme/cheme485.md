@@ -490,7 +490,7 @@ Electrical component is not shown on PFD as utility streams
   |-:|:-|
   |Number of operators per shift <br/> ★ $P \le 2$|$N_{OL} = (6.29 + 31.7 P^2 + 0.23 N_{np})^{0.5}$|
   |Number of particular solid process|$P$|
-  |Number of nonparticular process <br/> ★ Compressor, tower, reactor, heater, exchanger|$N_{np}$|
+  |Number of nonparticular processes that are <br/> [Compressor, tower, reactor, heater, exchanger]|$N_{np}$|
 
 - ### Utility cost $C_{UT}$
 
@@ -532,11 +532,141 @@ Electrical component is not shown on PFD as utility streams
 
   - Table 8.3
 
+## Ch 9 Engineering Economic Analysis
+
+- ### Investments and the time value of money
+
+  - Goal of manufacturing company: make money
+  - Companies produce high value chemicals from low value raw materials
+  - Personal income
+    - Basic standard of living
+    - Discretionary money
+      - Consume money for now
+      - Retain money for future
+        - Simple savings
+        - Investments
+  - Money makes money when invested.
+  - **Investment** - agreement between investor and producer with the expectation that the producer will return money to the investor at some specified future dates
+    - **Investor** - party providing money $P$ (principal/present value)
+    - **Producer** - party expected to return money $F$ (future value)
+    - EQNS
+  - **Savings** - people invest in bank
+  - **Loan** - bank invest in people
+  - **Money** - measure of the value of products and services
+  - **Value** - other units to measure value of products and services
+  - Usually, company is investor in project
+  - **Time value of money** - Money today is worth more than money in the future
+
+- ### Different types of interest
+
+  - **Simple interest** - amount of interest paid is based only on initial investment
+  - **Compound interest** - interest earned is reinvested
+
+  |Description|Equation|
+  |-:|:-|
+  |Simple interest|$F_n = P(1 + i_s n)$|
+  |Compound interest|$F_n = P(1 + i)^n$|
+  |Compound interest with changing interest rates|$\begin{aligned}F_n &= P \prod_{j = 1}^n (1 + i_j) \\\ &= P(1+i_1)(1+i_2)\cdots(1+i_n)\end{aligned}$|
+
+- ### Time basis for compound interest
+
+  - **Nominal annual interest rate** $i_{\text{nom}}$ - annual interest rate if compounded per year
+  - **Actual rate** $r$ - interest rate per compounding period
+  - **Effective annual interest rate** $i_{\text{eff}}$ - annual interest rate if not compounded per year
+
+  |Description|Equation|
+  |-:|:-|
+  |Actual rate <br/> ★ $m$ - number of compounding period per year|$r = \dfrac{i_{\text{nom}}}{m}$|
+  |Effective annual interest rate|$i_{\text{eff}} = \left(1 + \dfrac{i_{\text{nom}}}{m}\right)^m - 1$|
+  |Continuous compounding|$i_{\text{eff}} = \exp(i_{\text{nom}}) - 1$|
+
+- ### Annuity and discount factors
+
+  - When cash flows occur at different times, each cash flow must be brought to the same point in time for comparison
+  - **Annuity** - a series of uniform cash transactions taken place at the end of each year for some consecutive years
+  - **Discount factor** - conversion factor converting present, future, and annuity values as a function of $i$ and $n$
+
+  |Conversion|Symbol|Common Name|Formula|
+  |:-:|:-:|:-:|:-:|
+  |$P$ to $F$|$F/P$|Single payment compound amount factor|$(1+i)^n$|
+  |$F$ to $P$|$P/F$|Single payment present worth factor|$\dfrac{1}{(1+i)^n}$|
+  |$A$ to $F$|$F/A$|Uniform series compound amount factor; <br/> Future worth of annuity|$\dfrac{(1+i)^n - 1}{i}$|
+  |$F$ to $A$|$A/F$|Sinking fund factor|$\dfrac{1}{(1+i)^n - 1}$|
+  |$P$ to $A$|$A/P$|Capital recovery factor|$\dfrac{i(1+i)^n}{(1+i)^n - 1}$|
+  |$A$ to $P$|$P/A$|Uniform series present worth factor; <br/> Present worth of annuity|$\dfrac{(1+i)^n - 1}{i(1+i)^n}$|
+
+- ### Inflation
+
+  |Description|Equation|
+  |-:|:-|
+  |Purchasing power of future cash|$F' = \dfrac{F}{(1+f)^n} = P(1 + i\')^n$|
+  |Effective interest rate|$i\' = \dfrac{1+i}{1+f} - 1 = \dfrac{i-f}{1+f}$|
+  |Effective interest rate approximation <br/> ★ $f < 0.05$|$i\' \approx i - f$|
+
+- ### Depreciation of capital investment
+
+  - Capital depreciation - difference between purchase and installation expense and salvage value
+  - **Total Capital investment** = Fixed capital + Working capital
+    - **Fixed capital** - cost for building the plant
+      - Land cannot be depreciated
+    - **Working capital** - capital required to start up the plant and finance the first few months of operation
+      - Working capital cannot be depreciated
+  - Depreciation metrics
+    - **Fixed capital investment** $\mathrm{FCI_L}$ - depreciable capital investment
+      - $\mathrm{FCI_L} =$ (cost to build the plant) - (cost of land)
+    - **Salvage value** $S$ - fixed capital investment minus land evaluated at the end of plant life
+    - **Life of the equipment** $n$ - IRS equipment depreciation time (currently 9.5 years)
+    - **Total capital for depreciation** $D$
+      - $D = \mathrm{FCI_L} - S$
+    - **Yearly depreciation** $d_k$ - amount of depreciation in the $k$th year
+    - **Book value** $\mathrm{BV_k}$ - amount of depreciable capital that has not yet been depreciated
+      - $\mathrm{BC_k = FCI_L} - \sum d_j$
+  - Depreciation methods
+    - **Straight-line depreciation method** (SL) - equal amount of depreciation is charged each year over the depreciation period allowed
+      - $d_k^{SL} = \dfrac{\mathrm{FCI_L - S}}{n}$
+    - **Sum of the years digits depreciation method** (SOYD)
+      - $d_k^{SOYD} = \dfrac{(n + 1 - k)(\mathrm{FCI_L} - S)}{\dfrac{n}{2}(n+1)}$
+    - **Double declining balance depreciation method** (DDB)
+      - $d_k^{DDB} = \dfrac{2}{n} \left[\mathrm{FCI_L} - \displaystyle\sum_{j = 0}^{k-1} d_j\right]$
+
+## Ch 10 Profitability Analysis
+
+- ### Project cash flow diagram
+
+  - Uses cumulative cash flow diagram
+    - Assume land purchase is done at $t = 0$
+    - Fixed capital investment ($\mathrm{FCI_L}$) at project construction years
+    - Working capital (WC) at plant start-up
+    - **Teething problem** - revenue for first year after start-up is less than subsequent years
+    - Assume a working life for profitability analysis
+    - Land, working capital, and salvage recovered at ebd of life
+
+- ### Profitability criteria
+
+  - Time, cash, interest rate
+
+  - #### Nondiscounted profitability criteria
+
+    - **Payback period (PBP)** - time required after start-up to recover the fixed capital investment ($\mathrm{FCI_L}$) for the project
+    - **Cumulative cash position (CCP)** - Worth of the project at the end of life
+    - **Cumulative cash ratio (CCR)**
+      - $\mathrm{CCR} = \dfrac{\sum \text{Positive cash flow}}{\sum \text{Negative cash flow}} = 1 + \dfrac{\mathrm{CCP}}{\text{Land + WC +}\mathrm{FCI_L}}$
+    - **Rate of return on investment (ROROI)**
+      - $\mathrm{ROROI} = \dfrac{\text{Average annual net profit}}{\mathrm{FCI_L}} = \dfrac{\text{Slope startup-to-post-salvage curve}}{\mathrm{FCI_L}} - \dfrac{1}{n}$
+
+  - #### Discounted profitability criteria
+
+    - **Discounted payback period (DPBP)** - time required after start-up to recover fixed capital investment $\mathrm{FCI_L}$ for the project with all cash flows discounted back to $t = 0$
+    - **Net present value (NPV)** - discounted cumulative cash position at the end of the project
+    - **Present value ratio (PVR)**
+      - $\mathrm{PVR} = \dfrac{\sum \text{Present value of positive cash flow}}{\sum \text{Present value of negative cash flow}}$
+    - **Discounted cash flow rate of return (DCFROR)** - interest or discount rate for which net present value of the project equals to zero (break even)
+
 ---
 
 ## -★- Synthesis and Optimization of Chemical Processes
 
-## Ch11 Design Heuristics
+## Ch 11 Design Heuristics
 
 - **Heuristic** - statement concerning equipment sizes, operating conditions, and equipment performance that reduces need for calculations
 - **Shortcut method** - faster method that replaces extensive calculation to evaluate equipment sizes, operating conditions, and equipment performance
@@ -549,7 +679,7 @@ Electrical component is not shown on PFD as utility streams
   - If $\Delta T_{lm} > 100 \deg C$, need better heat integration
   - If stream have diff $T$ for mixing, need better heat integration
 
-## Ch12 Reactor and Separation Design Heuristics
+## Ch 12 Reactor and Separation Design Heuristics
 
 - Table 12.1 - choice of separation units
   - Example: separate A, B, C needs $\ge 2$ sep units. need design decisions to optimize cost-effectiveness
