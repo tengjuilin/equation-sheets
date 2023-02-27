@@ -628,6 +628,24 @@ Electrical component is not shown on PFD as utility streams
       - $d_k^{SOYD} = \dfrac{(n + 1 - k)(\mathrm{FCI_L} - S)}{\dfrac{n}{2}(n+1)}$
     - **Double declining balance depreciation method** (DDB)
       - $d_k^{DDB} = \dfrac{2}{n} \left[\mathrm{FCI_L} - \displaystyle\sum_{j = 0}^{k-1} d_j\right]$
+    - **Modified accelerated cost recovery system** (MACRS)
+      - Use half year convention - equipment is bought midway through first year that depreciation is allowed
+      - Most equipment has 9.5 year class life, 5 year recovery period, and no salvage value
+      - Use DDB method then SL method when SL yields greater depreciation allowance
+
+  - ### Taxation, cash flow, profit
+
+    - Federal, state, city, local taxes are high for large corporations
+    - **Revenue** $R$
+    - **Cost of manufacturing** $\mathrm{COM}_d$ - excludes depreciation
+    - **Depreciation** $d$
+    - **Tax rate** $t$
+    - **Expense** = Manufacturing costs + Depreciation
+      - $E = \mathrm{COM}_d + d$
+    - **Income tax** = (Revenue - Expenses)(Tax rate)
+      - $(R - \mathrm{COM}_d - d)(t)$
+    - **After-tax** = Revenue - Expense - Income tax
+      - $(R - \mathrm{COM}_d - d)(1-t)$
 
 ## Ch 10 Profitability Analysis
 
@@ -661,6 +679,28 @@ Electrical component is not shown on PFD as utility streams
     - **Present value ratio (PVR)**
       - $\mathrm{PVR} = \dfrac{\sum \text{Present value of positive cash flow}}{\sum \text{Present value of negative cash flow}}$
     - **Discounted cash flow rate of return (DCFROR)** - interest or discount rate for which net present value of the project equals to zero (break even)
+
+  - ### Evaluation of equipment alternatives
+
+    - Equipment with same expected operating lives and operating costs
+      - Choose less expensive one
+    - Equipment with same expecting operating lives
+      - Choose less negative NPV
+    - Equipment with different operating lives
+      - **Capitalized cost method**
+        - Fund needed to purchase equipment, replace at the end of life, and continue replacing it
+        - Do not include operating cost
+        - Equipment cost $P$
+        - Residual $R$
+        - Equipment life $n_{eq}$
+        - Capitalized cost = $P+R = P \left[\dfrac{(1+i)^{n_{eq}}}{(1+i)^{n_{eq}} - 1}\right]$
+      - **Equivalent capitalized cost (ECC) method**
+        - Yearly operating cost (YOC)
+        - Capitalized operating cost = $\dfrac{\mathrm{YOC}(\frac{F}{A})}{(1+i)^{n_{eq}}-1}$
+        - Equivalent capitalized cost (ECC) = Capitalized cost + Capitalized operating cost = $\dfrac{P(1+i)^{n_{eq}} + \mathrm{YOC}(\frac{F}{A})}{(1+i)^{n_{eq}}-1}$
+        - Residual R = ECC - P - YOC
+      - **Equivalent annual operating cost (EAOC) method**
+        - $\mathrm{EAOC} = (\text{Capital investment})(\frac{A}{P}) + \mathrm{YOC}$
 
 ---
 
