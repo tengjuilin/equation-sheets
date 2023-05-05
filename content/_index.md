@@ -155,7 +155,6 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 - [CHEM E 485 Process Design I](cheme/cheme485/)
   - In progress Wi23 with [Professor Vincent Holmberg](https://www.cheme.washington.edu/facultyfinder/vincent-holmberg)
   - Textbook: *Analysis, Synthesis, and Design of Chemical Processes* 5e by Turton et al.
-  - Aspen Plus refresher: [<i class="fab fa-youtube"></i> National Chung Hsing University](https://lms.nchu.edu.tw/course/10352/intro) (English solutions, Mandarin Chinese instructions)
   - Aspen Plus lectures and case studies: [<i class="fab fa-youtube"></i> NPTEL, Indian Institute of Technology, Guwahati](https://www.youtube.com/playlist?list=PLwdnzlV3ogoWmaPmHqavPktjRTvXcZxb7)
 
 ### Nanoscience and Molecular Engineering
