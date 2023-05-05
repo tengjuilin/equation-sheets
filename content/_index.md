@@ -98,15 +98,10 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 - [CHEM E 310 Material and Energy Balances](cheme/cheme310/)
   - Covered units and process variables, material balances of nonreactive and reactive systems, single- and multi-phase systems, energy balances of nonreactive and reactive systems.
   - Taken in Sp21 with [Professor Elizabeth Nance](https://www.cheme.washington.edu/facultyfinder/elizabeth-nance)
+  - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder et al.
 - [CHEM E 375 Chemical Engineering Computer Skills](http://cheme-sci-computing.netlify.app/)
   - Covered chemical engineering scientific computing and numerical methods. Topics include curve fitting, balancing chemical equations, solving VLE problems, plotting VLE x/y and Txy diagrams, determining Antoine's coefficients, chemical kinetics, and time-dependent and -independent heat transfer.
   - Taken in Sp21 with [Professor Jim Pfaendtner](https://www.cheme.washington.edu/facultyfinder/jim-pfaendtner)
-  - Textbook: *Elementary Principles of Chemical Processes* 4e by Felder et al.
-<!-- - [CHEM E 512 Methods of Engineering Analysis](cheme/cheme512/)
-  - Covered first, second, and higher-order homogeneous and nonhomogeneous ODEs, systems of ODEs, Laplace transform, series solution, PDEs, perturbation methods, and elementary data science.
-  - Taken in Au22 with [Professor Shachi Mittal](https://www.cheme.washington.edu/facultyfinder/shachi-mittal)
-  - Optional textbook: *Mathematical Methods in Chemical Engineering* 1e by Varma
-  - Study textbooks: *Advanced Engineering Mathematics* 6e by Zill; *Advanced Engineering Mathematics* 10e by Kreyszig -->
 
 ### Thermodynamics and Statistical Mechanics
 
@@ -136,7 +131,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 - [CHEM E 435 Transport Process III](cheme/cheme435/)
   - Covered mass transfer, single equilibrium stages, multistage cascades, absorption and stripping, distillation, and membrane separations.
   - Taken in Au22 with [Professor Jorge Marchand](https://www.cheme.washington.edu/facultyfinder/jorge-marchand)
-  - Textbook: *Separation Process Principles with Applications Using Process Simulators* 4e by Seader
+  - Textbook: *Separation Process Principles with Applications Using Process Simulators* 4e by Seader et al.
 <!-- - [CHEM E 455 Surface and Colloid Science Laboratory](cheme/cheme455/)
   - Taken in Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Textbook: *An Introduction to Interfaces and Colloids: The Bridge to Nanoscience* 1e by Berg -->
@@ -147,6 +142,10 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered rate law, reactor sizing, stoichiometry, isothermal reactor deign, rate law determination, multiple reactions, enzymatic and catalytic reactions, and nonisothermal reactor design.
   - Taken in Au22 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
   - Textbook: *Essentials of Chemical Reaction Engineering* 2e by Fogler
+- [CHEM E 467 Biochemical Engineering](cheme/cheme467/)
+  - Covered enzyme and cell growth kinetics, cell reaction stoichiometry, media design, oxygen transfer, sterilization, bioreactor design, bioseparation, mammalian cell culture, immunology, and biologics.
+  - Taken in Sp23 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
+  - Optional textbook: *Biochemical Engineering: A Textbook for Engineers, Chemists and Biologists* 2e by Katoh et al.
 
 ### Process Engineering
 

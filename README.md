@@ -94,13 +94,14 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
 |CHEM E 465 <br/> Reactor Design|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme465/)|**Chemical reaction engineering**|:white_check_mark:|
+|CHEM E 467 <br/> Biochemical Engineering|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme467/)|**Biochemical engineering**|Sp23 in progress <br/> :pick:|
 
 ### Process Engineering
 
 |Course|PDF|Online|Topics and Description|Status|
 |-|-|-|-|:-:|
-|CHEM E 480 <br/> Process Dynamics and Control|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme480/)|**Process dynamics and control**|Wi23 in progress <br/> :pick:|
-|CHEM E 485 <br/> Process Design I|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme485/)|**Process design**|Wi23 in progress <br/> :pick:|
+|CHEM E 480 <br/> Process Dynamics and Control|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme480/)|**Process dynamics and control**|Wi23 completed <br/> :pick:|
+|CHEM E 485 <br/> Process Design I|[pdf]|[html](https://equation-sheets.netlify.app/cheme/cheme485/)|**Process design**|Wi23 completed <br/> :pick:|
 
 ### Nanoscience and Molecular Engineering
 
