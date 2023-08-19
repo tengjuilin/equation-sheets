@@ -118,6 +118,10 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Undergraduate, Year 2
   - Covered chemical engineering scientific computing and numerical methods. Topics include curve fitting, balancing chemical equations, solving VLE problems, plotting VLE x/y and Txy diagrams, determining Antoine's coefficients, chemical kinetics, and time-dependent and -independent heat transfer.
   - Taken in Sp21 with [Professor Jim Pfaendtner](https://www.cheme.washington.edu/facultyfinder/jim-pfaendtner)
+- [UCB CHM ENG 130 Mathematics and Statistics in Chemical Engineering](cheme/chmeng130)
+  - Undergraduate, Year 3
+  - Covered first-, second-order ODEs, coupled systems of ODEs, PDEs, and statistics.
+  - Instruction in progress in Au23 with [Professor Aditi Krishnapriyan](https://chemistry.berkeley.edu/faculty/cbe/krishnapriyan)
 
 ### Thermodynamics and Statistical Mechanics
 
@@ -136,6 +140,9 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, and phase transitions.
   - Taken in Sp22 with [Professor Samson Jenekhe](https://www.cheme.washington.edu/facultyfinder/samson-a-jenekhe)
   - Textbook: *Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience* 2e by Dill and Bromberg
+- [UCB CHM ENG 240 Thermodynamics for Chemical Product and Process Design](cheme/chmeng240)
+  - Graduate
+  - In progress in Au23 with [Professor Rui Wang](https://chemistry.berkeley.edu/faculty/cbe/wang)
 
 ### Transport Processes
 
@@ -154,6 +161,9 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered mass transfer, single equilibrium stages, multistage cascades, absorption and stripping, distillation, and membrane separations.
   - Taken in Au22 with [Professor Jorge Marchand](https://www.cheme.washington.edu/facultyfinder/jorge-marchand)
   - Textbook: *Separation Process Principles with Applications Using Process Simulators* 4e by Seader et al.
+- [UCB CHM ENG 250 Transport Processes](cheme/chmeng250)
+  - Graduate
+  - In progress in Au23 with [Professor Kranthi Mandadapu](https://chemistry.berkeley.edu/faculty/cbe/mandadapu)
 <!-- - [UW CHEM E 455 Surface and Colloid Science Laboratory](cheme/cheme455/)
   - Undergraduate, Year 3-4, Graduate
   - Taken in Sp22 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
@@ -171,6 +181,9 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered enzyme and cell growth kinetics, cell reaction stoichiometry, media design, oxygen transfer, sterilization, bioreactor design, bioseparation, mammalian cell culture, immunology, and biologics.
   - Taken in Sp23 with [Professor Alex Prybutok](https://www.cheme.washington.edu/facultyfinder/alex-prybutok)
   - Optional textbook: *Biochemical Engineering: A Textbook for Engineers, Chemists and Biologists* 2e by Katoh et al.
+- [UCB CHM ENG 244 Kinetics and Reaction Engineering](cheme/chmeng244)
+  - Graduate
+  - In progress in Au23 with [Professor Alexander Katz](https://chemistry.berkeley.edu/faculty/cbe/katz)
 
 ### Process Engineering
 

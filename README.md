@@ -79,6 +79,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |UW|CHEM E 325 <br/> Energy and Entropy|[pdf](static/pdf/cheme/cheme325.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme325/)|**Thermodynamics I** - thermodynamic data, molecular interactions and equations of state, first and second law analysis, process efficiency, single and multi-component equilibrium|:white_check_mark:|
 |UW|CHEM E 326 <br/> Chemical Engineering Thermodynamics|[pdf](static/pdf/cheme/cheme326.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme326/)|**Thermodynamics II** - thermodynamic relations, single- and multi-component phase equilibrium, fugacity-based equilibrium, phase equilibrium applications, chemical equilibrium|:white_check_mark:|
 |UW|CHEM E 457 <br/> Principles of Molecular Engineering|[pdf](static/pdf/cheme/cheme457.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme457/)|**Statistical mechanics** - probability, entropy, Boltzmann's law, ensembles, chemical and physical equilibrium, solvation and phase transfer, phase transitions|:white_check_mark:|
+|UCB|CHM ENG 240 <br/> Thermodynamics for Chemical Product and Process Design|[pdf]|[html](https://equation-sheets.netlify.app/cheme/chmeng240/)|**Thermodynamics**|In Progress Au23 <br/> :pick:|
 
 ### Transport Processes
 
@@ -87,6 +88,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |UW|CHEM E 330 <br/> Transport Process I|[pdf](static/pdf/cheme/cheme330.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme330/)|**Transport fundamentals** - rate laws, transport coefficients, shell balance method, generalization to 3D <br/> **Fluid mechanics** - Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, microfluidics|:white_check_mark:|
 |UW|CHEM E 340 <br/> Transport Process II|[pdf]|[html]|**Heat transfer** - 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, radiation|Wi22 completed <br/> :pick:|
 |UW|CHEM E 435 <br/> Transport Process III|[pdf](static/pdf/cheme/cheme435.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme435/)|**Separation process and mass transfer** - mass transfer and diffusion, single equilibrium stages, multistage cascades, absorption and stripping, distillation, membrane separations|:white_check_mark:|
+|UCB|CHM ENG 250 <br/> Transport Processes|[pdf]|[html](https://equation-sheets.netlify.app/cheme/chmeng250/)|**Transport processes**|In Progress Au23 <br/> :pick:|
 
 ### Chemical Reaction Engineering
 
@@ -94,6 +96,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |-|-|-|-|-|:-:|
 |UW|CHEM E 465 <br/> Reactor Design|[pdf](static/pdf/cheme/cheme465.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme465/)|**Chemical reaction engineering** - rate law, reactor design and sizing, stoichiometry, isothermal reactor design, rate law determination, multiple reactions, enzymatic reactions, catalytic reactions|:white_check_mark:|
 |UW|CHEM E 467 <br/> Biochemical Engineering|[pdf](static/pdf/cheme/cheme467.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme467/)|**Biochemical engineering** - enzyme kinetics, enzymatic inhibitions, cell growth kinetics, cell reaction stoichiometry|:white_check_mark:|
+|UCB|CHM ENG 244 <br/> Kinetics and Reaction Engineering|[pdf]|[html](https://equation-sheets.netlify.app/cheme/chmeng244/)|**Chemical reaction engineering**|In Progress Au23 <br/> :pick:|
 
 ### Process Engineering
 
