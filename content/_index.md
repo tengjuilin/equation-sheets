@@ -86,7 +86,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered first order and second order ODEs with applications in mathematical modeling, stability, and mechanical vibrations. Covers systems of differential equations and Laplace transform.
   - Taken in Wi21 with [Alanna Gary](https://amath.washington.edu/people/alanna-gary)
   - Optional textbook: *Elementary Differential Equations and Boundary Value Problems* 11e by Boyce et al.
-- [AMATH 353 Partial Differential Equations and Waves](amath/amath353/)
+- [AMATH 353 Partial Differential Equations and Waves]
   - Covered traveling waves, wave equation, d'Alembert's solution, standing waves, separation of variables, and conservation laws.
   - Taken in Sp22 with [Professor Mark Kot](https://amath.washington.edu/people/mark-kot)
   - Textbook: *An Introduction to the Mathematical Theory of Wave* 1e by Knobel
@@ -124,7 +124,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
   - Covered transport fundamentals: rate laws, transport coefficients, shell balance method, and generalization to 3D. Covered fluid mechanics: Navier-Stokes equation, top-down method, turbulence, dynamic similarity, dimensional analysis, Bernoulli analysis, and microfluidics.
   - Taken in Au21 with [Professor John Berg](https://www.cheme.washington.edu/facultyfinder/john-c-berg)
   - Optional textbook: *Transport Phenomena* Revised 2e by Bird et al.
-- [CHEM E 340 Transport Process II](cheme/cheme340/)
+- [CHEM E 340 Transport Process II]
   - Covered 1D conduction, 2D conduction, transient heat conduction, convection, boiling and condensation, heat exchangers, and radiation.
   - Taken in Wi22 with [Professor David Bergsman](https://www.cheme.washington.edu/facultyfinder/david-s-bergsman)
   - Optional textbook: *Fundamentals of Heat and Mass Transfer* 8e by Bergman et al.
@@ -149,7 +149,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 
 ### Process Engineering
 
-- [CHEM E 480 Process Dynamics and Control](cheme/cheme480/)
+- [CHEM E 480 Process Dynamics and Control]
   - In progress Wi23 with [Professor James Carothers](https://www.cheme.washington.edu/facultyfinder/james-carothers)
   - Textbook: *Process Dynamics and Control* 4e by Seborg et al.
 - [CHEM E 485 Process Design I](cheme/cheme485/)
