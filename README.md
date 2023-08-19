@@ -71,6 +71,7 @@ If you find any mistake, please feel free to [raise an issue](https://github.com
 |-|-|-|-|-|:-:|
 |UW|CHEM E 310 <br/> Mass and Energy Balances|[pdf](static/pdf/cheme/cheme310.pdf)|[html](https://equation-sheets.netlify.app/cheme/cheme310/)|**Material and energy balances** - units and process variables, material and energy balances of nonreactive and reactive processes, single- and multi-phase systems|:white_check_mark:|
 |UW|CHEM E 375 <br/> Chemical Engineering Computer Skills|[Jupyter Notebooks](https://github.com/tengjuilin/cheme-sci-computing)|[html](http://cheme-sci-computing.netlify.app/)|**ChemE scientific computing** - curve fitting, solving linear, nonlinear systems, control flow, solving systems of ODEs, time-independent and -dependent PDEs|:white_check_mark:|
+|UCB|CHM ENG 130 <br/> Mathematics and Statistics in Chemical Engineering|[pdf]|[html](https://equation-sheets.netlify.app/cheme/chmeng130/)|**Engineering mathematics**|In Progress Au23 <br/> :pick:|
 
 ### Thermodynamics and Statistical Mechanics
 
