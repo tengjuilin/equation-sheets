@@ -34,6 +34,8 @@ date: 2023-09-05T00:00:00-08:00
 
 ### Vector spaces
 
+#### Vector spaces definitions
+
 |Definition of Vector Space $\\{V, +; \mathbb{R}, \cdot\\}$|Equations|
 |-:|:-|
 |Closure under linear combination|$\mathbf{u} \in V$, $\mathbf{v} \in V$ satisfing $(a \cdot \mathbf{u} + b \cdot \mathbf{v}) \in V$|
@@ -53,9 +55,9 @@ date: 2023-09-05T00:00:00-08:00
 |Finite dimensional|$V^n, \exist n \in \mathbb{Z}$ such that all linearly independent sets contain at most $n$ elements|
 |Basis|$\displaystyle\mathbf{v} = \sum_{i=1}^n \alpha_i \mathbf{b}_i$|
 
-### Euclidean space $E^n$
+#### Euclidean space $E^n$
 
-#### Inner product
+##### Inner product
 
 |Definition of inner product|Equations|
 |-:|:-|
@@ -72,7 +74,7 @@ date: 2023-09-05T00:00:00-08:00
 |Orthonormal|$\mathbf{e}_1 \cdot \mathbf{e}\_2 = \delta\_{ij}$|
 |Orthonormal basis|$\displaystyle\mathbf{v} = \sum_i^n \alpha_i \mathbf{e}_i$|
 
-### Vector product
+##### Vector product
 
 |Definition of vector product|Equations|
 |-:|:-|
@@ -98,7 +100,7 @@ date: 2023-09-05T00:00:00-08:00
 |Linear function|$f(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2) = \alpha_1 f({\mathbf{v}_1}) + \alpha_2 f(\mathbf{v}_2)$|
 |General form of linear function|$f(\mathbf{v}) = \mathbf{a \cdot v}$|
 
-### Indicial notation
+#### Indicial notation
 
 |Description|Equations|
 |-:|:-|
@@ -108,7 +110,7 @@ date: 2023-09-05T00:00:00-08:00
 
 <center>All notations below follows Einstein's indicial notation.</center>
 
-### Tensors
+#### Tensors
 
 |Description|Equations|
 |-:|:-|
@@ -116,7 +118,7 @@ date: 2023-09-05T00:00:00-08:00
 |Tensor (dyadic) product|$\mathbf{(a \otimes b) v \equiv (b \cdot v)a}$|
 |Tensor (dyadic) product|$\mathbf{(a \otimes b)} = a_ib_j$|
 
-### Tensor operations
+##### Tensor operations
 
 |Description|Equations|
 |-:|:-|
@@ -137,7 +139,7 @@ date: 2023-09-05T00:00:00-08:00
 |Principal invariant 2|$I_2 = \frac{1}{2}[\mathrm{tr}(\mathbf{T}^2) - \mathrm{tr}(\mathbf{T})^2]$|
 |Principal invariant 3|$I_3 = \det(\mathbf{T})$|
 
-### Tensor properties
+##### Tensor properties
 
 |Description|Equations|
 |-:|:-|
